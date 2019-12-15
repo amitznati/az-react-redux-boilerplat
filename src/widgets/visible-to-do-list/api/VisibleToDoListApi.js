@@ -26,6 +26,7 @@ export default class VisibleToDoListApi extends BaseApi {
 
 	addTodo = () => {
 		const text = this.getEditToDoSelector();
+
 		this.dispatchStoreAction({
 			type: ActionTypes.ADD_TODO,
 			payload: {id: nextTodoId++, text}
@@ -46,12 +47,21 @@ export default class VisibleToDoListApi extends BaseApi {
 		});
 	};
 
-	loadDummyPosts = () => {
+	loadDummyPosts = async () => {
 		return this.serviceRequest(
 			SimpleServices.getDummyPosts,
 			{},
 			ActionTypes.LOAD_POSTS
 		);
+
+	};
+
+	getPostById = async (id = 1) => {
+		const post = await this.serviceRequest(
+			SimpleServices.getPostById,
+			{id}
+		);
+		return post;
 	};
 
 

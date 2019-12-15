@@ -26,9 +26,9 @@ export default class BaseApi {
 		const failureType = this.getServiceFailureType(actionType);
 		this.dispatchStoreAction({type: requestType});
 		try {
-			const res = await serviceMethod(payload);
+			const res = await serviceMethod({payload});
 			const serviceRequestResponse = await Promise.resolve(getSuccessPayload(res));
-			this.dispatchStoreAction({type: successType, payload: serviceRequestResponse});
+			actionType && this.dispatchStoreAction({type: successType, payload: serviceRequestResponse});
 			return serviceRequestResponse;
 		} catch (err) {
 			const serviceRequestErr = await Promise.resolve(getErrorPayload(err));
