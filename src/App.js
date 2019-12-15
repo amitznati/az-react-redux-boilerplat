@@ -4,7 +4,6 @@ import VisibleTodoList from './widgets/visible-to-do-list/component/VisibleTodoL
 const App = () => (
 	<div>
 		<VisibleTodoList />
-		{/*<Footer />*/}
 	</div>
 );
 

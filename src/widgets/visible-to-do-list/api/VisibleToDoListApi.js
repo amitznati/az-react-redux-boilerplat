@@ -8,28 +8,50 @@ export const VisibilityFilters = {
 };
 
 export const ActionTypes = {
-	TOGGLE_TODO: 'TOGGLE_TODO',
-	ADD_TODO: 'ADD_TODO'
+	UPDATE_TODO: 'UPDATE_TODO',
+	ADD_TODO: 'ADD_TODO',
+	CHANGE_EDIT_TODO: 'CHANGE_EDIT_TODO'
 };
 let nextTodoId = 0;
 export default class VisibleToDoListApi extends BaseApi {
 
-	addTodo = (text) => {
+	changeEditValue = (value) => {
 		this.dispatchStoreAction({
-			type: 'ADD_TODO',
-			id: nextTodoId++,
-			text
+			type: ActionTypes.CHANGE_EDIT_TODO,
+			payload: value
+		});
+	};
+
+	addTodo = () => {
+		const text = this.getEditToDoSelector();
+		this.dispatchStoreAction({
+			type: ActionTypes.ADD_TODO,
+			payload: {id: nextTodoId++, text}
 		});
 	};
 
 	toggleTodo = (id) => {
+		const todos = this.getVisibleToDosSelector();
+		const newTodos = todos.map((t) => {
+			if (t.id === id) {
+				t.completed = !t.completed;
+			}
+			return t;
+		});
 		this.dispatchStoreAction({
-			type: ActionTypes.TOGGLE_TODO,
-			id
+			type: ActionTypes.UPDATE_TODO,
+			payload: newTodos
 		});
 	};
 
-	getVisibleTodos = () => {
+
+
+	/* Selectors */
+	getVisibleToDosSelector = () => {
 		return selectors.getToDosSelector(this.store.getState());
+	};
+
+	getEditToDoSelector = () => {
+		return selectors.getEditToDoSelector(this.store.getState());
 	};
 }

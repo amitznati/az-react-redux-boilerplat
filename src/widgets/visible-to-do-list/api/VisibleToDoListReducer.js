@@ -1,26 +1,27 @@
 import {ActionTypes} from './VisibleToDoListApi';
 const initialState = {
-	toDos: []
+	toDos: [],
+	editToDo: ''
 };
 const reducer = (state = initialState, action) => {
 	let newState = {...state};
-	switch (action.type) {
-	case ActionTypes.ADD_TODO:
+	const payload = action && action.payload;
+	const type = action && action.type;
+	switch (type) {
+		case ActionTypes.ADD_TODO:
 		newState = {
 			...state,
-			toDos: [...state.toDos, {id: action.id, text: action.text}]
+			editToDo: '',
+			toDos: [...state.toDos, {...payload}]
 		};
 		break;
-	case ActionTypes.TOGGLE_TODO: {
-		const newTodos = state.toDos.map((t) => {
-			if (t.id === action.id) {
-				t.completed = true;
-			}
-			return t;
-		});
-		newState = {...state, toDos: newTodos};
+	case ActionTypes.UPDATE_TODO: {
+		newState = {...state, toDos: [...payload]};
 		break;
 	}
+	case ActionTypes.CHANGE_EDIT_TODO:
+		newState = {...state, editToDo: payload};
+		break;
 	default:
 		return newState;
 	}

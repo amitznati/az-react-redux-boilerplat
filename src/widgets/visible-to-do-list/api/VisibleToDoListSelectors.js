@@ -7,7 +7,11 @@ export const getToDosSelector = createSelector(sliceSelector, (slice) => {
 	return slice.toDos;
 });
 
+export const getEditToDoSelector = createSelector(sliceSelector, (slice) => {
+	return slice.editToDo;
+});
 
 export default {
-	getToDosSelector
+	getToDosSelector,
+	getEditToDoSelector
 };

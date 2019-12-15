@@ -1,19 +1,21 @@
 import { connect } from 'react-redux';
-import Component from './VisibleToDoList.component';
 import {getInstance} from '../../../sdk';
+import VisibleToDoListComponent from './VisibleToDoList.component';
 
 const VisibleToDoListApi = getInstance().VisibleToDoListApi;
 
 const mapStateToProps = () => ({
-	todos: VisibleToDoListApi.getVisibleTodos()
+	todos: VisibleToDoListApi.getVisibleToDosSelector(),
+	editToDo: VisibleToDoListApi.getEditToDoSelector()
 });
 
 const mapDispatchToProps = () => ({
 	toggleTodo: VisibleToDoListApi.toggleTodo,
-	addTodo: VisibleToDoListApi.addTodo
+	addTodo: VisibleToDoListApi.addTodo,
+	changeEditValue: VisibleToDoListApi.changeEditValue
 });
 
 export default connect(
 	mapStateToProps,
 	mapDispatchToProps
-)(Component);
+)(VisibleToDoListComponent);

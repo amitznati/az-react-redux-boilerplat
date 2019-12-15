@@ -2,22 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ee60a5e-cb8c-4051-8f30-19791a206352" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/az-react-redux-boilerplat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/az-react-redux-boilerplat.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/manifest.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/logo.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/sdk/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sdk/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/api/VisibleToDoListConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/visible-to-do-list/api/VisibleToDoListConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/api/VisibleToDoListApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/visible-to-do-list/api/VisibleToDoListApi.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/api/VisibleToDoListReducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/visible-to-do-list/api/VisibleToDoListReducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/api/VisibleToDoListSelectors.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/visible-to-do-list/api/VisibleToDoListSelectors.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/component/VisibleToDoList.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/visible-to-do-list/component/VisibleToDoList.component.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/component/VisibleTodoList.connect.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/visible-to-do-list/component/VisibleTodoList.connect.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/component/components/AddTodo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/visible-to-do-list/component/components/AddTodo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/component/components/Todo.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/visible-to-do-list/component/components/Todo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/component/components/TodoList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/visible-to-do-list/component/components/TodoList.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -71,7 +68,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576354542812</updated>
-      <workItem from="1576354543981" duration="12783000" />
+      <workItem from="1576354543981" duration="19062000" />
     </task>
     <servers />
   </component>

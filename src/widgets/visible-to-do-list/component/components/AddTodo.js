@@ -1,23 +1,18 @@
 import React from 'react';
 
-const AddTodo = ({ addTodo }) => {
-	let input;
-
+const AddTodo = ({ addTodo, editToDo, changeEditValue }) => {
 	return (
 		<div>
-			<form onSubmit={e => {
-				e.preventDefault();
-				if (!input.value.trim()) {
-					return;
-				}
-				addTodo(input.value);
-				input.value = '';
-			}}>
-				<input ref={node => input = node} />
-				<button type="submit">
+			<div>
+				<input
+					type="text"
+					onChange={e => changeEditValue(e.target.value)}
+					value={editToDo}
+				/>
+				<button onClick={addTodo}>
 					Add Todo
 				</button>
-			</form>
+			</div>
 		</div>
 	);
 };
