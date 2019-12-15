@@ -38,4 +38,4 @@ export const getInstance = () => {
 export default {
 	getStoreInstance,
 	getInstance
-}
+};

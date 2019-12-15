@@ -11,16 +11,16 @@ const reducer = (state = initialState, action) => {
 			toDos: [...state.toDos, {id: action.id, text: action.text}]
 		};
 		break;
-		case ActionTypes.TOGGLE_TODO: {
-			const newTodos = state.toDos.map((t) => {
-				if (t.id === action.id) {
-					t.completed = true;
-				}
-				return t;
-			});
-			newState = {...state, toDos: newTodos};
-			break;
-		}
+	case ActionTypes.TOGGLE_TODO: {
+		const newTodos = state.toDos.map((t) => {
+			if (t.id === action.id) {
+				t.completed = true;
+			}
+			return t;
+		});
+		newState = {...state, toDos: newTodos};
+		break;
+	}
 	default:
 		return newState;
 	}

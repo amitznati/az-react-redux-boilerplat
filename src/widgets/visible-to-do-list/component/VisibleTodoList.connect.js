@@ -5,15 +5,15 @@ import {getInstance} from '../../../sdk';
 const VisibleToDoListApi = getInstance().VisibleToDoListApi;
 
 const mapStateToProps = () => ({
-  	todos: VisibleToDoListApi.getVisibleTodos()
+	todos: VisibleToDoListApi.getVisibleTodos()
 });
 
 const mapDispatchToProps = () => ({
-  	toggleTodo: VisibleToDoListApi.toggleTodo,
+	toggleTodo: VisibleToDoListApi.toggleTodo,
 	addTodo: VisibleToDoListApi.addTodo
 });
 
 export default connect(
-  mapStateToProps,
-  mapDispatchToProps
+	mapStateToProps,
+	mapDispatchToProps
 )(Component);

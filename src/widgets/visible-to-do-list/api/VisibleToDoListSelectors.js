@@ -10,4 +10,4 @@ export const getToDosSelector = createSelector(sliceSelector, (slice) => {
 
 export default {
 	getToDosSelector
-}
+};

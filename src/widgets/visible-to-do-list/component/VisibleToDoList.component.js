@@ -12,6 +12,6 @@ export default class VisibleToDoListComponent extends Component {
 				<AddTodo {...{addTodo}} />
 				<TodoList {...{todos, toggleTodo}} />
 			</div>
-		)
+		);
 	}
 }
