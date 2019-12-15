@@ -1,5 +1,6 @@
 import BaseApi from '../../../sdk/BaseApi';
 import selectors from './VisibleToDoListSelectors';
+import SimpleServices from '../../../sdk/services/SimpleServices';
 
 export const VisibilityFilters = {
 	SHOW_ALL: 'SHOW_ALL',
@@ -10,7 +11,8 @@ export const VisibilityFilters = {
 export const ActionTypes = {
 	UPDATE_TODO: 'UPDATE_TODO',
 	ADD_TODO: 'ADD_TODO',
-	CHANGE_EDIT_TODO: 'CHANGE_EDIT_TODO'
+	CHANGE_EDIT_TODO: 'CHANGE_EDIT_TODO',
+	LOAD_POSTS: 'LOAD_POSTS'
 };
 let nextTodoId = 0;
 export default class VisibleToDoListApi extends BaseApi {
@@ -42,6 +44,14 @@ export default class VisibleToDoListApi extends BaseApi {
 			type: ActionTypes.UPDATE_TODO,
 			payload: newTodos
 		});
+	};
+
+	loadDummyPosts = () => {
+		return this.serviceRequest(
+			SimpleServices.getDummyPosts,
+			{},
+			ActionTypes.LOAD_POSTS
+		);
 	};
 
 

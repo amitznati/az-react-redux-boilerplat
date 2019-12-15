@@ -4,6 +4,10 @@ import TodoList from './components/TodoList';
 
 export default class VisibleToDoListComponent extends Component {
 
+	componentDidMount() {
+		const {loadDummyPosts} = this.props;
+		loadDummyPosts();
+	}
 
 	render() {
 		const {todos, toggleTodo, addTodo, editToDo, changeEditValue} = this.props;

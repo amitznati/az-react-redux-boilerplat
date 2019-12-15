@@ -12,7 +12,8 @@ const mapStateToProps = () => ({
 const mapDispatchToProps = () => ({
 	toggleTodo: VisibleToDoListApi.toggleTodo,
 	addTodo: VisibleToDoListApi.addTodo,
-	changeEditValue: VisibleToDoListApi.changeEditValue
+	changeEditValue: VisibleToDoListApi.changeEditValue,
+	loadDummyPosts: VisibleToDoListApi.loadDummyPosts
 });
 
 export default connect(
