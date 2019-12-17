@@ -3,8 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3ee60a5e-cb8c-4051-8f30-19791a206352" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sdk/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sdk/instanceHandler.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/api/VisibleToDoListConfig.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/widgets/visible-to-do-list/api/VisibleToDoListConfig.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sdk/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sdk/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sdk/instanceHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sdk/instanceHandler.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -59,7 +59,7 @@
       <option name="presentableId" value="Default" />
       <updated>1576354542812</updated>
       <workItem from="1576354543981" duration="30124000" />
-      <workItem from="1576492579319" duration="4617000" />
+      <workItem from="1576492579319" duration="4808000" />
     </task>
     <servers />
   </component>

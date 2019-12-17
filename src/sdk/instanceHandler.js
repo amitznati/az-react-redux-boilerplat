@@ -1,13 +1,7 @@
 import { createStore } from 'redux';
 import { combineReducers } from 'redux';
 import { composeWithDevTools } from 'redux-devtools-extension';
-
-/* VisibleToDoList */
-import VisibleToDoList from '../widgets/visible-to-do-list';
-
-const widgets = [
-	VisibleToDoList
-];
+import widgets from './widgets';
 
 let storeInstance;
 const createStoreInstance = () => {
