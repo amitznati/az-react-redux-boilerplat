@@ -1,3 +1,4 @@
 export default {
-	sliceName: 'VisibleToDoList'
+	sliceName: 'VisibleToDoList',
+	apiName: 'VisibleToDoListApi'
 };
