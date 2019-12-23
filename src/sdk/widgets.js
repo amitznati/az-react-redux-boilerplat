@@ -1,4 +1,4 @@
-import VisibleToDoList from '../widgets/visible-to-do-list';
+import VisibleToDoList from 'visible-to-do-list';
 
 export const widgets = [
 	VisibleToDoList

@@ -17,9 +17,9 @@
   },
   "scripts": {
     "eslint": "eslint \"./src/**/*.js\"",
-    "start:dev": "react-scripts start",
+    "start:dev": "react-app-rewired start",
     "start": "npm-run-all eslint start:dev",
-    "build:dev": "react-scripts build",
+    "build:dev": "react-app-rewired build",
     "build": "npm-run-all eslint build:dev",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
@@ -41,6 +41,7 @@
   },
   "devDependencies": {
     "eslint": "^6.7.2",
+    "react-app-rewired": "^2.1.5",
     "redux-devtools-extension": "^2.13.8"
   }
 }
