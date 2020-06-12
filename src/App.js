@@ -1,10 +1,10 @@
 import React from 'react';
-import VisibleTodoList from './widgets/visible-to-do-list/component/VisibleTodoList.connect';
+import PostsList from './widgets/PostsList/widget/PostsList.connect';
 
 const App = () => (
-	<div>
-		<VisibleTodoList />
-	</div>
+  <div>
+    <PostsList />
+  </div>
 );
 
 export default App;

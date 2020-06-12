@@ -2,11 +2,31 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="3ee60a5e-cb8c-4051-8f30-19791a206352" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/az-react-redux-boilerplat.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/az-react-redux-boilerplat.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config-overrides.js" beforeDir="false" afterPath="$PROJECT_DIR$/config-overrides.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/sdk/widgets.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sdk/widgets.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/framework/BaseService.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sdk/BaseApi.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sdk/BaseApi.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sdk/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sdk/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sdk/instanceHandler.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sdk/instanceHandler.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sdk/services/SimpleServices.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/sdk/services/SimpleServices.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/sdk/widgets.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/api/VisibleToDoListApi.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/api/VisibleToDoListConfig.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/api/VisibleToDoListReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/api/VisibleToDoListSelectors.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/component/VisibleToDoList.component.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/component/VisibleTodoList.connect.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/component/components/AddTodo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/component/components/Todo.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/component/components/TodoList.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/widgets/visible-to-do-list/index.js" beforeDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,13 +39,23 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.detected.package.standard" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
+    <property name="node.js.path.for.package.standard" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="node.js.selected.package.standard" value="" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
+    <property name="settings.editor.selected.configurable" value="editing.templates" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -35,18 +65,6 @@
       <recent name="C:\Users\amitz\Documents\GitHub\az-react-redux-boilerplat\src" />
       <recent name="C:\Users\amitz\Documents\GitHub\az-react-redux-boilerplat\src\widgets\VisibleToDoList\components" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -60,31 +78,39 @@
       <updated>1576354542812</updated>
       <workItem from="1576354543981" duration="30124000" />
       <workItem from="1576492579319" duration="8272000" />
-      <workItem from="1577102883147" duration="654000" />
+      <workItem from="1577102883147" duration="671000" />
+      <workItem from="1577358586398" duration="617000" />
+      <workItem from="1577781813690" duration="1408000" />
+      <workItem from="1578217874199" duration="40000" />
+      <workItem from="1591900890364" duration="84000" />
+      <workItem from="1591909474327" duration="4498000" />
+      <workItem from="1591950414340" duration="2395000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
-    <option name="exactExcludedFiles">
-      <list>
-        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/toBeInRangeMatcher.d.js" />
-        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/waitForExpect.spec.d.js" />
-        <option value="$PROJECT_DIR$/node_modules/wait-for-expect/lib/index.d.js" />
-      </list>
-    </option>
+    <option name="version" value="2" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="828" y="412" width="940" height="419" key="#ESLint" timestamp="1591949013432">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="828" y="412" width="940" height="419" key="#ESLint/0.0.1920.1040@0.0.1920.1040" timestamp="1591949013432" />
+    <state x="461" y="165" key="SettingsEditor" timestamp="1591952788447">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="461" y="165" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1591952788447" />
   </component>
 </project>
