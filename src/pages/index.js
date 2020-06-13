@@ -6,7 +6,9 @@ const Home = () => {
   return (
     <div>
       Home
-      <a href="/posts">posts</a>
+      <div>
+        <a href="/posts">posts</a>
+      </div>
     </div>
   );
 };
