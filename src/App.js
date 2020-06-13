@@ -1,9 +1,16 @@
 import React from 'react';
-import PostsList from './widgets/PostsList/widget/PostsList.connect';
+import { Provider } from 'react-redux';
+import {getStoreInstance} from './sdk';
+import Pages from './pages';
+import './index.scss';
+
+const store = getStoreInstance();
 
 const App = () => (
   <div>
-    <PostsList />
+    <Provider store={store}>
+      <Pages />
+    </Provider>
   </div>
 );
 

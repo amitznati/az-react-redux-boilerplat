@@ -1,7 +1,6 @@
 import {ActionTypes} from './PostsListApi';
 const initialState = {
-  toDos: [],
-  editToDo: '',
+  posts: []
 };
 const SUCCESS = '_SUCCESS';
 const reducer = (state = initialState, action) => {
@@ -12,7 +11,7 @@ const reducer = (state = initialState, action) => {
   case `${ActionTypes.FETCH_POSTS}${SUCCESS}`:
     newState = {
       ...state,
-      posts: {...payload},
+      posts: [...payload],
     };
     break;
   default:

@@ -1,5 +1,1 @@
-import PostsList from './PostsList/widget/PostsList.connect';
-
-export default [
-  PostsList
-];
+export {default as PostsList} from './PostsList/widget/PostsList.connect';
