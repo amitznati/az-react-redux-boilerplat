@@ -1,17 +1,7 @@
 import * as React from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import Posts from './Posts';
-
-const Home = () => {
-  return (
-    <div>
-      Home
-      <div>
-        <a href="/posts">posts</a>
-      </div>
-    </div>
-  );
-};
+import Home from './Home';
 
 export const Index = () => {
   return (
