@@ -7,9 +7,9 @@ class SimpleServices {
     this.serviceBase = commonConfig.useMocks ? MockService : BaseService;
   }
 
-	getDummyPostsUrl = () => ('https://jsonplaceholder.typicode.com/posts');
+  getDummyPostsUrl = () => ('https://jsonplaceholder.typicode.com/posts');
 
-	getDummyPosts = ({config}) => (this.serviceBase.ajax.get({url: this.getDummyPostsUrl(), config}));
+  getDummyPosts = ({config}) => (this.serviceBase.ajax.get({url: this.getDummyPostsUrl(), config}));
 }
 
 export default new SimpleServices();

@@ -1,13 +1,15 @@
 import * as React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Posts from './Posts';
 import Home from './Home';
 
 export const Index = () => {
   return (
     <Router>
-      <Route exact path="/" component={ Home } />
-      <Route exact path="/posts" component={ Posts } />
+      <Routes>
+        <Route exact path="/" element={ <Home /> } />
+        <Route exact path="/posts" element={ <Posts /> } />
+      </Routes>
     </Router>
   );
 };

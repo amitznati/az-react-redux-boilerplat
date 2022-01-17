@@ -21,5 +21,5 @@ export default class PostsListApi extends BaseApi {
       {},
       ActionTypes.FETCH_POSTS
     );
-  }
+  };
 }
