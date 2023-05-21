@@ -1,46 +1,36 @@
 {
   "name": "az-react-redux-boilerplat",
-  "version": "0.0.1",
   "private": false,
+  "version": "0.0.1",
   "scripts": {
-    "eslint": "eslint \"./src/**/*.js\"",
-    "start:dev": "react-app-rewired start",
-    "start": "react-scripts start",
-    "build:dev": "react-app-rewired build",
-    "build": "npm-run-all eslint build:dev",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "dev": "vite",
+    "build": "vite build",
+    "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
   },
   "dependencies": {
-    "axios": "^1.1.3",
+    "@reduxjs/toolkit": "^1.9.5",
+    "axios": "^1.4.0",
+    "daisyui": "^2.51.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-redux": "^8.0.4",
-    "react-router-dom": "^6.4.2",
-    "react-scripts": "^5.0.1",
-    "redux": "^4.2.0",
-    "reselect": "^4.1.6",
-    "sass": "^1.55.0"
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.11.2",
+    "redux": "^4.2.1",
+    "reselect": "^4.1.8"
   },
   "devDependencies": {
+    "@types/react": "^18.0.28",
+    "@types/react-dom": "^18.0.11",
+    "@vitejs/plugin-react": "^4.0.0",
+    "autoprefixer": "^10.4.14",
     "copy-dir": "^1.3.0",
-    "npm-run-all": "^4.1.5",
-    "react-app-rewired": "^2.2.1",
-    "redux-devtools-extension": "^2.13.9"
+    "eslint": "^8.41.0",
+    "eslint-config-react-app": "^7.0.1",
+    "postcss": "^8.4.23",
+    "sass": "^1.62.1",
+    "tailwindcss": "^3.3.2",
+    "vite": "^4.3.2",
+    "vite-plugin-eslint": "^1.8.1"
   }
 }

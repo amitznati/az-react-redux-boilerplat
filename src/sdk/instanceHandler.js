@@ -1,6 +1,4 @@
-import {createStore} from 'redux';
-import {combineReducers} from 'redux';
-import {composeWithDevTools} from 'redux-devtools-extension';
+import {configureStore} from '@reduxjs/toolkit';
 import widgets from '../widgets/widgetsApis';
 import baseReducer from './baseReducer';
 
@@ -11,12 +9,9 @@ const createStoreInstance = () => {
     reducerMap[widget.config.sliceName] = widget.reducer;
   });
   reducerMap.general = baseReducer;
-  return createStore(
-    combineReducers(reducerMap),
-    // eslint-disable-next-line no-undef
-
-    (!process.env.NODE_ENV || process.env.NODE_ENV === 'development') && composeWithDevTools(),
-  );
+  return configureStore({
+      reducer: reducerMap
+  });
 };
 export const getStoreInstance = () => {
   if (!storeInstance) {

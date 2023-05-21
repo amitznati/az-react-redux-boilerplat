@@ -1,12 +1,11 @@
 import {connect} from 'react-redux';
-import React from 'react';
-
+import '../../styles/widgets/main-loader.scss'
 function SpinnerWidget({spinnerOn}) {
   if (!spinnerOn) {
     return <div />;
   }
   return (
-    <div className="container">
+    <div className="loader-container">
       <div className="loader" />
     </div>
   );
