@@ -13,7 +13,7 @@ type PostsListMainViewProps = {
 export default function PostsListMainView({posts, fetchPosts}: PostsListMainViewProps) {
   return (
     <div>
-      <Button className="m-3" color="primary" onClick={fetchPosts}>Refresh Posts</Button>
+      <Button className="m-4" color="primary" onClick={fetchPosts}>Refresh Posts</Button>
       <ul>
         {posts.map(post => {
           return (
