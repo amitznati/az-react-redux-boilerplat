@@ -34,9 +34,7 @@ export default function Root() {
             </Dropdown>
           </Navbar.Start>
           <Navbar.Center>
-            <Button tag="a" color="ghost" className="normal-case text-xl">
-              Chat App Client
-            </Button>
+            <h1 className="text-xl">AZ React Boilerplate</h1>
           </Navbar.Center>
           <Navbar.End className="navbar-end">
             <Button color="ghost" shape="circle">
