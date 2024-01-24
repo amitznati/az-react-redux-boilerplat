@@ -9,15 +9,15 @@ module.exports = {
       {
         light: {
           ...require("daisyui/src/theming/themes")["light"],
-          primary: "#e20074",
-          secondary: "rgb(59 130 246 / 0.5)",
+          primary: "#008be2",
+          secondary: "rgba(128,246,59,0.5)",
         },
       },
       {
         dark: {
           ...require("daisyui/src/theming/themes")["dark"],
-          primary: "#e20074",
-          secondary: "rgb(59 130 246 / 0.5)",
+          primary: "#008be2",
+          secondary: "rgba(128,246,59,0.5)",
         },
       },
     ],
