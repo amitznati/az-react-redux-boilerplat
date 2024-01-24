@@ -1,17 +1,17 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Timeline, { TimelineProps } from '.'
+import Timeline, { TimelineProps } from ".";
 
 const meta: Meta<TimelineProps> = {
-  title: 'Core/Data Display/Timeline',
+  title: "Core/Data Display/Timeline",
   component: Timeline,
   parameters: {
     controls: { expanded: true },
   },
-}
+};
 
-export default meta
+export default meta;
 
 export const Default: Story<TimelineProps> = (args) => {
   return (
@@ -42,8 +42,8 @@ export const Default: Story<TimelineProps> = (args) => {
         <Timeline.End>Apple Watch</Timeline.End>
       </Timeline.Item>
     </Timeline>
-  )
-}
+  );
+};
 
 export const BottomSideOnly: Story<TimelineProps> = (args) => {
   return (
@@ -69,8 +69,8 @@ export const BottomSideOnly: Story<TimelineProps> = (args) => {
         <Timeline.End>Apple Watch</Timeline.End>
       </Timeline.Item>
     </Timeline>
-  )
-}
+  );
+};
 
 export const TopSideOnly: Story<TimelineProps> = (args) => {
   return (
@@ -96,8 +96,8 @@ export const TopSideOnly: Story<TimelineProps> = (args) => {
         <Timeline.Middle />
       </Timeline.Item>
     </Timeline>
-  )
-}
+  );
+};
 
 export const DifferentSides: Story<TimelineProps> = (args) => {
   return (
@@ -123,8 +123,8 @@ export const DifferentSides: Story<TimelineProps> = (args) => {
         <Timeline.Middle />
       </Timeline.Item>
     </Timeline>
-  )
-}
+  );
+};
 
 export const ColorfulLines: Story<TimelineProps> = (args) => {
   return (
@@ -154,8 +154,8 @@ export const ColorfulLines: Story<TimelineProps> = (args) => {
         <Timeline.Middle />
       </Timeline.Item>
     </Timeline>
-  )
-}
+  );
+};
 
 export const WithoutIcons: Story<TimelineProps> = (args) => {
   return (
@@ -176,8 +176,8 @@ export const WithoutIcons: Story<TimelineProps> = (args) => {
         <Timeline.Start box={true}>Apple Watch</Timeline.Start>
       </Timeline.Item>
     </Timeline>
-  )
-}
+  );
+};
 
 export const Vertical: Story<TimelineProps> = (args) => {
   return (
@@ -208,11 +208,11 @@ export const Vertical: Story<TimelineProps> = (args) => {
         <Timeline.End>Apple Watch</Timeline.End>
       </Timeline.Item>
     </Timeline>
-  )
-}
+  );
+};
 Vertical.args = {
   vertical: true,
-}
+};
 
 export const VerticalWithBottomSideOnly: Story<TimelineProps> = (args) => {
   return (
@@ -238,11 +238,11 @@ export const VerticalWithBottomSideOnly: Story<TimelineProps> = (args) => {
         <Timeline.End>Apple Watch</Timeline.End>
       </Timeline.Item>
     </Timeline>
-  )
-}
+  );
+};
 VerticalWithBottomSideOnly.args = {
   vertical: true,
-}
+};
 export const VerticalWithTopSideOnly: Story<TimelineProps> = (args) => {
   return (
     <Timeline {...args}>
@@ -267,11 +267,11 @@ export const VerticalWithTopSideOnly: Story<TimelineProps> = (args) => {
         <Timeline.Middle />
       </Timeline.Item>
     </Timeline>
-  )
-}
+  );
+};
 VerticalWithTopSideOnly.args = {
   vertical: true,
-}
+};
 
 export const VerticalDifferentSides: Story<TimelineProps> = (args) => {
   return (
@@ -297,11 +297,11 @@ export const VerticalDifferentSides: Story<TimelineProps> = (args) => {
         <Timeline.Middle />
       </Timeline.Item>
     </Timeline>
-  )
-}
+  );
+};
 VerticalDifferentSides.args = {
   vertical: true,
-}
+};
 
 export const VerticalColorfulLines: Story<TimelineProps> = (args) => {
   return (
@@ -331,11 +331,11 @@ export const VerticalColorfulLines: Story<TimelineProps> = (args) => {
         <Timeline.Middle />
       </Timeline.Item>
     </Timeline>
-  )
-}
+  );
+};
 VerticalColorfulLines.args = {
   vertical: true,
-}
+};
 
 export const VerticalWithoutIcons: Story<TimelineProps> = (args) => {
   return (
@@ -356,11 +356,11 @@ export const VerticalWithoutIcons: Story<TimelineProps> = (args) => {
         <Timeline.Start box={true}>Apple Watch</Timeline.Start>
       </Timeline.Item>
     </Timeline>
-  )
-}
+  );
+};
 VerticalWithoutIcons.args = {
   vertical: true,
-}
+};
 
 export const Responsive: Story<TimelineProps> = (args) => {
   return (
@@ -391,11 +391,11 @@ export const Responsive: Story<TimelineProps> = (args) => {
         <Timeline.End>Apple Watch</Timeline.End>
       </Timeline.Item>
     </Timeline>
-  )
-}
+  );
+};
 Responsive.args = {
   responsive: true,
-}
+};
 
 export const IconSnappedToTheStart: Story<TimelineProps> = (args) => {
   return (
@@ -464,10 +464,10 @@ export const IconSnappedToTheStart: Story<TimelineProps> = (args) => {
         <Timeline.Middle />
       </Timeline.Item>
     </Timeline>
-  )
-}
+  );
+};
 IconSnappedToTheStart.args = {
   snap: true,
   vertical: true,
-  className: 'max:md:timeline-compact',
-}
+  className: "max:md:timeline-compact",
+};

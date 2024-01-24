@@ -1,12 +1,12 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Footer, { FooterProps } from '.'
+import Footer, { FooterProps } from ".";
 
 export default {
-  title: 'Core/Layout/Footer',
+  title: "Core/Layout/Footer",
   component: Footer,
-} as Meta
+} as Meta;
 
 const Template: Story<FooterProps> = (args) => {
   return (
@@ -32,16 +32,16 @@ const Template: Story<FooterProps> = (args) => {
         <a className="link link-hover">Cookie policy</a>
       </div>
     </Footer>
-  )
-}
+  );
+};
 
-export const Default = Template.bind({})
-Default.args = {}
+export const Default = Template.bind({});
+Default.args = {};
 
-export const Centered = Template.bind({})
+export const Centered = Template.bind({});
 Centered.args = {
-  center: true
-}
+  center: true,
+};
 
 export const WithLogo: Story<FooterProps> = (args) => {
   return (
@@ -86,8 +86,8 @@ export const WithLogo: Story<FooterProps> = (args) => {
         <a className="link link-hover">Cookie policy</a>
       </div>
     </Footer>
-  )
-}
+  );
+};
 
 export const WithLogoAndLightBackground: Story<FooterProps> = (args) => {
   return (
@@ -132,5 +132,5 @@ export const WithLogoAndLightBackground: Story<FooterProps> = (args) => {
         <a className="link link-hover">Cookie policy</a>
       </div>
     </Footer>
-  )
-}
+  );
+};

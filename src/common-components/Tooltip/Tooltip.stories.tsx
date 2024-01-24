@@ -1,13 +1,13 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Tooltip, { TooltipProps } from '.'
-import Button from '../Button'
+import Tooltip, { TooltipProps } from ".";
+import Button from "../Button";
 
 export default {
-  title: 'Core/Feedback/Tooltip',
+  title: "Core/Feedback/Tooltip",
   component: Tooltip,
-} as Meta
+} as Meta;
 
 const Template: Story<TooltipProps> = (args) => {
   return (
@@ -16,40 +16,40 @@ const Template: Story<TooltipProps> = (args) => {
         <Button>Hover me</Button>
       </Tooltip>
     </div>
-  )
-}
+  );
+};
 
-export const Default = Template.bind({})
+export const Default = Template.bind({});
 Default.args = {
-  message: 'hello',
-}
+  message: "hello",
+};
 
-export const ForceOpen = Template.bind({})
+export const ForceOpen = Template.bind({});
 ForceOpen.args = {
-  message: 'hello',
+  message: "hello",
   open: true,
-}
+};
 
-export const Bottom = Template.bind({})
+export const Bottom = Template.bind({});
 Bottom.args = {
-  message: 'hello',
+  message: "hello",
   open: true,
-  position: 'bottom',
-}
+  position: "bottom",
+};
 
-export const Left = Template.bind({})
+export const Left = Template.bind({});
 Left.args = {
-  message: 'hello',
+  message: "hello",
   open: true,
-  position: 'left',
-}
+  position: "left",
+};
 
-export const Right = Template.bind({})
+export const Right = Template.bind({});
 Right.args = {
-  message: 'hello',
+  message: "hello",
   open: true,
-  position: 'right',
-}
+  position: "right",
+};
 
 export const Colors: Story<TooltipProps> = (args) => {
   return (
@@ -66,11 +66,11 @@ export const Colors: Story<TooltipProps> = (args) => {
         <Button color="accent">Accent</Button>
       </Tooltip>
     </div>
-  )
-}
+  );
+};
 Colors.args = {
   open: true,
-}
+};
 
 export const Statuses: Story<TooltipProps> = (args) => {
   return (
@@ -91,8 +91,8 @@ export const Statuses: Story<TooltipProps> = (args) => {
         <Button color="error">Error</Button>
       </Tooltip>
     </div>
-  )
-}
+  );
+};
 Statuses.args = {
   open: true,
-}
+};

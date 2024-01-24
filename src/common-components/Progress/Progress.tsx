@@ -1,33 +1,33 @@
-import { forwardRef } from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import { forwardRef } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps, ComponentColor } from '../types'
+import { IComponentBaseProps, ComponentColor } from "../types";
 
 export type ProgressProps = Omit<
   React.ProgressHTMLAttributes<HTMLProgressElement>,
-  'color'
+  "color"
 > &
   IComponentBaseProps & {
-    color?: ComponentColor
-  }
+    color?: ComponentColor;
+  };
 
 const Progress = forwardRef<HTMLProgressElement, ProgressProps>(
   ({ color, dataTheme, className, ...props }, ref): JSX.Element => {
     const classes = twMerge(
-      'progress',
+      "progress",
       className,
       clsx({
-        'progress-accent': color === 'accent',
-        'progress-error': color === 'error',
-        'progress-ghost': color === 'ghost',
-        'progress-info': color === 'info',
-        'progress-primary': color === 'primary',
-        'progress-secondary': color === 'secondary',
-        'progress-success': color === 'success',
-        'progress-warning': color === 'warning',
-      })
-    )
+        "progress-accent": color === "accent",
+        "progress-error": color === "error",
+        "progress-ghost": color === "ghost",
+        "progress-info": color === "info",
+        "progress-primary": color === "primary",
+        "progress-secondary": color === "secondary",
+        "progress-success": color === "success",
+        "progress-warning": color === "warning",
+      }),
+    );
 
     return (
       <progress
@@ -36,10 +36,10 @@ const Progress = forwardRef<HTMLProgressElement, ProgressProps>(
         data-theme={dataTheme}
         className={classes}
       />
-    )
-  }
-)
+    );
+  },
+);
 
-Progress.displayName = 'Progress'
+Progress.displayName = "Progress";
 
-export default Progress
+export default Progress;

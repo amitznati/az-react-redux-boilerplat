@@ -1,22 +1,22 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Range, { RangeProps } from '.'
+import Range, { RangeProps } from ".";
 
 export default {
-  title: 'Core/Data Input/Range',
+  title: "Core/Data Input/Range",
   component: Range,
-} as Meta
+} as Meta;
 
 const Template: Story<RangeProps> = (args) => {
-  return <Range {...args} />
-}
+  return <Range {...args} />;
+};
 
-export const Default = Template.bind({})
-Default.args = {}
+export const Default = Template.bind({});
+Default.args = {};
 
-export const WithSteps = Template.bind({})
-WithSteps.args = { step: 25 }
+export const WithSteps = Template.bind({});
+WithSteps.args = { step: 25 };
 
 export const Colors: Story<RangeProps> = (args) => {
   return (
@@ -29,9 +29,9 @@ export const Colors: Story<RangeProps> = (args) => {
       <Range {...args} defaultValue="70" color="info" />
       <Range {...args} defaultValue="80" color="error" />
     </div>
-  )
-}
-Colors.args = {}
+  );
+};
+Colors.args = {};
 
 export const Sizes: Story<RangeProps> = (args) => {
   return (
@@ -41,5 +41,5 @@ export const Sizes: Story<RangeProps> = (args) => {
       <Range {...args} defaultValue="60" size="md" />
       <Range {...args} defaultValue="70" size="lg" />
     </div>
-  )
-}
+  );
+};

@@ -1,20 +1,20 @@
-import { ReactNode } from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import { ReactNode } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps } from "../types";
 
 export type DrawerProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
-    side: ReactNode
-    open?: boolean
-    end?: boolean
-    toggleClassName?: string
-    contentClassName?: string
-    sideClassName?: string
-    overlayClassName?: string
-    onClickOverlay?: () => void
-  }
+    side: ReactNode;
+    open?: boolean;
+    end?: boolean;
+    toggleClassName?: string;
+    contentClassName?: string;
+    sideClassName?: string;
+    overlayClassName?: string;
+    onClickOverlay?: () => void;
+  };
 
 const Drawer = ({
   children,
@@ -31,12 +31,12 @@ const Drawer = ({
   ...props
 }: DrawerProps) => {
   const classes = twMerge(
-    'drawer',
+    "drawer",
     className,
     clsx({
-      'drawer-end': end,
-    })
-  )
+      "drawer-end": end,
+    }),
+  );
 
   return (
     <div
@@ -47,20 +47,20 @@ const Drawer = ({
     >
       <input
         type="checkbox"
-        className={clsx('drawer-toggle', toggleClassName)}
+        className={clsx("drawer-toggle", toggleClassName)}
         checked={open}
         readOnly
       />
-      <div className={clsx('drawer-content', contentClassName)}>{children}</div>
-      <div className={clsx('drawer-side', sideClassName)}>
+      <div className={clsx("drawer-content", contentClassName)}>{children}</div>
+      <div className={clsx("drawer-side", sideClassName)}>
         <label
-          className={clsx('drawer-overlay', overlayClassName)}
+          className={clsx("drawer-overlay", overlayClassName)}
           onClick={onClickOverlay}
         ></label>
         {side}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Drawer
+export default Drawer;

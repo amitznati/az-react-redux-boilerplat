@@ -1,20 +1,20 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Hero, { HeroProps } from '.'
-import Button from '../Button'
-import Card from '../Card'
-import Input from '../Input'
-import Form from '../Form'
-import Link from '../Link'
+import Hero, { HeroProps } from ".";
+import Button from "../Button";
+import Card from "../Card";
+import Input from "../Input";
+import Form from "../Form";
+import Link from "../Link";
 
 export default {
-  title: 'Core/Layout/Hero',
+  title: "Core/Layout/Hero",
   component: Hero,
   args: {
-    className: 'bg-base-200 min-h-[30rem]',
+    className: "bg-base-200 min-h-[30rem]",
   },
-} as Meta
+} as Meta;
 
 export const Default: Story<HeroProps> = (args) => {
   return (
@@ -32,8 +32,8 @@ export const Default: Story<HeroProps> = (args) => {
         </div>
       </Hero.Content>
     </Hero>
-  )
-}
+  );
+};
 
 export const HeroWithFigure: Story<HeroProps> = (args) => {
   return (
@@ -54,8 +54,8 @@ export const HeroWithFigure: Story<HeroProps> = (args) => {
         </div>
       </Hero.Content>
     </Hero>
-  )
-}
+  );
+};
 
 export const HeroWithForm: Story<HeroProps> = (args) => {
   return (
@@ -99,15 +99,15 @@ export const HeroWithForm: Story<HeroProps> = (args) => {
         </Card>
       </Hero.Content>
     </Hero>
-  )
-}
+  );
+};
 
 export const HeroWithOverlayImage: Story<HeroProps> = (args) => {
   return (
     <Hero
       style={{
         backgroundImage:
-          'url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)',
+          "url(https://daisyui.com/images/stock/photo-1507358522600-9f71e620c44e.jpg)",
       }}
     >
       <Hero.Overlay {...args} />
@@ -124,8 +124,8 @@ export const HeroWithOverlayImage: Story<HeroProps> = (args) => {
         </div>
       </Hero.Content>
     </Hero>
-  )
-}
+  );
+};
 
-HeroWithOverlayImage.args = { className: 'bg-opacity-60' }
-Default.args = {}
+HeroWithOverlayImage.args = { className: "bg-opacity-60" };
+Default.args = {};

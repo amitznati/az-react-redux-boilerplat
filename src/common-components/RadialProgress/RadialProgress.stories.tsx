@@ -1,33 +1,33 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import RadialProgress, { RadialProgressProps } from '.'
+import RadialProgress, { RadialProgressProps } from ".";
 
 export default {
-  title: 'Core/Feedback/Radial Progress',
+  title: "Core/Feedback/Radial Progress",
   component: RadialProgress,
-} as Meta
+} as Meta;
 
 const Template: Story<RadialProgressProps> = (args) => {
-  return <RadialProgress {...args}>{args.value}%</RadialProgress>
-}
+  return <RadialProgress {...args}>{args.value}%</RadialProgress>;
+};
 
-export const Default = Template.bind({})
+export const Default = Template.bind({});
 Default.args = {
   value: 75,
-}
+};
 
-export const CustomColor = Template.bind({})
+export const CustomColor = Template.bind({});
 CustomColor.args = {
   value: 75,
-  color: 'primary',
-}
+  color: "primary",
+};
 
-export const BackgroundColor = Template.bind({})
+export const BackgroundColor = Template.bind({});
 BackgroundColor.args = {
   value: 75,
-  className: 'bg-primary text-primary-content border-4 border-primary',
-}
+  className: "bg-primary text-primary-content border-4 border-primary",
+};
 
 export const CustomSizeAndThickness: Story<RadialProgressProps> = (args) => {
   return (
@@ -39,6 +39,6 @@ export const CustomSizeAndThickness: Story<RadialProgressProps> = (args) => {
         80%
       </RadialProgress>
     </div>
-  )
-}
-CustomSizeAndThickness.args = {}
+  );
+};
+CustomSizeAndThickness.args = {};

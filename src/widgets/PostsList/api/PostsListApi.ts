@@ -1,10 +1,10 @@
-import BaseApi from '../../../sdk/BaseApi';
-import selectors from './PostsListSelectors';
-import SimpleServices from '../../../sdk/services/SimpleServices';
+import BaseApi from "../../../sdk/BaseApi";
+import selectors from "./PostsListSelectors";
+import SimpleServices from "../../../sdk/services/SimpleServices";
 
 export const ActionTypes = {
-  UPDATE_POSTS: 'UPDATE_POSTS',
-  FETCH_POSTS: 'FETCH_POSTS'
+  UPDATE_POSTS: "UPDATE_POSTS",
+  FETCH_POSTS: "FETCH_POSTS",
 };
 export default class PostsListApi extends BaseApi {
   updatePosts = (posts: Array<string>) => {
@@ -19,7 +19,7 @@ export default class PostsListApi extends BaseApi {
     return this.serviceRequest(
       SimpleServices.getDummyPosts,
       {},
-      ActionTypes.FETCH_POSTS
+      ActionTypes.FETCH_POSTS,
     );
   };
 }

@@ -1,5 +1,5 @@
-import PostsList from './PostsList';
+import PostsList from "./PostsList";
 
-export default [
-  PostsList
-];
+const widgetsAPIs = [PostsList];
+
+export default widgetsAPIs;

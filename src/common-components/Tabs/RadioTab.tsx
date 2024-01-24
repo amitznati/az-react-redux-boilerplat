@@ -1,17 +1,17 @@
-import React, { forwardRef } from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import React, { forwardRef } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 export type RadioTabProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
-  'type'
+  "type"
 > & {
-  active?: boolean
-  disabled?: boolean
-  label: string
-  name: string
-  contentClassName?: string
-}
+  active?: boolean;
+  disabled?: boolean;
+  label: string;
+  name: string;
+  contentClassName?: string;
+};
 
 const RadioTab = forwardRef<HTMLInputElement, RadioTabProps>(
   (
@@ -25,17 +25,17 @@ const RadioTab = forwardRef<HTMLInputElement, RadioTabProps>(
       contentClassName,
       ...props
     },
-    ref
+    ref,
   ): JSX.Element => {
     const classes = twMerge(
-      'tab',
+      "tab",
       className,
       clsx({
-        'tab-active': active,
-        'tab-disabled': disabled,
-      })
-    )
-    const contentClasses = twMerge('tab-content', contentClassName)
+        "tab-active": active,
+        "tab-disabled": disabled,
+      }),
+    );
+    const contentClasses = twMerge("tab-content", contentClassName);
 
     return (
       <>
@@ -51,8 +51,8 @@ const RadioTab = forwardRef<HTMLInputElement, RadioTabProps>(
         />
         <div className={contentClasses}>{children}</div>
       </>
-    )
-  }
-)
+    );
+  },
+);
 
-export default RadioTab
+export default RadioTab;

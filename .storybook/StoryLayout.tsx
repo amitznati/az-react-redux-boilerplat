@@ -1,29 +1,29 @@
-import { ReactNode, useEffect, useMemo } from 'react'
-import Highlight, { defaultProps } from 'prism-react-renderer';
-import theme from 'prism-react-renderer/themes/vsDark';
+import { ReactNode, useEffect, useMemo } from "react";
+import Highlight, { defaultProps } from "prism-react-renderer";
+import theme from "prism-react-renderer/themes/vsDark";
 
-import { useGlobalTheme } from './theming'
+import { useGlobalTheme } from "./theming";
 
-import CodeMockup from '../src/common-components/CodeMockup'
-import Navbar from '../src/common-components/Navbar'
-import Tabs from '../src/common-components/Tabs'
-import Theme from '../src/common-components/Theme'
+import CodeMockup from "../src/common-components/CodeMockup";
+import Navbar from "../src/common-components/Navbar";
+import Tabs from "../src/common-components/Tabs";
+import Theme from "../src/common-components/Theme";
 
 type Props = {
-  children: ReactNode | ReactNode[]
-  title: string
-  description: string
-  source: string
-}
+  children: ReactNode | ReactNode[];
+  title: string;
+  description: string;
+  source: string;
+};
 
 const StoryLayout = ({ children, title, description, source }: Props) => {
-  const globalTheme = useGlobalTheme()
+  const globalTheme = useGlobalTheme();
 
   useEffect(() => {
     document
-      .getElementsByTagName('html')[0]
-      .setAttribute('data-theme', globalTheme)
-  }, [globalTheme])
+      .getElementsByTagName("html")[0]
+      .setAttribute("data-theme", globalTheme);
+  }, [globalTheme]);
 
   const Code = () =>
     useMemo(
@@ -42,8 +42,8 @@ const StoryLayout = ({ children, title, description, source }: Props) => {
           )}
         </Highlight>
       ),
-      [theme, source]
-    )
+      [theme, source],
+    );
 
   return (
     <Theme dataTheme={globalTheme} className="w-full h-screen p-8 bg-base-100">
@@ -101,7 +101,7 @@ const StoryLayout = ({ children, title, description, source }: Props) => {
         </div>
       </div>
     </Theme>
-  )
-}
+  );
+};
 
-export default StoryLayout
+export default StoryLayout;

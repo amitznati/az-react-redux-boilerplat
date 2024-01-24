@@ -1,3 +1,5 @@
-export default {
-  useMocks: false
+const config = {
+  useMocks: false,
 };
+
+export default config;

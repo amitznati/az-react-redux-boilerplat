@@ -1,9 +1,9 @@
-import { StoryFn as Story, Meta } from '@storybook/react'
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import BottomNavigation, { BottomNavigationProps } from '.'
+import BottomNavigation, { BottomNavigationProps } from ".";
 
 export default {
-  title: 'Core/Navigation/BottomNavigation',
+  title: "Core/Navigation/BottomNavigation",
   component: BottomNavigation,
   parameters: {
     controls: { expanded: true },
@@ -14,9 +14,9 @@ export default {
     },
   },
   args: {
-    className: 'relative',
+    className: "relative",
   },
-} as Meta
+} as Meta;
 
 export const Default: Story<BottomNavigationProps> = (args) => {
   return (
@@ -70,8 +70,8 @@ export const Default: Story<BottomNavigationProps> = (args) => {
         </svg>
       </BottomNavigation.Item>
     </BottomNavigation>
-  )
-}
+  );
+};
 
 export const BrandColors: Story<BottomNavigationProps> = (args) => {
   return (
@@ -228,8 +228,8 @@ export const BrandColors: Story<BottomNavigationProps> = (args) => {
         </BottomNavigation.Item>
       </BottomNavigation>
     </>
-  )
-}
+  );
+};
 
 export const StateColors: Story<BottomNavigationProps> = (args) => {
   return (
@@ -438,8 +438,8 @@ export const StateColors: Story<BottomNavigationProps> = (args) => {
         </BottomNavigation.Item>
       </BottomNavigation>
     </>
-  )
-}
+  );
+};
 
 export const Title: Story<BottomNavigationProps> = (args) => {
   return (
@@ -496,8 +496,8 @@ export const Title: Story<BottomNavigationProps> = (args) => {
         <BottomNavigation.Label>Statics</BottomNavigation.Label>
       </BottomNavigation.Item>
     </BottomNavigation>
-  )
-}
+  );
+};
 
 export const CustomColor: Story<BottomNavigationProps> = (args) => {
   return (
@@ -557,8 +557,8 @@ export const CustomColor: Story<BottomNavigationProps> = (args) => {
         <BottomNavigation.Label>Statics</BottomNavigation.Label>
       </BottomNavigation.Item>
     </BottomNavigation>
-  )
-}
+  );
+};
 
 export const Sizes: Story<BottomNavigationProps> = (args) => {
   return (
@@ -767,13 +767,13 @@ export const Sizes: Story<BottomNavigationProps> = (args) => {
         </BottomNavigation.Item>
       </BottomNavigation>
     </>
-  )
-}
+  );
+};
 Sizes.argTypes = {
   size: {
     control: false,
   },
-}
+};
 
 export const DisabledButtons: Story<BottomNavigationProps> = (args) => {
   return (
@@ -885,5 +885,5 @@ export const DisabledButtons: Story<BottomNavigationProps> = (args) => {
         </BottomNavigation.Item>
       </BottomNavigation>
     </>
-  )
-}
+  );
+};

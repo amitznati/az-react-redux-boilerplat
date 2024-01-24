@@ -1,14 +1,14 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Stats, { StatsProps } from '.'
-import Avatar from '../Avatar'
-import Button from '../Button'
+import Stats, { StatsProps } from ".";
+import Avatar from "../Avatar";
+import Button from "../Button";
 
 export default {
-  title: 'Core/Data Display/Stats',
+  title: "Core/Data Display/Stats",
   component: Stats,
-} as Meta
+} as Meta;
 
 export const Default: Story<StatsProps> = (args) => {
   return (
@@ -21,8 +21,8 @@ export const Default: Story<StatsProps> = (args) => {
         </Stats.Stat.Item>
       </Stats.Stat>
     </Stats>
-  )
-}
+  );
+};
 
 export const IconsOrImage: Story<StatsProps> = (args) => {
   return (
@@ -108,8 +108,8 @@ export const IconsOrImage: Story<StatsProps> = (args) => {
         </Stats.Stat.Item>
       </Stats.Stat>
     </Stats>
-  )
-}
+  );
+};
 
 export const CenteredItems: Story<StatsProps> = (args) => {
   return (
@@ -138,8 +138,8 @@ export const CenteredItems: Story<StatsProps> = (args) => {
         <Stats.Stat.Item variant="desc">↘︎ 90 (14%)</Stats.Stat.Item>
       </Stats.Stat>
     </Stats>
-  )
-}
+  );
+};
 
 export const Vertical: Story<StatsProps> = (args) => {
   return (
@@ -162,11 +162,11 @@ export const Vertical: Story<StatsProps> = (args) => {
         <Stats.Stat.Item variant="desc">↘︎ 90 (14%)</Stats.Stat.Item>
       </Stats.Stat>
     </Stats>
-  )
-}
+  );
+};
 Vertical.args = {
   vertical: true,
-}
+};
 
 export const Responsive: Story<StatsProps> = (args) => {
   return (
@@ -189,8 +189,8 @@ export const Responsive: Story<StatsProps> = (args) => {
         <Stats.Stat.Item variant="desc">↘︎ 90 (14%)</Stats.Stat.Item>
       </Stats.Stat>
     </Stats>
-  )
-}
+  );
+};
 
 export const CustomColorsAndButton: Story<StatsProps> = (args) => {
   return (
@@ -213,5 +213,5 @@ export const CustomColorsAndButton: Story<StatsProps> = (args) => {
         </div>
       </Stats.Stat>
     </Stats>
-  )
-}
+  );
+};

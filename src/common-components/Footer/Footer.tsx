@@ -1,25 +1,25 @@
-import React from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import React from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps } from "../types";
 
-import FooterTitle from './FooterTitle'
+import FooterTitle from "./FooterTitle";
 
 export type FooterProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
-    center?: boolean
-  }
+    center?: boolean;
+  };
 
 const Footer = React.forwardRef<HTMLDivElement, FooterProps>(
   ({ center, dataTheme, className, ...props }, ref) => {
     const classes = twMerge(
-      'footer',
+      "footer",
       className,
       clsx({
-        'footer-center': center,
-      })
-    )
+        "footer-center": center,
+      }),
+    );
 
     return (
       <div
@@ -29,8 +29,8 @@ const Footer = React.forwardRef<HTMLDivElement, FooterProps>(
         className={classes}
         ref={ref}
       />
-    )
-  }
-)
+    );
+  },
+);
 
-export default Object.assign(Footer, { Title: FooterTitle })
+export default Object.assign(Footer, { Title: FooterTitle });

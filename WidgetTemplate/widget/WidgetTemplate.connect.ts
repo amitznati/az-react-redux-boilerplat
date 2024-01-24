@@ -1,6 +1,6 @@
-import {connect} from 'react-redux';
-import {getInstance} from '../../../sdk';
-import WidgetTemplateComponent from './WidgetTemplate.component';
+import { connect } from "react-redux";
+import { getInstance } from "../../../sdk";
+import WidgetTemplateComponent from "./WidgetTemplate.component";
 
 const widgetTemplateApi = getInstance().WidgetTemplateApi;
 

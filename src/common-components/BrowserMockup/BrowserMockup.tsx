@@ -1,18 +1,18 @@
-import React, { forwardRef } from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import React, { forwardRef } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps } from "../types";
 
 export type BrowserMockupProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
-    url: string
-    variant?: 'border' | 'background'
-    inputClassName?: string
-    innerClassName?: string
-    inputRef?: React.Ref<HTMLDivElement>
-    innerRef?: React.Ref<HTMLDivElement>
-  }
+    url: string;
+    variant?: "border" | "background";
+    inputClassName?: string;
+    innerClassName?: string;
+    inputRef?: React.Ref<HTMLDivElement>;
+    innerRef?: React.Ref<HTMLDivElement>;
+  };
 
 const BrowserMockup = forwardRef<HTMLDivElement, BrowserMockupProps>(
   (
@@ -23,38 +23,38 @@ const BrowserMockup = forwardRef<HTMLDivElement, BrowserMockupProps>(
       innerClassName,
       children,
       url,
-      variant = 'border',
+      variant = "border",
       inputRef,
       innerRef,
       ...props
     },
-    ref
+    ref,
   ): JSX.Element => {
     const classes = twMerge(
-      'mockup-browser border',
+      "mockup-browser border",
       clsx({
-        'border-base-300': variant === 'border',
-        'bg-base-300': variant === 'background',
+        "border-base-300": variant === "border",
+        "bg-base-300": variant === "background",
       }),
-      className
-    )
+      className,
+    );
 
     const inputClasses = twMerge(
-      'input',
+      "input",
       clsx({
-        'border-base-300': variant === 'border',
+        "border-base-300": variant === "border",
       }),
-      inputClassName
-    )
+      inputClassName,
+    );
 
     const innerClasses = twMerge(
-      'flex justify-center px-4 py-16 ',
+      "flex justify-center px-4 py-16 ",
       clsx({
-        'border-t border-base-300': variant === 'border',
-        'bg-base-200': variant === 'background',
+        "border-t border-base-300": variant === "border",
+        "bg-base-200": variant === "background",
       }),
-      innerClassName
-    )
+      innerClassName,
+    );
 
     return (
       <div
@@ -73,10 +73,10 @@ const BrowserMockup = forwardRef<HTMLDivElement, BrowserMockupProps>(
           {children}
         </div>
       </div>
-    )
-  }
-)
+    );
+  },
+);
 
-BrowserMockup.displayName = 'BrowserMockup'
+BrowserMockup.displayName = "BrowserMockup";
 
-export default BrowserMockup
+export default BrowserMockup;

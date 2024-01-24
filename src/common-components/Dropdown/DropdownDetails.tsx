@@ -1,13 +1,13 @@
-import React from 'react'
+import React from "react";
 
-import { classesFn, DropdownProps } from './Dropdown'
+import { classesFn, DropdownProps } from "./Dropdown";
 
-import { Summary } from './DropdownToggle'
+import { Summary } from "./DropdownToggle";
 
 export type DetailsProps = Omit<
   DropdownProps<HTMLDetailsElement>,
-  'item' | 'hover'
->
+  "item" | "hover"
+>;
 const Details = React.forwardRef<HTMLDetailsElement, DetailsProps>(
   (
     {
@@ -20,7 +20,7 @@ const Details = React.forwardRef<HTMLDetailsElement, DetailsProps>(
       open,
       ...props
     },
-    ref
+    ref,
   ) => {
     return (
       <details
@@ -39,11 +39,11 @@ const Details = React.forwardRef<HTMLDetailsElement, DetailsProps>(
       >
         {children}
       </details>
-    )
-  }
-)
+    );
+  },
+);
 
-Details.displayName = 'Details'
+Details.displayName = "Details";
 export default Object.assign(Details, {
   Toggle: Summary,
-})
+});

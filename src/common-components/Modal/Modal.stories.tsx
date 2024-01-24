@@ -1,19 +1,19 @@
-import { useRef, useCallback } from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import { useRef, useCallback } from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Modal, { ModalProps } from '.'
-import Button from '../Button'
+import Modal, { ModalProps } from ".";
+import Button from "../Button";
 
 export default {
-  title: 'Core/Actions/Modal',
+  title: "Core/Actions/Modal",
   component: Modal,
-} as Meta
+} as Meta;
 
 export const Default: Story<ModalProps> = (args) => {
-  const ref = useRef<HTMLDialogElement>(null)
+  const ref = useRef<HTMLDialogElement>(null);
   const handleShow = useCallback(() => {
-    ref.current?.showModal()
-  }, [ref])
+    ref.current?.showModal();
+  }, [ref]);
   return (
     <div className="font-sans">
       <Button onClick={handleShow}>Open Modal</Button>
@@ -29,14 +29,14 @@ export const Default: Story<ModalProps> = (args) => {
         </Modal.Actions>
       </Modal>
     </div>
-  )
-}
+  );
+};
 
 export const ClickedOutside: Story<ModalProps> = (args) => {
-  const ref = useRef<HTMLDialogElement>(null)
+  const ref = useRef<HTMLDialogElement>(null);
   const handleShow = useCallback(() => {
-    ref.current?.showModal()
-  }, [ref])
+    ref.current?.showModal();
+  }, [ref]);
   return (
     <div className="font-sans">
       <Button onClick={handleShow}>Open Modal</Button>
@@ -45,17 +45,17 @@ export const ClickedOutside: Story<ModalProps> = (args) => {
         <Modal.Body>Press ESC key or click outside to close</Modal.Body>
       </Modal>
     </div>
-  )
-}
+  );
+};
 ClickedOutside.args = {
   backdrop: true,
-}
+};
 
 export const CloseButton: Story<ModalProps> = (args) => {
-  const ref = useRef<HTMLDialogElement>(null)
+  const ref = useRef<HTMLDialogElement>(null);
   const handleShow = useCallback(() => {
-    ref.current?.showModal()
-  }, [ref])
+    ref.current?.showModal();
+  }, [ref]);
   return (
     <div className="font-sans">
       <Button onClick={handleShow}>Open Modal</Button>
@@ -74,14 +74,14 @@ export const CloseButton: Story<ModalProps> = (args) => {
         <Modal.Body>Press ESC key or click on X button to close</Modal.Body>
       </Modal>
     </div>
-  )
-}
+  );
+};
 
 export const CustomWidth: Story<ModalProps> = (args) => {
-  const ref = useRef<HTMLDialogElement>(null)
+  const ref = useRef<HTMLDialogElement>(null);
   const handleShow = useCallback(() => {
-    ref.current?.showModal()
-  }, [ref])
+    ref.current?.showModal();
+  }, [ref]);
   return (
     <div className="font-sans">
       <Button onClick={handleShow}>Open Modal</Button>
@@ -97,15 +97,15 @@ export const CustomWidth: Story<ModalProps> = (args) => {
         </Modal.Actions>
       </Modal>
     </div>
-  )
-}
+  );
+};
 
 CustomWidth.args = {
-  className: 'w-11/12 max-w-5xl',
-}
+  className: "w-11/12 max-w-5xl",
+};
 
 export const UseDialogHook: Story<ModalProps> = (args) => {
-  const { Dialog, handleShow } = Modal.useDialog()
+  const { Dialog, handleShow } = Modal.useDialog();
   return (
     <div className="font-sans">
       <Button onClick={handleShow}>Open Modal</Button>
@@ -119,5 +119,5 @@ export const UseDialogHook: Story<ModalProps> = (args) => {
         </Modal.Actions>
       </Dialog>
     </div>
-  )
-}
+  );
+};

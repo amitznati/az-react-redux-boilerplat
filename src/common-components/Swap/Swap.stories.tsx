@@ -1,10 +1,10 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Swap, { SwapProps } from '.'
+import Swap, { SwapProps } from ".";
 
 export default {
-  title: 'Core/Actions/Swap',
+  title: "Core/Actions/Swap",
   component: Swap,
   argTypes: {
     onElement: {
@@ -14,19 +14,19 @@ export default {
       control: false,
     },
   },
-} as Meta
+} as Meta;
 
 const Template: Story<SwapProps> = (args) => {
-  return <Swap {...args} />
-}
+  return <Swap {...args} />;
+};
 
-export const Text = Template.bind({})
+export const Text = Template.bind({});
 Text.args = {
-  onElement: 'ON',
-  offElement: 'OFF',
-}
+  onElement: "ON",
+  offElement: "OFF",
+};
 
-export const Volume = Template.bind({})
+export const Volume = Template.bind({});
 Volume.args = {
   onElement: (
     <svg
@@ -50,9 +50,9 @@ Volume.args = {
       <path d="M3,9H7L12,4V20L7,15H3V9M16.59,12L14,9.41L15.41,8L18,10.59L20.59,8L22,9.41L19.41,12L22,14.59L20.59,16L18,13.41L15.41,16L14,14.59L16.59,12Z" />
     </svg>
   ),
-}
+};
 
-export const Hamburger = Template.bind({})
+export const Hamburger = Template.bind({});
 Hamburger.args = {
   rotate: true,
   onElement: (
@@ -77,9 +77,9 @@ Hamburger.args = {
       <path d="M64,384H448V341.33H64Zm0-106.67H448V234.67H64ZM64,128v42.67H448V128Z" />
     </svg>
   ),
-}
+};
 
-export const RotateEfect = Template.bind({})
+export const RotateEfect = Template.bind({});
 RotateEfect.args = {
   rotate: true,
   onElement: (
@@ -100,12 +100,12 @@ RotateEfect.args = {
       <path d="M21.64,13a1,1,0,0,0-1.05-.14,8.05,8.05,0,0,1-3.37.73A8.15,8.15,0,0,1,9.08,5.49a8.59,8.59,0,0,1,.25-2A1,1,0,0,0,8,2.36,10.14,10.14,0,1,0,22,14.05,1,1,0,0,0,21.64,13Zm-9.5,6.69A8.14,8.14,0,0,1,7.08,5.22v.27A10.15,10.15,0,0,0,17.22,15.63a9.79,9.79,0,0,0,2.1-.22A8.11,8.11,0,0,1,12.14,19.73Z" />
     </svg>
   ),
-}
+};
 
-export const FlipEffect = Template.bind({})
+export const FlipEffect = Template.bind({});
 FlipEffect.args = {
   flip: true,
-  className: 'text-6xl',
+  className: "text-6xl",
   onElement: <>😈</>,
   offElement: <>😇</>,
-}
+};

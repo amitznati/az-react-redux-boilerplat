@@ -1,13 +1,13 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Radio, { RadioProps } from '.'
-import Form from '../Form'
+import Radio, { RadioProps } from ".";
+import Form from "../Form";
 
 export default {
-  title: 'Core/Data Input/Radio',
+  title: "Core/Data Input/Radio",
   component: Radio,
-} as Meta
+} as Meta;
 
 const Template: Story<RadioProps> = (args) => {
   return (
@@ -15,11 +15,11 @@ const Template: Story<RadioProps> = (args) => {
       <Radio {...args} name="radio1" defaultChecked />
       <Radio {...args} name="radio1" />
     </>
-  )
-}
+  );
+};
 
-export const Default = Template.bind({})
-Default.args = {}
+export const Default = Template.bind({});
+Default.args = {};
 
 export const Colors: Story<RadioProps> = (args) => (
   <div className="flex flex-col items-center float-left gap-2">
@@ -31,11 +31,11 @@ export const Colors: Story<RadioProps> = (args) => (
     <Radio {...args} defaultChecked color="info" />
     <Radio {...args} defaultChecked color="error" />
   </div>
-)
-Colors.args = {}
+);
+Colors.args = {};
 
-export const Disabled = Template.bind({})
-Disabled.args = { disabled: true }
+export const Disabled = Template.bind({});
+Disabled.args = { disabled: true };
 
 export const WithLabelsAndForm: Story<RadioProps> = (args) => {
   return (
@@ -61,5 +61,5 @@ export const WithLabelsAndForm: Story<RadioProps> = (args) => {
         </Form.Label>
       </Form>
     </div>
-  )
-}
+  );
+};

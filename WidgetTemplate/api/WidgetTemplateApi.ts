@@ -1,8 +1,8 @@
-import BaseApi from '../../../sdk/BaseApi';
-import selectors from './WidgetTemplateSelectors';
+import BaseApi from "../../../sdk/BaseApi";
+import selectors from "./WidgetTemplateSelectors";
 
 export const ActionTypes = {
-  WidgetTemplate_UPDATE_DATA: 'WidgetTemplate_UPDATE_DATA',
+  WidgetTemplate_UPDATE_DATA: "WidgetTemplate_UPDATE_DATA",
 };
 export default class WidgetTemplateApi extends BaseApi {
   updateData = (data: any) => {

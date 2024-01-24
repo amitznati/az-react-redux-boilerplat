@@ -1,9 +1,9 @@
-import React from 'react'
+import React from "react";
 
-export type RatingItemProps = React.InputHTMLAttributes<HTMLInputElement>
+export type RatingItemProps = React.InputHTMLAttributes<HTMLInputElement>;
 
 const RatingItem = ({ ...props }: RatingItemProps): JSX.Element => {
-  return <input {...props} type="checkbox" />
-}
+  return <input {...props} type="checkbox" />;
+};
 
-export default RatingItem
+export default RatingItem;

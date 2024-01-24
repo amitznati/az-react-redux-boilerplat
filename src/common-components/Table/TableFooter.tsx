@@ -1,12 +1,12 @@
-import React, { ReactElement } from 'react'
+import React, { ReactElement } from "react";
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps } from "../types";
 
 export type TableFooterProps =
   React.TableHTMLAttributes<HTMLTableSectionElement> &
     IComponentBaseProps & {
-      children?: ReactElement[]
-    }
+      children?: ReactElement[];
+    };
 
 const TableFooter = React.forwardRef<HTMLTableSectionElement, TableFooterProps>(
   ({ children, ...props }, ref): JSX.Element => {
@@ -14,12 +14,12 @@ const TableFooter = React.forwardRef<HTMLTableSectionElement, TableFooterProps>(
       <tfoot {...props} ref={ref}>
         <tr>
           {children?.map((child, i) => {
-            return <th key={i}>{child}</th>
+            return <th key={i}>{child}</th>;
           })}
         </tr>
       </tfoot>
-    )
-  }
-)
+    );
+  },
+);
 
-export default TableFooter
+export default TableFooter;

@@ -1,27 +1,27 @@
-import { useState, useCallback } from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import { useState, useCallback } from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Drawer, { DrawerProps } from '.'
-import Button from '../Button'
-import Navbar from '../Navbar'
-import Menu from '../Menu'
+import Drawer, { DrawerProps } from ".";
+import Button from "../Button";
+import Navbar from "../Navbar";
+import Menu from "../Menu";
 
 export default {
-  title: 'Core/Layout/Drawer',
+  title: "Core/Layout/Drawer",
   component: Drawer,
   argTypes: {
     side: {
       control: false,
     },
   },
-} as Meta
+} as Meta;
 
 export const Default: Story<DrawerProps> = (args) => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
 
   const toggleVisible = useCallback(() => {
-    setVisible((visible) => !visible)
-  }, [])
+    setVisible((visible) => !visible);
+  }, []);
   return (
     <Drawer
       {...args}
@@ -42,19 +42,19 @@ export const Default: Story<DrawerProps> = (args) => {
         Open drawer
       </Button>
     </Drawer>
-  )
-}
+  );
+};
 Default.args = {
-  sideClassName: 'h-full absolute',
-  contentClassName: 'flex h-56 items-center justify-center',
-}
+  sideClassName: "h-full absolute",
+  contentClassName: "flex h-56 items-center justify-center",
+};
 
 export const Responsive: Story<DrawerProps> = (args) => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
 
   const toggleVisible = useCallback(() => {
-    setVisible((visible) => !visible)
-  }, [])
+    setVisible((visible) => !visible);
+  }, []);
   return (
     <Drawer
       {...args}
@@ -75,22 +75,22 @@ export const Responsive: Story<DrawerProps> = (args) => {
         Open drawer
       </Button>
     </Drawer>
-  )
-}
+  );
+};
 Responsive.args = {
-  className: 'lg:drawer-open',
-  sideClassName: 'h-full absolute',
-  contentClassName: 'flex h-56 items-center justify-center',
-}
+  className: "lg:drawer-open",
+  sideClassName: "h-full absolute",
+  contentClassName: "flex h-56 items-center justify-center",
+};
 
 export const NavbarMenuForDesktopSidebarDrawerForMobile: Story<DrawerProps> = (
-  args
+  args,
 ) => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
 
   const toggleVisible = useCallback(() => {
-    setVisible((visible) => !visible)
-  }, [])
+    setVisible((visible) => !visible);
+  }, []);
 
   return (
     <Drawer
@@ -140,19 +140,19 @@ export const NavbarMenuForDesktopSidebarDrawerForMobile: Story<DrawerProps> = (
       </Navbar>
       <div className="flex flex-grow items-center justify-center">Content</div>
     </Drawer>
-  )
-}
+  );
+};
 NavbarMenuForDesktopSidebarDrawerForMobile.args = {
-  className: 'h-56 rounded overflow-hidden',
-  contentClassName: 'flex flex-col',
-}
+  className: "h-56 rounded overflow-hidden",
+  contentClassName: "flex flex-col",
+};
 
 export const RightSideOfPage: Story<DrawerProps> = (args) => {
-  const [visible, setVisible] = useState(false)
+  const [visible, setVisible] = useState(false);
 
   const toggleVisible = useCallback(() => {
-    setVisible((visible) => !visible)
-  }, [])
+    setVisible((visible) => !visible);
+  }, []);
   return (
     <Drawer
       {...args}
@@ -173,10 +173,10 @@ export const RightSideOfPage: Story<DrawerProps> = (args) => {
         Open drawer
       </Button>
     </Drawer>
-  )
-}
+  );
+};
 RightSideOfPage.args = {
-  sideClassName: 'h-full absolute',
-  contentClassName: 'flex h-56 items-center justify-center',
+  sideClassName: "h-full absolute",
+  contentClassName: "flex h-56 items-center justify-center",
   end: true,
-}
+};

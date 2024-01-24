@@ -1,18 +1,18 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Badge, { BadgeProps } from '.'
-import Button from '../Button'
+import Badge, { BadgeProps } from ".";
+import Button from "../Button";
 
 export default {
-  title: 'Core/Data Display/Badge',
+  title: "Core/Data Display/Badge",
   component: Badge,
-} as Meta
+} as Meta;
 
 export const Default: Story<BadgeProps> = (args) => {
-  return <Badge {...args}>Badge</Badge>
-}
-Default.args = {}
+  return <Badge {...args}>Badge</Badge>;
+};
+Default.args = {};
 
 export const BrandColors: Story<BadgeProps> = (args) => {
   return (
@@ -34,8 +34,8 @@ export const BrandColors: Story<BadgeProps> = (args) => {
         ghost
       </Badge>
     </div>
-  )
-}
+  );
+};
 
 export const Outline: Story<BadgeProps> = (args) => {
   return (
@@ -51,11 +51,11 @@ export const Outline: Story<BadgeProps> = (args) => {
         accent
       </Badge>
     </div>
-  )
-}
+  );
+};
 Outline.args = {
-  variant: 'outline',
-}
+  variant: "outline",
+};
 
 export const Sizes: Story<BadgeProps> = (args) => {
   return (
@@ -73,8 +73,8 @@ export const Sizes: Story<BadgeProps> = (args) => {
         987,654
       </Badge>
     </div>
-  )
-}
+  );
+};
 
 export const Empty: Story<BadgeProps> = (args) => {
   return (
@@ -84,11 +84,11 @@ export const Empty: Story<BadgeProps> = (args) => {
       <Badge {...args} size="sm" />
       <Badge {...args} size="xs" />
     </div>
-  )
-}
+  );
+};
 Empty.args = {
-  color: 'primary',
-}
+  color: "primary",
+};
 
 export const StateColors: Story<BadgeProps> = (args) => {
   return (
@@ -158,11 +158,11 @@ export const StateColors: Story<BadgeProps> = (args) => {
         error
       </Badge>
     </div>
-  )
-}
+  );
+};
 StateColors.args = {
-  className: 'gap-2',
-}
+  className: "gap-2",
+};
 
 export const BadgeInText: Story<BadgeProps> = (args) => {
   return (
@@ -193,9 +193,9 @@ export const BadgeInText: Story<BadgeProps> = (args) => {
         </Badge>
       </h5>
     </div>
-  )
-}
-BadgeInText.args = {}
+  );
+};
+BadgeInText.args = {};
 
 export const BadgeInAButton: Story<BadgeProps> = (args) => {
   return (
@@ -211,6 +211,6 @@ export const BadgeInAButton: Story<BadgeProps> = (args) => {
         </Badge>
       </Button>
     </div>
-  )
-}
-BadgeInAButton.args = {}
+  );
+};
+BadgeInAButton.args = {};

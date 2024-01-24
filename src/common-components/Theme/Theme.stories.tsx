@@ -1,19 +1,19 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Theme, { ThemeProps } from '.'
-import ThemeItem from './ThemeItem'
+import Theme, { ThemeProps } from ".";
+import ThemeItem from "./ThemeItem";
 
-import { DEFAULT_THEMES } from '../defaultThemes'
-import { useTheme } from './useTheme'
+import { DEFAULT_THEMES } from "../defaultThemes";
+import { useTheme } from "./useTheme";
 
 export default {
-  title: 'Core/Utils/Theme',
+  title: "Core/Utils/Theme",
   component: Theme,
-} as Meta
+} as Meta;
 
 export const Default: Story<ThemeProps> = (args) => {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme();
 
   return (
     <div>
@@ -29,22 +29,22 @@ export const Default: Story<ThemeProps> = (args) => {
             selected={t === theme}
             tabIndex={0}
             onClick={() => {
-                document
-                .getElementsByTagName('html')[0]
-                .setAttribute('data-theme', t)
-              window.localStorage.setItem('sb-react-daisyui-preview-theme', t)
-              setTheme(t)
+              document
+                .getElementsByTagName("html")[0]
+                .setAttribute("data-theme", t);
+              window.localStorage.setItem("sb-react-daisyui-preview-theme", t);
+              setTheme(t);
             }}
           />
         ))}
       </div>
     </div>
-  )
-}
-Default.args = {}
+  );
+};
+Default.args = {};
 
 export const WithInitialValue: Story<ThemeProps> = (args) => {
-  const { theme, setTheme } = useTheme('corporate')
+  const { theme, setTheme } = useTheme("corporate");
 
   return (
     <div className="flex flex-wrap gap-4">
@@ -55,15 +55,15 @@ export const WithInitialValue: Story<ThemeProps> = (args) => {
         tabIndex={0}
       />
     </div>
-  )
-}
-WithInitialValue.args = {}
+  );
+};
+WithInitialValue.args = {};
 
 export const NestedThemes: Story<ThemeProps> = (args) => {
-  const { theme, setTheme } = useTheme()
+  const { theme, setTheme } = useTheme();
 
   const renderNestedThemes = (themes: readonly string[]) => {
-    const nodes: React.ReactNode[] = []
+    const nodes: React.ReactNode[] = [];
 
     for (let i = 0; i < themes.length; i += 2) {
       nodes.push(
@@ -76,16 +76,16 @@ export const NestedThemes: Story<ThemeProps> = (args) => {
           selected={themes[i] === theme}
           tabIndex={0}
           onClick={(e) => {
-            e.stopPropagation()
+            e.stopPropagation();
 
             document
-              .getElementsByTagName('html')[0]
-              .setAttribute('data-theme', themes[i])
+              .getElementsByTagName("html")[0]
+              .setAttribute("data-theme", themes[i]);
             window.localStorage.setItem(
-              'sb-react-daisyui-preview-theme',
-              themes[i]
-            )
-            setTheme(themes[i])
+              "sb-react-daisyui-preview-theme",
+              themes[i],
+            );
+            setTheme(themes[i]);
           }}
         >
           <ThemeItem
@@ -97,24 +97,24 @@ export const NestedThemes: Story<ThemeProps> = (args) => {
             selected={themes[i + 1] === theme}
             tabIndex={0}
             onClick={(e) => {
-              e.stopPropagation()
+              e.stopPropagation();
 
               document
-                .getElementsByTagName('html')[0]
-                .setAttribute('data-theme', themes[i + 1])
+                .getElementsByTagName("html")[0]
+                .setAttribute("data-theme", themes[i + 1]);
               window.localStorage.setItem(
-                'sb-react-daisyui-preview-theme',
-                themes[i + 1]
-              )
-              setTheme(themes[i + 1])
+                "sb-react-daisyui-preview-theme",
+                themes[i + 1],
+              );
+              setTheme(themes[i + 1]);
             }}
           />
-        </ThemeItem>
-      )
+        </ThemeItem>,
+      );
     }
 
-    return <div className="flex flex-wrap gap-4">{nodes}</div>
-  }
+    return <div className="flex flex-wrap gap-4">{nodes}</div>;
+  };
 
   return (
     <div>
@@ -123,6 +123,6 @@ export const NestedThemes: Story<ThemeProps> = (args) => {
         {renderNestedThemes(DEFAULT_THEMES)}
       </div>
     </div>
-  )
-}
-NestedThemes.args = {}
+  );
+};
+NestedThemes.args = {};

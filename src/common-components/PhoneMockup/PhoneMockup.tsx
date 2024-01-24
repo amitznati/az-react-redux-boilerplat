@@ -1,33 +1,33 @@
-import { forwardRef } from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import { forwardRef } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps, ComponentColor } from '../types'
+import { IComponentBaseProps, ComponentColor } from "../types";
 
 export type PhoneMockupProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
-    color?: Omit<ComponentColor, 'ghost'>
-    innerProps?: React.HTMLAttributes<HTMLDivElement>
-    innerRef?: React.Ref<HTMLDivElement>
-  }
+    color?: Omit<ComponentColor, "ghost">;
+    innerProps?: React.HTMLAttributes<HTMLDivElement>;
+    innerRef?: React.Ref<HTMLDivElement>;
+  };
 
 const PhoneMockup = forwardRef<HTMLDivElement, PhoneMockupProps>(
   (
     { color, dataTheme, className, children, innerRef, innerProps, ...props },
-    ref
+    ref,
   ): JSX.Element => {
     const classes = twMerge(
-      'mockup-phone',
+      "mockup-phone",
       clsx({
-        'border-primary': color === 'primary',
-        'border-secondary': color === 'secondary',
-        'border-info': color === 'info',
-        'border-success': color === 'success',
-        'border-warning': color === 'warning',
-        'border-error': color === 'error',
+        "border-primary": color === "primary",
+        "border-secondary": color === "secondary",
+        "border-info": color === "info",
+        "border-success": color === "success",
+        "border-warning": color === "warning",
+        "border-error": color === "error",
       }),
-      className
-    )
+      className,
+    );
 
     return (
       <div
@@ -42,8 +42,8 @@ const PhoneMockup = forwardRef<HTMLDivElement, PhoneMockupProps>(
           <div
             {...innerProps}
             className={twMerge(
-              'artboard artboard-demo phone-1',
-              innerProps?.className
+              "artboard artboard-demo phone-1",
+              innerProps?.className,
             )}
             ref={innerRef}
           >
@@ -51,10 +51,10 @@ const PhoneMockup = forwardRef<HTMLDivElement, PhoneMockupProps>(
           </div>
         </div>
       </div>
-    )
-  }
-)
+    );
+  },
+);
 
-PhoneMockup.displayName = 'PhoneMockup'
+PhoneMockup.displayName = "PhoneMockup";
 
-export default PhoneMockup
+export default PhoneMockup;

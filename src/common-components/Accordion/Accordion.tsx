@@ -1,47 +1,47 @@
-import React, { forwardRef } from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import React, { forwardRef } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps } from "../types";
 
-import CollapseTitle from '../Collapse/CollapseTitle'
-import CollapseContent from '../Collapse/CollapseContent'
+import CollapseTitle from "../Collapse/CollapseTitle";
+import CollapseContent from "../Collapse/CollapseContent";
 
 export type AccordionProps = Omit<
   React.HTMLAttributes<HTMLInputElement>,
-  'type'
+  "type"
 > &
   IComponentBaseProps & {
-    name?: string
-    icon?: 'arrow' | 'plus'
-  }
+    name?: string;
+    icon?: "arrow" | "plus";
+  };
 
 const Accordion = forwardRef<HTMLInputElement, AccordionProps>(
   (
-    { name = 'accordion', icon, dataTheme, className, children, ...props },
-    ref
+    { name = "accordion", icon, dataTheme, className, children, ...props },
+    ref,
   ) => {
     const classes = twMerge(
-      'collapse',
+      "collapse",
       clsx({
-        'collapse-arrow': icon === 'arrow',
-        'collapse-plus': icon === 'plus',
+        "collapse-arrow": icon === "arrow",
+        "collapse-plus": icon === "plus",
       }),
-      className
-    )
+      className,
+    );
 
     return (
       <div data-theme={dataTheme} className={classes}>
         <input {...props} ref={ref} type="radio" name={name} />
         {children}
       </div>
-    )
-  }
-)
+    );
+  },
+);
 
-Accordion.displayName = 'Accordion'
+Accordion.displayName = "Accordion";
 
 export default Object.assign(Accordion, {
   Title: CollapseTitle,
   Content: CollapseContent,
-})
+});

@@ -1,6 +1,6 @@
-import {connect} from 'react-redux';
-import {getInstance} from '../../../sdk';
-import PostsListComponent from './PostsList.component';
+import { connect } from "react-redux";
+import { getInstance } from "../../../sdk";
+import PostsListComponent from "./PostsList.component";
 
 const postsListApi = getInstance().PostsListApi;
 
@@ -14,7 +14,4 @@ const mapDispatchToProps = () => ({
   fetchPosts: postsListApi.fetchPosts,
 });
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps,
-)(PostsListComponent);
+export default connect(mapStateToProps, mapDispatchToProps)(PostsListComponent);

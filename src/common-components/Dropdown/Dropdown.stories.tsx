@@ -1,20 +1,20 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Dropdown, { DropdownProps } from '.'
-import Card from '../Card/'
-import Navbar from '../Navbar'
-import Button from '../Button'
+import Dropdown, { DropdownProps } from ".";
+import Card from "../Card/";
+import Navbar from "../Navbar";
+import Button from "../Button";
 
 export default {
-  title: 'Core/Actions/Dropdown',
+  title: "Core/Actions/Dropdown",
   component: Dropdown,
   argTypes: {
     item: {
       control: false,
     },
   },
-} as Meta
+} as Meta;
 
 export const Default: Story<DropdownProps> = (args) => {
   return (
@@ -27,8 +27,8 @@ export const Default: Story<DropdownProps> = (args) => {
         </Dropdown.Menu>
       </Dropdown>
     </div>
-  )
-}
+  );
+};
 
 export const AsCard: Story<DropdownProps> = (args) => {
   return (
@@ -37,14 +37,14 @@ export const AsCard: Story<DropdownProps> = (args) => {
         <Dropdown.Toggle>Click</Dropdown.Toggle>
         <Dropdown.Menu className="card card-compact w-64 p-2 shadow bg-primary text-primary-content m-1">
           <Card.Body>
-            <Card.Title tag={'h3'}>Card title!</Card.Title>
+            <Card.Title tag={"h3"}>Card title!</Card.Title>
             <p>you can use any element as a dropdown.</p>
           </Card.Body>
         </Dropdown.Menu>
       </Dropdown>
     </div>
-  )
-}
+  );
+};
 
 export const InNavbar: Story<DropdownProps> = ({ dataTheme, ...args }) => {
   return (
@@ -70,11 +70,11 @@ export const InNavbar: Story<DropdownProps> = ({ dataTheme, ...args }) => {
         </Dropdown>
       </Navbar.End>
     </Navbar>
-  )
-}
+  );
+};
 InNavbar.args = {
   end: true,
-}
+};
 
 export const Helper: Story<DropdownProps> = (args) => {
   return (
@@ -101,12 +101,12 @@ export const Helper: Story<DropdownProps> = (args) => {
         </Dropdown.Toggle>
         <Dropdown.Menu className="card compact w-64 !p-0 shadow bg-base-100 rounded-box">
           <Card.Body>
-            <Card.Title tag={'h2'}>You needed more info?</Card.Title>
+            <Card.Title tag={"h2"}>You needed more info?</Card.Title>
             <p>Here is a description!</p>
           </Card.Body>
         </Dropdown.Menu>
       </Dropdown>
     </div>
-  )
-}
-Helper.args = { end: true }
+  );
+};
+Helper.args = { end: true };

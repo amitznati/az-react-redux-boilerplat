@@ -1,14 +1,14 @@
-const initialState: {spinnerOn: Array<any>, spinnerOptions: any} = {
+const initialState: { spinnerOn: Array<any>; spinnerOptions: any } = {
   spinnerOn: [],
-  spinnerOptions: null
+  spinnerOptions: null,
 };
 const types = {
-  REQUEST: '_REQUEST',
-  SUCCESS: '_SUCCESS',
-  FAILURE: '_FAILURE',
+  REQUEST: "_REQUEST",
+  SUCCESS: "_SUCCESS",
+  FAILURE: "_FAILURE",
 };
 const reducer = (state = initialState, action: any) => {
-  let newState = {...state};
+  let newState = { ...state };
   const type = action && action.type;
   const payload = (action && action.payload) || {};
   if (type) {
@@ -21,22 +21,22 @@ const reducer = (state = initialState, action: any) => {
         ],
       };
     } else if (type.endsWith(types.FAILURE) || type.endsWith(types.SUCCESS)) {
-      const typeName = type.substr(0, type.length - 8);
+      const typeName = type.slice(0, type.length - 8);
       newState = {
         ...state,
-        spinnerOn: [...state.spinnerOn.filter(s => s !== typeName)],
+        spinnerOn: [...state.spinnerOn.filter((s) => s !== typeName)],
       };
-    } else if (type === 'SPINNER_ACTION') {
+    } else if (type === "SPINNER_ACTION") {
       let spinnerOn = [...state.spinnerOn];
       if (payload.isOn) {
         spinnerOn.push(payload.spinnerId);
       } else {
-        spinnerOn = spinnerOn.filter(s => s !== payload.spinnerId);
+        spinnerOn = spinnerOn.filter((s) => s !== payload.spinnerId);
       }
       newState = {
         ...state,
         spinnerOn: [...spinnerOn],
-        spinnerOptions: {...state.spinnerOptions, ...payload.options},
+        spinnerOptions: { ...state.spinnerOptions, ...payload.options },
       };
     }
   }

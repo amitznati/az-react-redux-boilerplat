@@ -1,15 +1,15 @@
-import React, { forwardRef } from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import React, { forwardRef } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps } from "../types";
 
 export type JoinProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
-    responsive?: boolean
-    vertical?: boolean
-    horizontal?: boolean
-  }
+    responsive?: boolean;
+    vertical?: boolean;
+    horizontal?: boolean;
+  };
 
 const Join = forwardRef<HTMLDivElement, JoinProps>(
   (
@@ -22,26 +22,26 @@ const Join = forwardRef<HTMLDivElement, JoinProps>(
       horizontal,
       ...props
     },
-    ref
+    ref,
   ): JSX.Element => {
     const classes = twMerge(
-      'join',
+      "join",
       clsx({
-        'join-vertical': !responsive && vertical,
-        'join-horizontal': !responsive && horizontal,
-        'join-vertical lg:join-horizontal': responsive,
+        "join-vertical": !responsive && vertical,
+        "join-horizontal": !responsive && horizontal,
+        "join-vertical lg:join-horizontal": responsive,
       }),
-      className
-    )
+      className,
+    );
 
     return (
       <div {...props} data-theme={dataTheme} className={classes} ref={ref}>
         {children}
       </div>
-    )
-  }
-)
+    );
+  },
+);
 
-Join.displayName = 'Join'
+Join.displayName = "Join";
 
-export default Join
+export default Join;

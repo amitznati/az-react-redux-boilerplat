@@ -1,12 +1,12 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Collapse, { DetailsProps } from '.'
+import Collapse, { DetailsProps } from ".";
 
 export default {
-  title: 'Core/Data Display/Collapse/Details',
+  title: "Core/Data Display/Collapse/Details",
   component: Collapse.Details,
-} as Meta
+} as Meta;
 
 export const Default: Story<DetailsProps> = (args) => {
   return (
@@ -18,8 +18,8 @@ export const Default: Story<DetailsProps> = (args) => {
         <p>content</p>
       </Collapse.Content>
     </Collapse.Details>
-  )
-}
+  );
+};
 Default.args = {
-  className: 'bg-base-200',
-}
+  className: "bg-base-200",
+};

@@ -1,15 +1,15 @@
-import { useState } from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import { useState } from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Collapse, { CollapseProps } from '.'
+import Collapse, { CollapseProps } from ".";
 
 export default {
-  title: 'Core/Data Display/Collapse',
+  title: "Core/Data Display/Collapse",
   component: Collapse,
   args: {
-    className: 'bg-base-200',
+    className: "bg-base-200",
   },
-} as Meta
+} as Meta;
 
 const Template: Story<CollapseProps> = (args) => {
   return (
@@ -21,11 +21,11 @@ const Template: Story<CollapseProps> = (args) => {
         tabindex="0" attribute is necessary to make the div focusable
       </Collapse.Content>
     </Collapse>
-  )
-}
+  );
+};
 
-export const Default = Template.bind({})
-Default.args = {}
+export const Default = Template.bind({});
+Default.args = {};
 
 export const Checkbox: Story<CollapseProps> = (args) => {
   return (
@@ -35,28 +35,28 @@ export const Checkbox: Story<CollapseProps> = (args) => {
       </Collapse.Title>
       <Collapse.Content>hello</Collapse.Content>
     </Collapse>
-  )
-}
+  );
+};
 Checkbox.args = {
   checkbox: true,
-}
+};
 
-export const WithBorderAndBackground = Template.bind({})
+export const WithBorderAndBackground = Template.bind({});
 WithBorderAndBackground.args = {
-  className: 'border border-base-300 bg-base-200',
-}
+  className: "border border-base-300 bg-base-200",
+};
 
-export const WithArrow = Template.bind({})
+export const WithArrow = Template.bind({});
 WithArrow.args = {
-  className: 'border border-base-300 bg-base-200',
-  icon: 'arrow',
-}
+  className: "border border-base-300 bg-base-200",
+  icon: "arrow",
+};
 
-export const WithPlusMinus = Template.bind({})
+export const WithPlusMinus = Template.bind({});
 WithPlusMinus.args = {
-  className: 'border border-base-300 bg-base-200',
-  icon: 'plus',
-}
+  className: "border border-base-300 bg-base-200",
+  icon: "plus",
+};
 
 export const ForceOpen: Story<CollapseProps> = (args) => {
   return (
@@ -68,12 +68,12 @@ export const ForceOpen: Story<CollapseProps> = (args) => {
         tabindex="0" attribute is necessary to make the div focusable
       </Collapse.Content>
     </Collapse>
-  )
-}
+  );
+};
 ForceOpen.args = {
-  className: 'border border-base-300 bg-base-200',
+  className: "border border-base-300 bg-base-200",
   open: true,
-}
+};
 
 export const ForceClose: Story<CollapseProps> = (args) => {
   return (
@@ -85,12 +85,12 @@ export const ForceClose: Story<CollapseProps> = (args) => {
         tabindex="0" attribute is necessary to make the div focusable
       </Collapse.Content>
     </Collapse>
-  )
-}
+  );
+};
 ForceClose.args = {
-  className: 'border border-base-300 bg-base-200',
+  className: "border border-base-300 bg-base-200",
   open: false,
-}
+};
 
 export const CustomColorsWithFocus: Story<CollapseProps> = (args) => {
   return (
@@ -102,8 +102,8 @@ export const CustomColorsWithFocus: Story<CollapseProps> = (args) => {
         <p>tabindex="0" attribute is necessary to make the div focusable</p>
       </Collapse.Content>
     </Collapse>
-  )
-}
+  );
+};
 
 export const CustomColorsWithFocusCheckbox: Story<CollapseProps> = (args) => {
   return (
@@ -115,27 +115,27 @@ export const CustomColorsWithFocusCheckbox: Story<CollapseProps> = (args) => {
         <p>tabindex="0" attribute is necessary to make the div focusable</p>
       </Collapse.Content>
     </Collapse>
-  )
-}
+  );
+};
 
 export const HandlingEvents: Story<CollapseProps> = (args) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
 
   const handleToggle = () => {
-    console.log('toggled!')
-  }
+    console.log("toggled!");
+  };
 
   const handleOpen = () => {
-    setIsOpen(true)
-  }
+    setIsOpen(true);
+  };
 
   const handleClose = () => {
-    setIsOpen(false)
-  }
+    setIsOpen(false);
+  };
 
   return (
     <div>
-      <span>Checkbox is {isOpen ? 'open' : 'closed'}.</span>
+      <span>Checkbox is {isOpen ? "open" : "closed"}.</span>
       <Collapse
         {...args}
         className="group"
@@ -151,26 +151,26 @@ export const HandlingEvents: Story<CollapseProps> = (args) => {
         </Collapse.Content>
       </Collapse>
     </div>
-  )
-}
+  );
+};
 
 export const CheckboxEvents: Story<CollapseProps> = (args) => {
-  const [isOpen, setIsOpen] = useState(false)
+  const [isOpen, setIsOpen] = useState(false);
   const handleToggle = () => {
-    console.log('toggled!')
-  }
+    console.log("toggled!");
+  };
 
   const handleOpen = () => {
-    setIsOpen(true)
-  }
+    setIsOpen(true);
+  };
 
   const handleClose = () => {
-    setIsOpen(false)
-  }
+    setIsOpen(false);
+  };
 
   return (
     <div>
-      <span>Checkbox is {isOpen ? 'open' : 'closed'}.</span>
+      <span>Checkbox is {isOpen ? "open" : "closed"}.</span>
       <Collapse
         {...args}
         className="group"
@@ -187,5 +187,5 @@ export const CheckboxEvents: Story<CollapseProps> = (args) => {
         </Collapse.Content>
       </Collapse>
     </div>
-  )
-}
+  );
+};

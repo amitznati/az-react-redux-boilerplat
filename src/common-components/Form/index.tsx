@@ -1,3 +1,3 @@
-import Form, { FormProps as TFormProps } from './Form'
-export type FormProps = TFormProps
-export default Form
+import Form, { FormProps as TFormProps } from "./Form";
+export type FormProps = TFormProps;
+export default Form;

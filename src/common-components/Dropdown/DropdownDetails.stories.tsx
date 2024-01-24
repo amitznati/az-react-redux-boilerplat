@@ -1,12 +1,12 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Dropdown, { DetailsProps } from '.'
+import Dropdown, { DetailsProps } from ".";
 
 export default {
-  title: 'Core/Actions/Dropdown/Details',
+  title: "Core/Actions/Dropdown/Details",
   component: Dropdown.Details,
-} as Meta
+} as Meta;
 
 export const Default: Story<DetailsProps> = (args) => {
   return (
@@ -19,6 +19,6 @@ export const Default: Story<DetailsProps> = (args) => {
         </Dropdown.Menu>
       </Dropdown.Details>
     </div>
-  )
-}
-Default.args = {}
+  );
+};
+Default.args = {};

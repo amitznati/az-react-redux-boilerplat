@@ -1,14 +1,14 @@
-import React, { forwardRef } from 'react'
-import { twMerge } from 'tailwind-merge'
+import React, { forwardRef } from "react";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps } from "../types";
 
 export type StackProps = React.HTMLAttributes<HTMLDivElement> &
-  IComponentBaseProps
+  IComponentBaseProps;
 
 const Stack = forwardRef<HTMLDivElement, StackProps>(
   ({ dataTheme, className, children, ...props }, ref): JSX.Element => {
-    const classes = twMerge('stack', className)
+    const classes = twMerge("stack", className);
 
     return (
       <div
@@ -20,10 +20,10 @@ const Stack = forwardRef<HTMLDivElement, StackProps>(
       >
         {children}
       </div>
-    )
-  }
-)
+    );
+  },
+);
 
-Stack.displayName = 'Stack'
+Stack.displayName = "Stack";
 
-export default Stack
+export default Stack;

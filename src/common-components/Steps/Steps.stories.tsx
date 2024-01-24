@@ -1,13 +1,13 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Steps, { StepsProps } from '.'
-import Step from './Step'
+import Steps, { StepsProps } from ".";
+import Step from "./Step";
 
 export default {
-  title: 'Core/Navigation/Steps',
+  title: "Core/Navigation/Steps",
   component: Steps,
-} as Meta
+} as Meta;
 
 export const Default: Story<StepsProps> = (args) => {
   return (
@@ -17,8 +17,8 @@ export const Default: Story<StepsProps> = (args) => {
       <Steps.Step>Purchase</Steps.Step>
       <Steps.Step>Receive Product</Steps.Step>
     </Steps>
-  )
-}
+  );
+};
 
 export const Responsive: Story<StepsProps> = (args) => {
   return (
@@ -28,12 +28,12 @@ export const Responsive: Story<StepsProps> = (args) => {
       <Steps.Step>Purchase</Steps.Step>
       <Steps.Step>Receive Product</Steps.Step>
     </Steps>
-  )
-}
+  );
+};
 Responsive.args = {
-  className: 'lg:steps-horizontal',
+  className: "lg:steps-horizontal",
   vertical: true,
-}
+};
 
 export const WithDataContent: Story<StepsProps> = (args) => {
   return (
@@ -60,8 +60,8 @@ export const WithDataContent: Story<StepsProps> = (args) => {
         Step 7
       </Steps.Step>
     </Steps>
-  )
-}
+  );
+};
 
 export const CustomColors: Story<StepsProps> = (args) => {
   return (
@@ -73,8 +73,8 @@ export const CustomColors: Story<StepsProps> = (args) => {
         Sit on toilet
       </Steps.Step>
     </Steps>
-  )
-}
+  );
+};
 
 export const WithScrollableWrapper: Story<StepsProps> = (args) => {
   return (
@@ -106,5 +106,5 @@ export const WithScrollableWrapper: Story<StepsProps> = (args) => {
         <Steps.Step color="neutral">end</Steps.Step>
       </Steps>
     </div>
-  )
-}
+  );
+};

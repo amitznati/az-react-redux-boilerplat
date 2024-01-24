@@ -1,5 +1,5 @@
-import Steps, { StepsProps as TStepsProps } from './Steps'
+import Steps, { StepsProps as TStepsProps } from "./Steps";
 
-export * from './Steps'
-export type StepsProps = TStepsProps
-export default Steps
+export * from "./Steps";
+export type StepsProps = TStepsProps;
+export default Steps;

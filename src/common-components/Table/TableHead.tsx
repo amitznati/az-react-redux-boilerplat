@@ -1,9 +1,9 @@
-import React, { ReactNode } from 'react'
+import React, { ReactNode } from "react";
 
 export type TableHeadProps =
   React.TableHTMLAttributes<HTMLTableSectionElement> & {
-    children?: ReactNode[]
-  }
+    children?: ReactNode[];
+  };
 
 const TableHead = React.forwardRef<HTMLTableSectionElement, TableHeadProps>(
   ({ children, ...props }, ref): JSX.Element => {
@@ -11,11 +11,11 @@ const TableHead = React.forwardRef<HTMLTableSectionElement, TableHeadProps>(
       <thead {...props} ref={ref}>
         <tr>
           {children?.map((child, i) => {
-            return <th key={i}>{child}</th>
+            return <th key={i}>{child}</th>;
           })}
         </tr>
       </thead>
-    )
-  }
-)
-export default TableHead
+    );
+  },
+);
+export default TableHead;

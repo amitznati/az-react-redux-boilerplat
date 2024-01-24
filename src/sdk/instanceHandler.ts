@@ -1,16 +1,16 @@
-import {configureStore} from '@reduxjs/toolkit';
-import widgets from '../widgets/widgetsApis';
-import baseReducer from './baseReducer';
+import { configureStore } from "@reduxjs/toolkit";
+import widgets from "../widgets/widgetsApis";
+import baseReducer from "./baseReducer";
 
 let storeInstance: any;
 const createStoreInstance = () => {
   const reducerMap: any = {};
-  widgets.forEach(widget => {
+  widgets.forEach((widget) => {
     reducerMap[widget.config.sliceName] = widget.reducer;
   });
   reducerMap.general = baseReducer;
   return configureStore({
-      reducer: reducerMap
+    reducer: reducerMap,
   });
 };
 export const getStoreInstance = () => {
@@ -23,7 +23,7 @@ export const getStoreInstance = () => {
 let instance: any;
 const createInstance = () => {
   const apis: any = {};
-  widgets.forEach(widget => {
+  widgets.forEach((widget) => {
     const api: any = widget.api;
     apis[widget.config.apiName] = new api(getStoreInstance(), apis);
   });
@@ -37,7 +37,9 @@ export const getInstance = () => {
   return instance;
 };
 
-export default {
+const instanceHandler = {
   getStoreInstance,
   getInstance,
 };
+
+export default instanceHandler;

@@ -1,5 +1,5 @@
-import Join, { JoinProps } from '../Join'
+import Join, { JoinProps } from "../Join";
 
-export type PaginationProps = JoinProps
-const Pagination = Join
-export default Pagination
+export type PaginationProps = JoinProps;
+const Pagination = Join;
+export default Pagination;

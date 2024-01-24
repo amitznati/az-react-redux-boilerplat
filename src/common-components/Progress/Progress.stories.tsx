@@ -1,12 +1,12 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Progress, { ProgressProps } from '.'
+import Progress, { ProgressProps } from ".";
 
 export default {
-  title: 'Core/Feedback/Progress',
+  title: "Core/Feedback/Progress",
   component: Progress,
-} as Meta
+} as Meta;
 
 const Template: Story<ProgressProps> = (args) => {
   return (
@@ -17,57 +17,57 @@ const Template: Story<ProgressProps> = (args) => {
       <Progress {...args} className="w-56" value={70} />
       <Progress {...args} className="w-56" value={100} />
     </div>
-  )
-}
+  );
+};
 
-export const Default = Template.bind({})
+export const Default = Template.bind({});
 Default.args = {
   max: 100,
-}
+};
 
-export const PrimaryColor = Template.bind({})
+export const PrimaryColor = Template.bind({});
 PrimaryColor.args = {
   max: 100,
-  color: 'primary',
-}
+  color: "primary",
+};
 
-export const SecondaryColor = Template.bind({})
+export const SecondaryColor = Template.bind({});
 SecondaryColor.args = {
   max: 100,
-  color: 'secondary',
-}
+  color: "secondary",
+};
 
-export const AccentColor = Template.bind({})
+export const AccentColor = Template.bind({});
 AccentColor.args = {
   max: 100,
-  color: 'accent',
-}
+  color: "accent",
+};
 
-export const SuccessColor = Template.bind({})
+export const SuccessColor = Template.bind({});
 SuccessColor.args = {
   max: 100,
-  color: 'success',
-}
+  color: "success",
+};
 
-export const InfoColor = Template.bind({})
+export const InfoColor = Template.bind({});
 InfoColor.args = {
   max: 100,
-  color: 'info',
-}
+  color: "info",
+};
 
-export const WarningColor = Template.bind({})
+export const WarningColor = Template.bind({});
 WarningColor.args = {
   max: 100,
-  color: 'warning',
-}
+  color: "warning",
+};
 
-export const ErrorColor = Template.bind({})
+export const ErrorColor = Template.bind({});
 ErrorColor.args = {
   max: 100,
-  color: 'error',
-}
+  color: "error",
+};
 
 export const Indeterminate: Story<ProgressProps> = (args) => {
-  return <Progress {...args} className="w-56" />
-}
-Indeterminate.args = {}
+  return <Progress {...args} className="w-56" />;
+};
+Indeterminate.args = {};

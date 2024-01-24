@@ -1,36 +1,36 @@
-import { forwardRef } from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import { forwardRef } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps, ComponentSize } from '../types'
+import { IComponentBaseProps, ComponentSize } from "../types";
 
 import BottomNavigationItem, {
   BottomNavigationItemProps as ItemProps,
-} from './BottomNavigationItem'
+} from "./BottomNavigationItem";
 import BottomNavigationLabel, {
   BottomNavigationLabelProps as LabelProps,
-} from './BottomNavigationLabel'
+} from "./BottomNavigationLabel";
 
-export type BottomNavigationItemProps = ItemProps
-export type BottomNavigationLabelProps = LabelProps
+export type BottomNavigationItemProps = ItemProps;
+export type BottomNavigationLabelProps = LabelProps;
 
 export type BottomNavigationProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {
-    size?: ComponentSize
-  }
+    size?: ComponentSize;
+  };
 
 const BottomNavigation = forwardRef<HTMLDivElement, BottomNavigationProps>(
   ({ size, dataTheme, className, children, ...props }, ref): JSX.Element => {
     const classes = twMerge(
-      'btm-nav',
+      "btm-nav",
       clsx({
-        'btm-nav-lg': size === 'lg',
-        'btm-nav-md': size === 'md',
-        'btm-nav-sm': size === 'sm',
-        'btm-nav-xs': size === 'xs',
+        "btm-nav-lg": size === "lg",
+        "btm-nav-md": size === "md",
+        "btm-nav-sm": size === "sm",
+        "btm-nav-xs": size === "xs",
       }),
-      className
-    )
+      className,
+    );
 
     return (
       <div
@@ -42,13 +42,13 @@ const BottomNavigation = forwardRef<HTMLDivElement, BottomNavigationProps>(
       >
         {children}
       </div>
-    )
-  }
-)
+    );
+  },
+);
 
-BottomNavigation.displayName = 'BottomNavigation'
+BottomNavigation.displayName = "BottomNavigation";
 
 export default Object.assign(BottomNavigation, {
   Item: BottomNavigationItem,
   Label: BottomNavigationLabel,
-})
+});

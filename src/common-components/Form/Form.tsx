@@ -1,16 +1,16 @@
-import React, { FormHTMLAttributes } from 'react'
-import { twMerge } from 'tailwind-merge'
+import React, { FormHTMLAttributes } from "react";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps } from "../types";
 
-import Label from './Label'
+import Label from "./Label";
 
 export type FormProps = FormHTMLAttributes<HTMLFormElement> &
-  IComponentBaseProps
+  IComponentBaseProps;
 
 const Form = React.forwardRef<HTMLFormElement, FormProps>(
   ({ children, dataTheme, className, ...props }, ref): JSX.Element => {
-    const classes = twMerge('form-control', className)
+    const classes = twMerge("form-control", className);
 
     return (
       <form
@@ -22,8 +22,8 @@ const Form = React.forwardRef<HTMLFormElement, FormProps>(
       >
         {children}
       </form>
-    )
-  }
-)
+    );
+  },
+);
 
-export default Object.assign(Form, { Label })
+export default Object.assign(Form, { Label });

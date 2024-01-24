@@ -1,13 +1,13 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Stack, { StackProps } from '.'
-import Card from '../Card'
+import Stack, { StackProps } from ".";
+import Card from "../Card";
 
 export default {
-  title: 'Core/Layout/Stack',
+  title: "Core/Layout/Stack",
   component: Stack,
-} as Meta
+} as Meta;
 
 export const Default: Story<StackProps> = (args) => {
   return (
@@ -22,8 +22,8 @@ export const Default: Story<StackProps> = (args) => {
         3
       </div>
     </Stack>
-  )
-}
+  );
+};
 
 export const StackedImages: Story<StackProps> = (args) => {
   return (
@@ -44,8 +44,8 @@ export const StackedImages: Story<StackProps> = (args) => {
         className="rounded"
       />
     </Stack>
-  )
-}
+  );
+};
 
 export const StackedCardsWithBorder: Story<StackProps> = (args) => {
   return (
@@ -60,8 +60,8 @@ export const StackedCardsWithBorder: Story<StackProps> = (args) => {
         <Card.Body>C</Card.Body>
       </Card>
     </Stack>
-  )
-}
+  );
+};
 
 export const StackedCardsWithShadow: Story<StackProps> = (args) => {
   return (
@@ -76,8 +76,8 @@ export const StackedCardsWithShadow: Story<StackProps> = (args) => {
         <Card.Body>C</Card.Body>
       </Card>
     </Stack>
-  )
-}
+  );
+};
 
 export const StackedCards: Story<StackProps> = (args) => {
   return (
@@ -101,7 +101,7 @@ export const StackedCards: Story<StackProps> = (args) => {
         </Card.Body>
       </Card>
     </Stack>
-  )
-}
+  );
+};
 
-Default.args = {}
+Default.args = {};

@@ -7,11 +7,11 @@ export default class BaseApi {
   }
 
   dispatchStoreAction = (type: string, payload: any) => {
-    this.store.dispatch({type, payload});
+    this.store.dispatch({ type, payload });
   };
 
   spinnerAction = (isOn: boolean, options: any, spinnerId: string) => {
-    this.dispatchStoreAction('SPINNER_ACTION',{isOn, options, spinnerId});
+    this.dispatchStoreAction("SPINNER_ACTION", { isOn, options, spinnerId });
   };
   startSpinner = (spinnerId: string, options: any) =>
     this.spinnerAction(true, options, spinnerId);

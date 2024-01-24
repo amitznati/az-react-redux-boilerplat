@@ -1,16 +1,16 @@
-import React from 'react'
-import { twMerge } from 'tailwind-merge'
+import React from "react";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps } from "../types";
 
 export type LabelProps = React.LabelHTMLAttributes<HTMLLabelElement> &
   IComponentBaseProps & {
-    title?: string
-  }
+    title?: string;
+  };
 
 const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
   ({ children, title, dataTheme, className, ...props }, ref): JSX.Element => {
-    const classes = twMerge('label', className)
+    const classes = twMerge("label", className);
 
     return (
       <label {...props} className={classes}>
@@ -19,8 +19,8 @@ const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
         </span>
         {children}
       </label>
-    )
-  }
-)
+    );
+  },
+);
 
-export default Label
+export default Label;

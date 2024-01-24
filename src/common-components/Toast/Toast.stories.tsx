@@ -1,24 +1,24 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Toast, { ToastProps } from '.'
-import Alert from '../Alert'
-import Button from '../Button'
+import Toast, { ToastProps } from ".";
+import Alert from "../Alert";
+import Button from "../Button";
 
 export default {
-  title: 'Core/Feedback/Toast',
+  title: "Core/Feedback/Toast",
   component: Toast,
-} as Meta
+} as Meta;
 
 const horizontalMapping = {
-  start: 'left',
-  end: 'right',
-  center: 'center',
-} as const
+  start: "left",
+  end: "right",
+  center: "center",
+} as const;
 
 export const Default: Story<ToastProps> = ({
-  vertical = 'bottom',
-  horizontal = 'end',
+  vertical = "bottom",
+  horizontal = "end",
   ...args
 }) => {
   return (
@@ -33,12 +33,12 @@ export const Default: Story<ToastProps> = ({
         </Toast>
       </div>
     </>
-  )
-}
+  );
+};
 
 export const WithAlert: Story<ToastProps> = ({
-  vertical = 'bottom',
-  horizontal = 'end',
+  vertical = "bottom",
+  horizontal = "end",
   ...args
 }) => {
   return (
@@ -51,12 +51,12 @@ export const WithAlert: Story<ToastProps> = ({
         <Alert status="info">New message arrived.</Alert>
       </Toast>
     </>
-  )
-}
+  );
+};
 
 export const WithMultipleAlerts: Story<ToastProps> = ({
-  vertical = 'bottom',
-  horizontal = 'end',
+  vertical = "bottom",
+  horizontal = "end",
   ...args
 }) => {
   return (
@@ -70,42 +70,42 @@ export const WithMultipleAlerts: Story<ToastProps> = ({
         <Alert status="success">Message sent successfully.</Alert>
       </Toast>
     </>
-  )
-}
+  );
+};
 
 const dynamicToastChildStatuses = [
-  'info',
-  'success',
-  'warning',
-  'error',
-] as const
+  "info",
+  "success",
+  "warning",
+  "error",
+] as const;
 
 type DynamicToastChild = {
-  text: string
-  status: (typeof dynamicToastChildStatuses)[number]
-}
+  text: string;
+  status: (typeof dynamicToastChildStatuses)[number];
+};
 
 export const DynamicAlerts: Story<ToastProps> = (args) => {
   const [alerts, setAlerts] = React.useState<DynamicToastChild[]>([
-    { text: 'This is a custom alert!', status: 'info' },
-  ])
+    { text: "This is a custom alert!", status: "info" },
+  ]);
 
   const handleAddToast = () => {
     setAlerts((alerts) => [
       ...alerts,
       {
-        text: 'New message arrived.',
+        text: "New message arrived.",
         status:
           dynamicToastChildStatuses[
             Math.floor(Math.random() * dynamicToastChildStatuses.length)
           ],
       },
-    ])
-  }
+    ]);
+  };
 
   const handleRemoveToast = (index: number) => {
-    setAlerts((alerts) => alerts.filter((_, i) => i !== index))
-  }
+    setAlerts((alerts) => alerts.filter((_, i) => i !== index));
+  };
 
   return (
     <div>
@@ -123,5 +123,5 @@ export const DynamicAlerts: Story<ToastProps> = (args) => {
         ))}
       </Toast>
     </div>
-  )
-}
+  );
+};

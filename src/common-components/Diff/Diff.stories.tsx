@@ -1,17 +1,17 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Diff, { DiffProps } from '.'
+import Diff, { DiffProps } from ".";
 
 const meta: Meta<DiffProps> = {
-  title: 'Core/Data Display/Diff',
+  title: "Core/Data Display/Diff",
   component: Diff,
   parameters: {
     controls: { expanded: true },
   },
-}
+};
 
-export default meta
+export default meta;
 
 export const Default: Story<DiffProps> = ({ secondItem, ...args }) => (
   <Diff
@@ -28,12 +28,12 @@ export const Default: Story<DiffProps> = ({ secondItem, ...args }) => (
       src=" https://daisyui.com/images/stock/photo-1560717789-0ac7c58ac90a.jpg"
     />
   </Diff>
-)
+);
 Default.argTypes = {
   secondItem: {
     control: false,
   },
-}
+};
 export const Text: Story<DiffProps> = ({ secondItem, ...args }) => (
   <Diff
     {...args}
@@ -47,9 +47,9 @@ export const Text: Story<DiffProps> = ({ secondItem, ...args }) => (
       DAISY
     </div>
   </Diff>
-)
+);
 Text.argTypes = {
   secondItem: {
     control: false,
   },
-}
+};

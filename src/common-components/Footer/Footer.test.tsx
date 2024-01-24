@@ -1,21 +1,21 @@
-import { render, screen } from '@testing-library/react'
+import { render, screen } from "@testing-library/react";
 
-import Footer from '.'
+import Footer from ".";
 
-describe('Footer', () => {
-  const footerTitle = 'Services'
-  const linkList = ['Branding', 'Design', 'Marketing', 'Advertisement']
+describe("Footer", () => {
+  const footerTitle = "Services";
+  const linkList = ["Branding", "Design", "Marketing", "Advertisement"];
 
-  it('Should render Footer title', () => {
+  it("Should render Footer title", () => {
     render(
       <Footer className="p-10 bg-neutral text-neutral-content">
         <div>
           <Footer.Title>{footerTitle}</Footer.Title>
         </div>
-      </Footer>
-    )
-    expect(screen.getByText(footerTitle)).toBeInTheDocument()
-  })
+      </Footer>,
+    );
+    expect(screen.getByText(footerTitle)).toBeInTheDocument();
+  });
 
   it('Footer title have className "p-10 bg-neutral text-neutral-content"', () => {
     const { container } = render(
@@ -23,13 +23,13 @@ describe('Footer', () => {
         <div>
           <Footer.Title>{footerTitle}</Footer.Title>
         </div>
-      </Footer>
-    )
+      </Footer>,
+    );
     const titleClassName = container.getElementsByClassName(
-      'p-10 bg-neutral text-neutral-content'
-    )
-    expect(titleClassName).toBeTruthy()
-  })
+      "p-10 bg-neutral text-neutral-content",
+    );
+    expect(titleClassName).toBeTruthy();
+  });
 
   it('Footer links have className "link link-hover"', () => {
     const { container } = render(
@@ -42,14 +42,14 @@ describe('Footer', () => {
             </a>
           ))}
         </div>
-      </Footer>
-    )
-    expect(screen.getByText(linkList[0])).toBeInTheDocument()
-    const quantityLinks = container.getElementsByClassName('link link-hover')
-    expect(quantityLinks.length).toBe(4)
-  })
+      </Footer>,
+    );
+    expect(screen.getByText(linkList[0])).toBeInTheDocument();
+    const quantityLinks = container.getElementsByClassName("link link-hover");
+    expect(quantityLinks.length).toBe(4);
+  });
 
-  it('Should render Footer link list', () => {
+  it("Should render Footer link list", () => {
     const { container } = render(
       <Footer className="p-10 bg-neutral text-neutral-content">
         <div>
@@ -60,9 +60,9 @@ describe('Footer', () => {
             </a>
           ))}
         </div>
-      </Footer>
-    )
-    const linksClassName = container.getElementsByClassName('link link-hover')
-    expect(linksClassName).toBeTruthy()
-  })
-})
+      </Footer>,
+    );
+    const linksClassName = container.getElementsByClassName("link link-hover");
+    expect(linksClassName).toBeTruthy();
+  });
+});

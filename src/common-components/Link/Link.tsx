@@ -1,35 +1,35 @@
-import React, { forwardRef } from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import React, { forwardRef } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps, ComponentColor } from '../types'
+import { IComponentBaseProps, ComponentColor } from "../types";
 
 export type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> &
   IComponentBaseProps & {
-    color?: 'neutral' | ComponentColor
-    hover?: boolean
-  }
+    color?: "neutral" | ComponentColor;
+    hover?: boolean;
+  };
 
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   (
     { children, href, color, hover = true, dataTheme, className, ...props },
-    ref
+    ref,
   ) => {
     const classes = twMerge(
-      'link',
+      "link",
       className,
       clsx({
-        'link-neutral': color === 'neutral',
-        'link-primary': color === 'primary',
-        'link-secondary': color === 'secondary',
-        'link-accent': color === 'accent',
-        'link-info': color === 'info',
-        'link-success': color === 'success',
-        'link-warning': color === 'warning',
-        'link-error': color === 'error',
-        'link-hover': hover,
-      })
-    )
+        "link-neutral": color === "neutral",
+        "link-primary": color === "primary",
+        "link-secondary": color === "secondary",
+        "link-accent": color === "accent",
+        "link-info": color === "info",
+        "link-success": color === "success",
+        "link-warning": color === "warning",
+        "link-error": color === "error",
+        "link-hover": hover,
+      }),
+    );
 
     return (
       <a
@@ -42,10 +42,10 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(
       >
         {children}
       </a>
-    )
-  }
-)
+    );
+  },
+);
 
-Link.displayName = 'Link'
+Link.displayName = "Link";
 
-export default Link
+export default Link;

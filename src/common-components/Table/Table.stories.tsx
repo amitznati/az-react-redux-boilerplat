@@ -1,16 +1,16 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Table, { TableProps } from '.'
-import Checkbox from '../Checkbox'
-import Mask from '../Mask'
-import Badge from '../Badge'
-import Button from '../Button'
+import Table, { TableProps } from ".";
+import Checkbox from "../Checkbox";
+import Mask from "../Mask";
+import Badge from "../Badge";
+import Button from "../Button";
 
 export default {
-  title: 'Core/Data Display/Table',
+  title: "Core/Data Display/Table",
   component: Table,
-} as Meta
+} as Meta;
 
 const Template: Story<TableProps> = (args) => {
   return (
@@ -47,11 +47,11 @@ const Template: Story<TableProps> = (args) => {
         </Table.Body>
       </Table>
     </div>
-  )
-}
+  );
+};
 
-export const Default = Template.bind({})
-Default.args = {}
+export const Default = Template.bind({});
+Default.args = {};
 
 export const ActiveRow: Story<TableProps> = (args) => {
   return (
@@ -88,8 +88,8 @@ export const ActiveRow: Story<TableProps> = (args) => {
         </Table.Body>
       </Table>
     </div>
-  )
-}
+  );
+};
 
 export const HighlightsOnHover: Story<TableProps> = (args) => {
   return (
@@ -126,12 +126,12 @@ export const HighlightsOnHover: Story<TableProps> = (args) => {
         </Table.Body>
       </Table>
     </div>
-  )
-}
-export const Zebra = Template.bind({})
+  );
+};
+export const Zebra = Template.bind({});
 Zebra.args = {
   zebra: true,
-}
+};
 
 export const WithVisualElements: Story<TableProps> = (args) => {
   return (
@@ -256,9 +256,9 @@ export const WithVisualElements: Story<TableProps> = (args) => {
         </Table.Footer>
       </Table>
     </div>
-  )
-}
-WithVisualElements.args = {}
+  );
+};
+WithVisualElements.args = {};
 
 export const Xs: Story<TableProps> = (args) => {
   return (
@@ -487,11 +487,11 @@ export const Xs: Story<TableProps> = (args) => {
         </Table.Footer>
       </Table>
     </div>
-  )
-}
+  );
+};
 Xs.args = {
-  size: 'xs',
-}
+  size: "xs",
+};
 
 export const PinnedRows: Story<TableProps> = (args) => {
   return (
@@ -749,11 +749,11 @@ export const PinnedRows: Story<TableProps> = (args) => {
         </tbody>
       </Table>
     </div>
-  )
-}
+  );
+};
 PinnedRows.args = {
   pinRows: true,
-}
+};
 
 export const PinnedRowsAndPinnedCols: Story<TableProps> = (args) => {
   return (
@@ -987,10 +987,10 @@ export const PinnedRowsAndPinnedCols: Story<TableProps> = (args) => {
         </tfoot>
       </Table>
     </div>
-  )
-}
+  );
+};
 PinnedRowsAndPinnedCols.args = {
-  size: 'xs',
+  size: "xs",
   pinRows: true,
   pinCols: true,
-}
+};

@@ -1,25 +1,25 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Input, { InputProps } from '.'
+import Input, { InputProps } from ".";
 
 export default {
-  title: 'Core/Data Input/Input',
+  title: "Core/Data Input/Input",
   component: Input,
   args: {
-    placeholder: 'Type here',
-    className: 'w-full max-w-xs',
+    placeholder: "Type here",
+    className: "w-full max-w-xs",
     disabled: false,
   },
-} as Meta
+} as Meta;
 
 export const Default: Story<InputProps> = (args) => {
   return (
     <div className="flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
       <Input {...args} />
     </div>
-  )
-}
+  );
+};
 
 export const FormControlAndLabels: Story<InputProps> = (args) => {
   return (
@@ -36,5 +36,5 @@ export const FormControlAndLabels: Story<InputProps> = (args) => {
         </label>
       </div>
     </div>
-  )
-}
+  );
+};

@@ -1,13 +1,13 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Card, { CardProps } from '.'
-import Button from '../Button'
+import Card, { CardProps } from ".";
+import Button from "../Button";
 
 export default {
-  title: 'Core/Data Display/Card',
+  title: "Core/Data Display/Card",
   component: Card,
-} as Meta
+} as Meta;
 
 export const Default: Story<CardProps> = (args) => {
   return (
@@ -24,8 +24,8 @@ export const Default: Story<CardProps> = (args) => {
         </Card.Actions>
       </Card.Body>
     </Card>
-  )
-}
+  );
+};
 
 export const Responsive: Story<CardProps> = (args) => {
   return (
@@ -47,8 +47,8 @@ export const Responsive: Story<CardProps> = (args) => {
         </Card.Body>
       </Card>
     </div>
-  )
-}
+  );
+};
 
 export const Centered: Story<CardProps> = (args) => {
   return (
@@ -65,8 +65,8 @@ export const Centered: Story<CardProps> = (args) => {
         </Card.Actions>
       </Card.Body>
     </Card>
-  )
-}
+  );
+};
 
 export const ImageOverlay: Story<CardProps> = (args) => {
   return (
@@ -83,5 +83,5 @@ export const ImageOverlay: Story<CardProps> = (args) => {
         </Card.Actions>
       </Card.Body>
     </Card>
-  )
-}
+  );
+};

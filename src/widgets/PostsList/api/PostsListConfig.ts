@@ -1,6 +1,6 @@
-const PostsListConfig =  {
-  sliceName: 'postsList',
-  apiName: 'PostsListApi',
+const PostsListConfig = {
+  sliceName: "postsList",
+  apiName: "PostsListApi",
 };
 
 export default PostsListConfig;

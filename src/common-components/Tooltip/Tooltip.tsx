@@ -1,20 +1,20 @@
-import React, { forwardRef } from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import React, { forwardRef } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
 import {
   IComponentBaseProps,
   ComponentColor,
   ComponentPosition,
-} from '../types'
+} from "../types";
 
-export type TooltipProps = Omit<React.HTMLAttributes<HTMLDivElement>, 'color'> &
+export type TooltipProps = Omit<React.HTMLAttributes<HTMLDivElement>, "color"> &
   IComponentBaseProps & {
-    message: string
-    open?: boolean
-    color?: ComponentColor
-    position?: ComponentPosition
-  }
+    message: string;
+    open?: boolean;
+    color?: ComponentColor;
+    position?: ComponentPosition;
+  };
 
 const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
   (
@@ -28,26 +28,26 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
       className,
       ...props
     },
-    ref
+    ref,
   ): JSX.Element => {
     const classes = twMerge(
-      'tooltip',
+      "tooltip",
       className,
       clsx({
-        'tooltip-open': open,
-        'tooltip-primary': color === 'primary',
-        'tooltip-secondary': color === 'secondary',
-        'tooltip-accent': color === 'accent',
-        'tooltip-info': color === 'info',
-        'tooltip-success': color === 'success',
-        'tooltip-warning': color === 'warning',
-        'tooltip-error': color === 'error',
-        'tooltip-top': position === 'top',
-        'tooltip-bottom': position === 'bottom',
-        'tooltip-left': position === 'left',
-        'tooltip-right': position === 'right',
-      })
-    )
+        "tooltip-open": open,
+        "tooltip-primary": color === "primary",
+        "tooltip-secondary": color === "secondary",
+        "tooltip-accent": color === "accent",
+        "tooltip-info": color === "info",
+        "tooltip-success": color === "success",
+        "tooltip-warning": color === "warning",
+        "tooltip-error": color === "error",
+        "tooltip-top": position === "top",
+        "tooltip-bottom": position === "bottom",
+        "tooltip-left": position === "left",
+        "tooltip-right": position === "right",
+      }),
+    );
 
     return (
       <div
@@ -60,10 +60,10 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
       >
         {children}
       </div>
-    )
-  }
-)
+    );
+  },
+);
 
-Tooltip.displayName = 'Tooltip'
+Tooltip.displayName = "Tooltip";
 
-export default Tooltip
+export default Tooltip;

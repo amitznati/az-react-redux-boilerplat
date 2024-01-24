@@ -1,11 +1,13 @@
-import {connect} from 'react-redux';
-function SpinnerWidget({spinnerOn}: {spinnerOn: boolean}) {
+import { connect } from "react-redux";
+import "./main_loader.css";
+import { Loading } from "../../common-components";
+function SpinnerWidget({ spinnerOn }: { spinnerOn: boolean }) {
   if (!spinnerOn) {
     return <div />;
   }
   return (
     <div className="loader-container">
-      <div className="loader" />
+      <Loading size="lg" />
     </div>
   );
 }

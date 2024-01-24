@@ -1,12 +1,12 @@
-import { StoryFn as Story, Meta } from '@storybook/react'
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Accordion, { AccordionProps } from '.'
-import Join from '../Join'
+import Accordion, { AccordionProps } from ".";
+import Join from "../Join";
 
 export default {
-  title: 'Core/Data Display/Accordion',
+  title: "Core/Data Display/Accordion",
   component: Accordion,
-} as Meta
+} as Meta;
 
 export const Default: Story<AccordionProps> = (args) => {
   return (
@@ -36,11 +36,11 @@ export const Default: Story<AccordionProps> = (args) => {
         </Accordion.Content>
       </Accordion>
     </div>
-  )
-}
+  );
+};
 Default.args = {
-  className: 'bg-base-200',
-}
+  className: "bg-base-200",
+};
 
 export const WithArrow: Story<AccordionProps> = (args) => {
   return (
@@ -70,12 +70,12 @@ export const WithArrow: Story<AccordionProps> = (args) => {
         </Accordion.Content>
       </Accordion>
     </div>
-  )
-}
+  );
+};
 WithArrow.args = {
-  className: 'bg-base-200',
-  icon: 'arrow',
-}
+  className: "bg-base-200",
+  icon: "arrow",
+};
 
 export const WithPlusMinus: Story<AccordionProps> = (args) => {
   return (
@@ -105,12 +105,12 @@ export const WithPlusMinus: Story<AccordionProps> = (args) => {
         </Accordion.Content>
       </Accordion>
     </div>
-  )
-}
+  );
+};
 WithPlusMinus.args = {
-  className: 'bg-base-200',
-  icon: 'plus',
-}
+  className: "bg-base-200",
+  icon: "plus",
+};
 
 export const AndJoinTogether: Story<AccordionProps> = (args) => {
   return (
@@ -140,12 +140,12 @@ export const AndJoinTogether: Story<AccordionProps> = (args) => {
         </Accordion.Content>
       </Accordion>
     </Join>
-  )
-}
+  );
+};
 AndJoinTogether.args = {
-  className: 'border border-base-300 join-item',
-  icon: 'arrow',
-}
+  className: "border border-base-300 join-item",
+  icon: "arrow",
+};
 
 export const Multiple: Story<AccordionProps> = (args) => {
   return (
@@ -203,8 +203,8 @@ export const Multiple: Story<AccordionProps> = (args) => {
         </Accordion>
       </div>
     </>
-  )
-}
+  );
+};
 Multiple.args = {
-  className: 'bg-base-200',
-}
+  className: "bg-base-200",
+};

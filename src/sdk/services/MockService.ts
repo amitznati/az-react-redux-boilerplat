@@ -1,21 +1,28 @@
-import mocks from './mocks';
-import {requestType} from "./BaseService";
-/* eslint-disable no-unused-vars */
+import mocks from "./mocks";
+import { requestType } from "./BaseService";
+
+const DELAY = 1000;
+
+const wait = (ms: number) => {
+  return new Promise((resolve) => setTimeout(resolve, ms));
+};
 class MockAxios {
-  get = (url: string, payload: any) => {
-    // @ts-ignore
+  get = async (url: string, payload: any) => {
+    await wait(DELAY);
     return mocks[url];
   };
-  post = (url: string, data: any, config: any) => {
+  post = async (url: string, data: any, config: any) => {
+    await wait(DELAY);
+    return mocks[url];
+  };
+
+  put = async (url: string, data: any, config: any) => {
+    await wait(DELAY);
     return {};
   };
 
-
-  put = (url: string, data: any, config: any) => {
-    return {};
-  };
-
-  delete = (url: string, config: any) => {
+  delete = async (url: string, config: any) => {
+    await wait(DELAY);
     return {};
   };
 }
@@ -25,19 +32,19 @@ class MockService {
   constructor() {
     this.mockAxios = new MockAxios();
   }
-  get = ({url, config}: requestType) => {
-    return this.mockAxios.get(url, {params: {...config}});
+  get = ({ url, config }: requestType) => {
+    return this.mockAxios.get(url, { params: { ...config } });
   };
 
-  post = ({url, data, config}: requestType) => {
+  post = ({ url, data, config }: requestType) => {
     return this.mockAxios.post(url, data, config);
   };
 
-  put = ({url, data, config}: requestType) => {
+  put = ({ url, data, config }: requestType) => {
     return this.mockAxios.put(url, data, config);
   };
 
-  delete = ({url, config}: requestType) => {
+  delete = ({ url, config }: requestType) => {
     return this.mockAxios.delete(url, config);
   };
 
@@ -50,5 +57,5 @@ class MockService {
     };
   }
 }
-
-export default new MockService();
+const mockService = new MockService();
+export default mockService;

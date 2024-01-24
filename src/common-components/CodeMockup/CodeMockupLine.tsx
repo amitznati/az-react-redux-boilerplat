@@ -1,16 +1,16 @@
-import { forwardRef } from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import { forwardRef } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-import { ComponentStatus, IComponentBaseProps } from '../types'
+import { ComponentStatus, IComponentBaseProps } from "../types";
 
 export type CodeMockupLineProps = React.HTMLAttributes<HTMLPreElement> &
   IComponentBaseProps & {
-    dataPrefix?: string | boolean
-    status?: ComponentStatus
-    innerProps?: React.HTMLAttributes<HTMLElement>
-    innerRef?: React.Ref<HTMLElement>
-  }
+    dataPrefix?: string | boolean;
+    status?: ComponentStatus;
+    innerProps?: React.HTMLAttributes<HTMLElement>;
+    innerRef?: React.Ref<HTMLElement>;
+  };
 
 export const CodeMockupLine = forwardRef<HTMLPreElement, CodeMockupLineProps>(
   (
@@ -24,27 +24,27 @@ export const CodeMockupLine = forwardRef<HTMLPreElement, CodeMockupLineProps>(
       innerRef,
       ...props
     },
-    ref
+    ref,
   ): JSX.Element => {
     const classes = twMerge(
       clsx({
-        'bg-info': status === 'info',
-        'bg-success': status === 'success',
-        'bg-warning': status === 'warning',
-        'bg-error': status === 'error',
-        'text-info-content': status === 'info',
-        'text-success-content': status === 'success',
-        'text-warning-content': status === 'warning',
-        'text-error-content': status === 'error',
+        "bg-info": status === "info",
+        "bg-success": status === "success",
+        "bg-warning": status === "warning",
+        "bg-error": status === "error",
+        "text-info-content": status === "info",
+        "text-success-content": status === "success",
+        "text-warning-content": status === "warning",
+        "text-error-content": status === "error",
       }),
-      className
-    )
+      className,
+    );
 
     const allProps = {
       ...props,
       className: classes,
-      ...(dataPrefix !== false && { 'data-prefix': dataPrefix || '>' }),
-    } as Record<string, any>
+      ...(dataPrefix !== false && { "data-prefix": dataPrefix || ">" }),
+    } as Record<string, any>;
 
     return (
       <pre {...allProps} data-theme={dataTheme} className={classes} ref={ref}>
@@ -52,8 +52,8 @@ export const CodeMockupLine = forwardRef<HTMLPreElement, CodeMockupLineProps>(
           {children}
         </code>
       </pre>
-    )
-  }
-)
+    );
+  },
+);
 
-CodeMockupLine.displayName = 'CodeMockup.Line'
+CodeMockupLine.displayName = "CodeMockup.Line";

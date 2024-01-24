@@ -1,19 +1,19 @@
-import { useState, useCallback } from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import { useState, useCallback } from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Menu, { MenuProps } from '.'
-import Tooltip from '../Tooltip'
-import Badge from '../Badge'
+import Menu, { MenuProps } from ".";
+import Tooltip from "../Tooltip";
+import Badge from "../Badge";
 
 const responsiveArgType = {
-  control: 'select',
-  options: [true, false, 'xs', 'sm', 'md', 'lg'],
-}
+  control: "select",
+  options: [true, false, "xs", "sm", "md", "lg"],
+};
 export default {
-  title: 'Core/Navigation/Menu',
+  title: "Core/Navigation/Menu",
   component: Menu,
   args: {
-    className: 'bg-base-100 w-56 shadow-xl',
+    className: "bg-base-100 w-56 shadow-xl",
   },
   argTypes: {
     compact: responsiveArgType,
@@ -21,7 +21,7 @@ export default {
     horizontal: responsiveArgType,
     vertical: responsiveArgType,
   },
-} as Meta
+} as Meta;
 
 export const Default: Story<MenuProps> = (args) => {
   return (
@@ -36,11 +36,11 @@ export const Default: Story<MenuProps> = (args) => {
         <a>Item 3</a>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 Default.args = {
-  className: 'bg-base-200 w-56 rounded-box',
-}
+  className: "bg-base-200 w-56 rounded-box",
+};
 
 export const Responsive: Story<MenuProps> = (args) => {
   return (
@@ -55,12 +55,12 @@ export const Responsive: Story<MenuProps> = (args) => {
         <a>Item 3</a>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 Responsive.args = {
-  className: 'bg-base-200 rounded-box',
+  className: "bg-base-200 rounded-box",
   responsive: true,
-}
+};
 
 export const IconOnly: Story<MenuProps> = (args) => {
   return (
@@ -120,11 +120,11 @@ export const IconOnly: Story<MenuProps> = (args) => {
         </a>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 IconOnly.args = {
-  className: 'bg-base-200 rounded-box',
-}
+  className: "bg-base-200 rounded-box",
+};
 
 export const IconOnlyHorizontal: Story<MenuProps> = (args) => {
   return (
@@ -184,12 +184,12 @@ export const IconOnlyHorizontal: Story<MenuProps> = (args) => {
         </a>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 IconOnlyHorizontal.args = {
-  className: 'bg-base-200 rounded-box',
+  className: "bg-base-200 rounded-box",
   horizontal: true,
-}
+};
 
 export const IconOnlyWithTooltip: Story<MenuProps> = (args) => {
   return (
@@ -249,11 +249,11 @@ export const IconOnlyWithTooltip: Story<MenuProps> = (args) => {
         </Tooltip>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 IconOnlyWithTooltip.args = {
-  className: 'bg-base-200 rounded-box',
-}
+  className: "bg-base-200 rounded-box",
+};
 
 export const IconOnlyHorizontalWithTooltip: Story<MenuProps> = (args) => {
   return (
@@ -313,12 +313,12 @@ export const IconOnlyHorizontalWithTooltip: Story<MenuProps> = (args) => {
         </Tooltip>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 IconOnlyHorizontalWithTooltip.args = {
-  className: 'bg-base-200 rounded-box mt-6',
+  className: "bg-base-200 rounded-box mt-6",
   horizontal: true,
-}
+};
 
 export const Sizes: Story<MenuProps> = (args) => {
   return (
@@ -356,11 +356,11 @@ export const Sizes: Story<MenuProps> = (args) => {
         </Menu.Item>
       </Menu>
     </div>
-  )
-}
+  );
+};
 Sizes.args = {
-  className: 'bg-base-200 w-56 rounded-box',
-}
+  className: "bg-base-200 w-56 rounded-box",
+};
 
 export const DisabledItems: Story<MenuProps> = (args) => {
   return (
@@ -375,11 +375,11 @@ export const DisabledItems: Story<MenuProps> = (args) => {
         <a>disabled item</a>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 DisabledItems.args = {
-  className: 'bg-base-200 w-56 rounded-box',
-}
+  className: "bg-base-200 w-56 rounded-box",
+};
 
 export const Icons: Story<MenuProps> = (args) => {
   return (
@@ -442,11 +442,11 @@ export const Icons: Story<MenuProps> = (args) => {
         </a>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 Icons.args = {
-  className: 'bg-base-200 w-56 rounded-box',
-}
+  className: "bg-base-200 w-56 rounded-box",
+};
 
 export const IconsAndBadgeResponsive: Story<MenuProps> = (args) => {
   return (
@@ -500,12 +500,12 @@ export const IconsAndBadgeResponsive: Story<MenuProps> = (args) => {
         </a>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 IconsAndBadgeResponsive.args = {
-  className: 'bg-base-200 rounded-box',
+  className: "bg-base-200 rounded-box",
   responsive: true,
-}
+};
 
 export const WithoutPaddingAndBorderRadius: Story<MenuProps> = (args) => {
   return (
@@ -520,11 +520,11 @@ export const WithoutPaddingAndBorderRadius: Story<MenuProps> = (args) => {
         <a>Item 3</a>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 WithoutPaddingAndBorderRadius.args = {
-  className: 'bg-base-200 w-56 p-0 [&_li>*]:rounded-none',
-}
+  className: "bg-base-200 w-56 p-0 [&_li>*]:rounded-none",
+};
 
 export const Title: Story<MenuProps> = (args) => {
   return (
@@ -540,11 +540,11 @@ export const Title: Story<MenuProps> = (args) => {
         <a>Item 3</a>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 Title.args = {
-  className: 'bg-base-200 w-56 rounded-box',
-}
+  className: "bg-base-200 w-56 rounded-box",
+};
 
 export const TitleAsParent: Story<MenuProps> = (args) => {
   return (
@@ -564,11 +564,11 @@ export const TitleAsParent: Story<MenuProps> = (args) => {
         </Menu>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 TitleAsParent.args = {
-  className: 'bg-base-200 w-56 rounded-box',
-}
+  className: "bg-base-200 w-56 rounded-box",
+};
 
 export const Submenu: Story<MenuProps> = (args) => {
   return (
@@ -602,11 +602,11 @@ export const Submenu: Story<MenuProps> = (args) => {
         <a>Item 3</a>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 Submenu.args = {
-  className: 'bg-base-200 w-56 rounded-box',
-}
+  className: "bg-base-200 w-56 rounded-box",
+};
 
 export const CollapsibleSubmenu: Story<MenuProps> = (args) => {
   return (
@@ -615,7 +615,7 @@ export const CollapsibleSubmenu: Story<MenuProps> = (args) => {
         <a>Item 1</a>
       </Menu.Item>
       <Menu.Item>
-        <Menu.Details open={true} label={'Parent'}>
+        <Menu.Details open={true} label={"Parent"}>
           <Menu.Item>
             <a>level 2 item 1</a>
           </Menu.Item>
@@ -623,7 +623,7 @@ export const CollapsibleSubmenu: Story<MenuProps> = (args) => {
             <a>level 2 item 2</a>
           </Menu.Item>
           <Menu.Item>
-            <Menu.Details open={true} label={'Parent'}>
+            <Menu.Details open={true} label={"Parent"}>
               <Menu.Item>
                 <a>level 3 item 1</a>
               </Menu.Item>
@@ -638,18 +638,18 @@ export const CollapsibleSubmenu: Story<MenuProps> = (args) => {
         <a>Item 3</a>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 CollapsibleSubmenu.args = {
-  className: 'bg-base-200 w-56 rounded-box',
-}
+  className: "bg-base-200 w-56 rounded-box",
+};
 
 export const CollapsibleSubmenuWithMenuDropdown: Story<MenuProps> = (args) => {
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(true);
 
   const toggleOpen = useCallback(() => {
-    setOpen((val) => !val)
-  }, [setOpen])
+    setOpen((val) => !val);
+  }, [setOpen]);
   return (
     <Menu {...args}>
       <Menu.Item>
@@ -666,11 +666,11 @@ export const CollapsibleSubmenuWithMenuDropdown: Story<MenuProps> = (args) => {
         </Menu.Dropdown>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 CollapsibleSubmenuWithMenuDropdown.args = {
-  className: 'bg-base-200 w-56 rounded-box',
-}
+  className: "bg-base-200 w-56 rounded-box",
+};
 
 export const FileTree: Story<MenuProps> = (args) => {
   return (
@@ -884,12 +884,12 @@ export const FileTree: Story<MenuProps> = (args) => {
         </a>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 FileTree.args = {
-  className: 'bg-base-200 w-56 rounded-lg max-w-xs w-full',
-  size: 'xs',
-}
+  className: "bg-base-200 w-56 rounded-lg max-w-xs w-full",
+  size: "xs",
+};
 
 export const ActiveItem: Story<MenuProps> = (args) => {
   return (
@@ -904,12 +904,12 @@ export const ActiveItem: Story<MenuProps> = (args) => {
         <a>Item 3</a>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 
 ActiveItem.args = {
-  className: 'bg-base-200 w-56 rounded-box',
-}
+  className: "bg-base-200 w-56 rounded-box",
+};
 
 export const FocusItem: Story<MenuProps> = (args) => {
   return (
@@ -924,12 +924,12 @@ export const FocusItem: Story<MenuProps> = (args) => {
         <a>Item 3</a>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 
 FocusItem.args = {
-  className: 'bg-base-200 w-56 rounded-box',
-}
+  className: "bg-base-200 w-56 rounded-box",
+};
 
 export const Horizontal: Story<MenuProps> = (args) => {
   return (
@@ -944,13 +944,13 @@ export const Horizontal: Story<MenuProps> = (args) => {
         <a>Item 3</a>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 
 Horizontal.args = {
-  className: 'bg-base-200 rounded-box',
+  className: "bg-base-200 rounded-box",
   horizontal: true,
-}
+};
 
 export const HorizontalSubmenu: Story<MenuProps> = (args) => {
   return (
@@ -973,13 +973,13 @@ export const HorizontalSubmenu: Story<MenuProps> = (args) => {
         <a>Item 3</a>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 
 HorizontalSubmenu.args = {
-  className: 'bg-base-200 rounded-box',
+  className: "bg-base-200 rounded-box",
   horizontal: true,
-}
+};
 
 export const MegaMenuWithSubmenuResponsive: Story<MenuProps> = (args) => {
   return (
@@ -1064,13 +1064,13 @@ export const MegaMenuWithSubmenuResponsive: Story<MenuProps> = (args) => {
         </Menu>
       </Menu.Item>
     </Menu>
-  )
-}
+  );
+};
 
 MegaMenuWithSubmenuResponsive.args = {
-  className: 'bg-base-200 rounded-box lg:min-w-max ',
+  className: "bg-base-200 rounded-box lg:min-w-max ",
   responsive: true,
-}
+};
 
 export const CollapsibleWithSubmenuResponsive: Story<MenuProps> = (args) => {
   return (
@@ -1079,7 +1079,7 @@ export const CollapsibleWithSubmenuResponsive: Story<MenuProps> = (args) => {
         <a>Item 1</a>
       </Menu.Item>
       <Menu.Item>
-        <Menu.Details open={true} label={'Parent item'}>
+        <Menu.Details open={true} label={"Parent item"}>
           <Menu.Item>
             <a>level 2 item 1</a>
           </Menu.Item>
@@ -1087,7 +1087,7 @@ export const CollapsibleWithSubmenuResponsive: Story<MenuProps> = (args) => {
             <a>level 2 item 2</a>
           </Menu.Item>
           <Menu.Item>
-            <Menu.Details open={true} label={'Parent'}>
+            <Menu.Details open={true} label={"Parent"}>
               <Menu.Item>
                 <a>item 1</a>
               </Menu.Item>
@@ -1102,10 +1102,10 @@ export const CollapsibleWithSubmenuResponsive: Story<MenuProps> = (args) => {
         <a>Item 3</a>
       </li>
     </Menu>
-  )
-}
+  );
+};
 
 CollapsibleWithSubmenuResponsive.args = {
-  className: 'bg-base-200 rounded-box lg:mb-64',
+  className: "bg-base-200 rounded-box lg:mb-64",
   responsive: true,
-}
+};

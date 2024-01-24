@@ -1,9 +1,9 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
-import ChatBubble, { ChatBubbleProps } from '.'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
+import ChatBubble, { ChatBubbleProps } from ".";
 
 const meta: Meta = {
-  title: 'Core/Data Display/Chat Bubble',
+  title: "Core/Data Display/Chat Bubble",
   component: ChatBubble,
   decorators: [
     (Story) => (
@@ -12,16 +12,16 @@ const meta: Meta = {
       </div>
     ),
   ],
-}
+};
 
-export default meta
+export default meta;
 
 interface DefaultControls {
-  header: boolean
-  time: boolean
-  avatar: boolean
-  footer: boolean
-  side: 'start' | 'end'
+  header: boolean;
+  time: boolean;
+  avatar: boolean;
+  footer: boolean;
+  side: "start" | "end";
 }
 
 export const Default: Story<DefaultControls> = ({
@@ -32,10 +32,10 @@ export const Default: Story<DefaultControls> = ({
   side,
 }) => {
   return (
-    <ChatBubble end={side === 'end' ? true : false}>
+    <ChatBubble end={side === "end" ? true : false}>
       {header && (
         <ChatBubble.Header>
-          Obi-Wan Kenobi{' '}
+          Obi-Wan Kenobi{" "}
           {time && <ChatBubble.Time>2 hours ago</ChatBubble.Time>}
         </ChatBubble.Header>
       )}
@@ -45,22 +45,22 @@ export const Default: Story<DefaultControls> = ({
       <ChatBubble.Message>You were my brother, Anakin.</ChatBubble.Message>
       {footer && <ChatBubble.Footer>Seen</ChatBubble.Footer>}
     </ChatBubble>
-  )
-}
+  );
+};
 Default.args = {
   header: false,
   time: false,
   avatar: false,
   footer: false,
-  side: 'start',
-}
+  side: "start",
+};
 Default.argTypes = {
   side: {
-    options: ['start', 'end'],
-    control: { type: 'radio' },
+    options: ["start", "end"],
+    control: { type: "radio" },
   },
-}
-Default.parameters = { controls: { exclude: ['end', 'dataTheme'] } }
+};
+Default.parameters = { controls: { exclude: ["end", "dataTheme"] } };
 
 export const Side: Story<ChatBubbleProps> = (args) => (
   <>
@@ -74,7 +74,7 @@ export const Side: Story<ChatBubbleProps> = (args) => (
       <ChatBubble.Message>You underestimate my power!</ChatBubble.Message>
     </ChatBubble>
   </>
-)
+);
 
 export const WithImage: Story<ChatBubbleProps> = (args) => (
   <>
@@ -97,7 +97,7 @@ export const WithImage: Story<ChatBubbleProps> = (args) => (
       <ChatBubble.Message>Not leave it in Darkness</ChatBubble.Message>
     </ChatBubble>
   </>
-)
+);
 
 export const WithHeader: Story<ChatBubbleProps> = (args) => (
   <>
@@ -117,7 +117,7 @@ export const WithHeader: Story<ChatBubbleProps> = (args) => (
       <ChatBubble.Message>I hate you!</ChatBubble.Message>
     </ChatBubble>
   </>
-)
+);
 
 export const WithFooter: Story<ChatBubbleProps> = (args) => (
   <>
@@ -133,7 +133,7 @@ export const WithFooter: Story<ChatBubbleProps> = (args) => (
       <ChatBubble.Footer>Seen at 12:46</ChatBubble.Footer>
     </ChatBubble>
   </>
-)
+);
 
 export const WithHeaderAndFooter: Story<ChatBubbleProps> = (args) => (
   <>
@@ -153,7 +153,7 @@ export const WithHeaderAndFooter: Story<ChatBubbleProps> = (args) => (
       <ChatBubble.Footer>Seen at 12:46</ChatBubble.Footer>
     </ChatBubble>
   </>
-)
+);
 
 export const Colors: Story<ChatBubbleProps> = (args) => (
   <>
@@ -197,4 +197,4 @@ export const Colors: Story<ChatBubbleProps> = (args) => (
       </ChatBubble.Message>
     </ChatBubble>
   </>
-)
+);

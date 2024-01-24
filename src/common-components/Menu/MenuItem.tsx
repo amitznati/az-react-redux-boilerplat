@@ -1,13 +1,13 @@
-import React from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import React from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps } from "../types";
 
 export type MenuItemProps = React.LiHTMLAttributes<HTMLLIElement> &
   IComponentBaseProps & {
-    disabled?: boolean
-  }
+    disabled?: boolean;
+  };
 
 const MenuItem = React.forwardRef<HTMLLIElement, MenuItemProps>(
   ({ className, disabled, ...props }, ref) => {
@@ -15,11 +15,11 @@ const MenuItem = React.forwardRef<HTMLLIElement, MenuItemProps>(
       className,
       clsx({
         disabled: disabled,
-      })
-    )
+      }),
+    );
 
-    return <li role="menuitem" className={classes} {...props} ref={ref} />
-  }
-)
+    return <li role="menuitem" className={classes} {...props} ref={ref} />;
+  },
+);
 
-export default MenuItem
+export default MenuItem;

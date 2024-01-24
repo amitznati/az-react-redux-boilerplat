@@ -1,6 +1,6 @@
-const config =   {
-  sliceName: 'widgetTemplate',
-  apiName: 'WidgetTemplateApi',
+const config = {
+  sliceName: "widgetTemplate",
+  apiName: "WidgetTemplateApi",
 };
 
 export default config;

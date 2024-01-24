@@ -1,9 +1,9 @@
-import React from 'react'
-import { twMerge } from 'tailwind-merge'
-import { IComponentBaseProps } from '../types'
+import React from "react";
+import { twMerge } from "tailwind-merge";
+import { IComponentBaseProps } from "../types";
 
 export type DropdownMenuProps = React.HTMLAttributes<HTMLUListElement> &
-  IComponentBaseProps
+  IComponentBaseProps;
 
 const DropdownMenu = ({
   dataTheme,
@@ -11,9 +11,9 @@ const DropdownMenu = ({
   ...props
 }: DropdownMenuProps) => {
   const classes = twMerge(
-    'dropdown-content menu p-2 shadow bg-base-100 rounded-box',
-    className
-  )
+    "dropdown-content menu p-2 shadow bg-base-100 rounded-box",
+    className,
+  );
 
   return (
     <ul
@@ -23,7 +23,7 @@ const DropdownMenu = ({
       className={classes}
       role="menu"
     />
-  )
-}
+  );
+};
 
-export default DropdownMenu
+export default DropdownMenu;

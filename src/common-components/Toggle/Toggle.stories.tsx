@@ -1,20 +1,20 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Toggle, { ToggleProps } from '.'
-import Form from '../Form'
+import Toggle, { ToggleProps } from ".";
+import Form from "../Form";
 
 export default {
-  title: 'Core/Data Input/Toggle',
+  title: "Core/Data Input/Toggle",
   component: Toggle,
-} as Meta
+} as Meta;
 
 const Template: Story<ToggleProps> = (args) => {
-  return <Toggle {...args} />
-}
+  return <Toggle {...args} />;
+};
 
-export const Default = Template.bind({})
-Default.args = {}
+export const Default = Template.bind({});
+Default.args = {};
 
 const FormTemplate: Story<ToggleProps> = (args) => {
   return (
@@ -23,11 +23,11 @@ const FormTemplate: Story<ToggleProps> = (args) => {
         <Toggle {...args} className="m-2" />
       </Form.Label>
     </Form>
-  )
-}
+  );
+};
 
-export const WithLabelAndForm = FormTemplate.bind({})
-WithLabelAndForm.args = {}
+export const WithLabelAndForm = FormTemplate.bind({});
+WithLabelAndForm.args = {};
 
 export const Colors: Story<ToggleProps> = (args) => {
   return (
@@ -40,15 +40,15 @@ export const Colors: Story<ToggleProps> = (args) => {
       <Toggle {...args} defaultChecked color="info" />
       <Toggle {...args} defaultChecked color="error" />
     </div>
-  )
-}
-Colors.args = {}
+  );
+};
+Colors.args = {};
 
-export const Disabled = Template.bind({})
-Disabled.args = { disabled: true }
+export const Disabled = Template.bind({});
+Disabled.args = { disabled: true };
 
-export const DisabledAndChecked = Template.bind({})
-DisabledAndChecked.args = { disabled: true, checked: true }
+export const DisabledAndChecked = Template.bind({});
+DisabledAndChecked.args = { disabled: true, checked: true };
 
 export const Sizes: Story<ToggleProps> = (args) => {
   return (
@@ -58,5 +58,5 @@ export const Sizes: Story<ToggleProps> = (args) => {
       <Toggle {...args} defaultChecked size="md" />
       <Toggle {...args} defaultChecked size="lg" />
     </div>
-  )
-}
+  );
+};

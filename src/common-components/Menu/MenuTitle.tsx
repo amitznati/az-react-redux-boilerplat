@@ -1,17 +1,17 @@
-import React from 'react'
-import { twMerge } from 'tailwind-merge'
+import React from "react";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps } from "../types";
 
 export type MenuTitleProps = React.LiHTMLAttributes<HTMLLIElement> &
-  IComponentBaseProps
+  IComponentBaseProps;
 
 const MenuTitle = React.forwardRef<HTMLLIElement, MenuTitleProps>(
   ({ className, ...props }, ref) => {
-    const classes = twMerge('menu-title', className)
+    const classes = twMerge("menu-title", className);
 
-    return <li {...props} className={classes} ref={ref} />
-  }
-)
+    return <li {...props} className={classes} ref={ref} />;
+  },
+);
 
-export default MenuTitle
+export default MenuTitle;

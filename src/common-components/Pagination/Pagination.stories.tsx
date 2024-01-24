@@ -1,13 +1,13 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Pagination, { PaginationProps } from '.'
-import Button from '../Button'
+import Pagination, { PaginationProps } from ".";
+import Button from "../Button";
 
 export default {
-  title: 'Core/Navigation/Pagination',
+  title: "Core/Navigation/Pagination",
   component: Pagination,
-} as Meta
+} as Meta;
 
 export const Default: Story<PaginationProps> = (args) => {
   return (
@@ -19,10 +19,10 @@ export const Default: Story<PaginationProps> = (args) => {
       <Button className="join-item">3</Button>
       <Button className="join-item">4</Button>
     </Pagination>
-  )
-}
+  );
+};
 
-Default.args = {}
+Default.args = {};
 
 export const Sizes: Story<PaginationProps> = (args) => {
   return (
@@ -87,10 +87,10 @@ export const Sizes: Story<PaginationProps> = (args) => {
         </Button>
       </Pagination>
     </div>
-  )
-}
+  );
+};
 
-Sizes.args = {}
+Sizes.args = {};
 
 export const DisabledButton: Story<PaginationProps> = (args) => {
   return (
@@ -103,10 +103,10 @@ export const DisabledButton: Story<PaginationProps> = (args) => {
       <Button className="join-item">99</Button>
       <Button className="join-item">100</Button>
     </Pagination>
-  )
-}
+  );
+};
 
-DisabledButton.args = {}
+DisabledButton.args = {};
 
 export const ExtraSmallButtons: Story<PaginationProps> = (args) => {
   return (
@@ -115,13 +115,13 @@ export const ExtraSmallButtons: Story<PaginationProps> = (args) => {
       <Button className="join-item">Page 22</Button>
       <Button className="join-item">»</Button>
     </Pagination>
-  )
-}
+  );
+};
 
-ExtraSmallButtons.args = {}
+ExtraSmallButtons.args = {};
 
 export const NextPrevOutlineButtonsWithEqualWidth: Story<PaginationProps> = (
-  args
+  args,
 ) => {
   return (
     <Pagination {...args}>
@@ -132,12 +132,12 @@ export const NextPrevOutlineButtonsWithEqualWidth: Story<PaginationProps> = (
         Next
       </Button>
     </Pagination>
-  )
-}
+  );
+};
 
 NextPrevOutlineButtonsWithEqualWidth.args = {
-  className: 'grid grid-cols-2',
-}
+  className: "grid grid-cols-2",
+};
 
 export const UsingRadioInputs: Story<PaginationProps> = (args) => {
   return (
@@ -168,7 +168,7 @@ export const UsingRadioInputs: Story<PaginationProps> = (args) => {
         aria-label="4"
       />
     </Pagination>
-  )
-}
+  );
+};
 
-UsingRadioInputs.args = {}
+UsingRadioInputs.args = {};

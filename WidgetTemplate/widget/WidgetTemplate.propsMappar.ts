@@ -2,4 +2,4 @@ const mapComponentProps = (props: any) => {
   return props;
 };
 
-export {mapComponentProps};
+export { mapComponentProps };

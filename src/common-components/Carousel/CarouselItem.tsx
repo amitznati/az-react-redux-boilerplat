@@ -1,22 +1,22 @@
-import { cloneElement, LegacyRef } from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import { cloneElement, LegacyRef } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-import Button from '../Button'
+import Button from "../Button";
 
-export type CarouselItemWidth = 'full' | 'half'
+export type CarouselItemWidth = "full" | "half";
 
 export type CarouselItemProps = React.HTMLAttributes<HTMLDivElement> & {
-  readonly innerRef?: LegacyRef<HTMLDivElement>
-  src?: string
-  alt?: string
-  index?: number
-  width?: CarouselItemWidth
-  hasButtons?: boolean
-  buttonStyle?: (value: string) => React.ReactElement
-  onPrev?: () => void
-  onNext?: () => void
-}
+  readonly innerRef?: LegacyRef<HTMLDivElement>;
+  src?: string;
+  alt?: string;
+  index?: number;
+  width?: CarouselItemWidth;
+  hasButtons?: boolean;
+  buttonStyle?: (value: string) => React.ReactElement;
+  onPrev?: () => void;
+  onNext?: () => void;
+};
 
 const CarouselItem = ({
   children,
@@ -33,31 +33,31 @@ const CarouselItem = ({
   ...props
 }: CarouselItemProps): JSX.Element => {
   const classes = twMerge(
-    'carousel-item relative',
+    "carousel-item relative",
     className,
     clsx({
-      'w-full': width === 'full',
-      'w-1/2': width === 'half',
-      'h-full': true,
-    })
-  )
+      "w-full": width === "full",
+      "w-1/2": width === "half",
+      "h-full": true,
+    }),
+  );
 
   const imageClasses = clsx({
-    'w-full': width === 'full',
-  })
+    "w-full": width === "full",
+  });
 
   const renderButtons = () => {
     if (buttonStyle != null) {
       return (
         <>
-          {cloneElement(buttonStyle('❮'), {
+          {cloneElement(buttonStyle("❮"), {
             onClick: onPrev,
           })}
-          {cloneElement(buttonStyle('❯'), {
+          {cloneElement(buttonStyle("❯"), {
             onClick: onNext,
           })}
         </>
-      )
+      );
     }
 
     return (
@@ -69,8 +69,8 @@ const CarouselItem = ({
           ❯
         </Button>
       </>
-    )
-  }
+    );
+  };
 
   return (
     <div {...props} id={`item${index}`} ref={innerRef} className={classes}>
@@ -81,7 +81,7 @@ const CarouselItem = ({
         </div>
       )}
     </div>
-  )
-}
+  );
+};
 
-export default CarouselItem
+export default CarouselItem;

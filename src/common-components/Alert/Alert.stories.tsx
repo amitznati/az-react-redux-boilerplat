@@ -1,18 +1,18 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Alert, { AlertProps } from '.'
-import Button from '../Button'
+import Alert, { AlertProps } from ".";
+import Button from "../Button";
 
 export default {
-  title: 'Core/Feedback/Alert',
+  title: "Core/Feedback/Alert",
   component: Alert,
   argTypes: {
     icon: {
       control: false,
     },
   },
-} as Meta
+} as Meta;
 
 export const Default: Story<AlertProps> = (args) => {
   return (
@@ -36,9 +36,9 @@ export const Default: Story<AlertProps> = (args) => {
     >
       <span>12 unread messages. Tap to see.</span>
     </Alert>
-  )
-}
-Default.args = {}
+  );
+};
+Default.args = {};
 
 export const InfoColor: Story<AlertProps> = (args) => {
   return (
@@ -62,11 +62,11 @@ export const InfoColor: Story<AlertProps> = (args) => {
     >
       <span>New software update available.</span>
     </Alert>
-  )
-}
+  );
+};
 InfoColor.args = {
-  status: 'info',
-}
+  status: "info",
+};
 
 export const SuccessColor: Story<AlertProps> = (args) => {
   return (
@@ -90,11 +90,11 @@ export const SuccessColor: Story<AlertProps> = (args) => {
     >
       <span>Your purchase has been confirmed!</span>
     </Alert>
-  )
-}
+  );
+};
 SuccessColor.args = {
-  status: 'success',
-}
+  status: "success",
+};
 
 export const WarningColor: Story<AlertProps> = (args) => {
   return (
@@ -118,11 +118,11 @@ export const WarningColor: Story<AlertProps> = (args) => {
     >
       <span>Warning: Invalid email address!</span>
     </Alert>
-  )
-}
+  );
+};
 WarningColor.args = {
-  status: 'warning',
-}
+  status: "warning",
+};
 
 export const ErrorColor: Story<AlertProps> = (args) => {
   return (
@@ -146,11 +146,11 @@ export const ErrorColor: Story<AlertProps> = (args) => {
     >
       <span>Error! Task failed successfully.</span>
     </Alert>
-  )
-}
+  );
+};
 ErrorColor.args = {
-  status: 'error',
-}
+  status: "error",
+};
 
 export const WithButtons: Story<AlertProps> = (args) => {
   return (
@@ -180,11 +180,11 @@ export const WithButtons: Story<AlertProps> = (args) => {
         </Button>
       </div>
     </Alert>
-  )
-}
+  );
+};
 WithButtons.args = {
-  className: 'shadow-lg',
-}
+  className: "shadow-lg",
+};
 
 export const WithTitleAndDescription: Story<AlertProps> = (args) => {
   return (
@@ -212,8 +212,8 @@ export const WithTitleAndDescription: Story<AlertProps> = (args) => {
       </div>
       <Button size="sm">See</Button>
     </Alert>
-  )
-}
+  );
+};
 WithTitleAndDescription.args = {
-  className: 'shadow-lg',
-}
+  className: "shadow-lg",
+};

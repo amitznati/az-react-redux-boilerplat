@@ -1,25 +1,25 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Checkbox, { CheckboxProps } from '.'
-import Form from '../Form'
+import Checkbox, { CheckboxProps } from ".";
+import Form from "../Form";
 
 export default {
-  title: 'Core/Data Input/Checkbox',
+  title: "Core/Data Input/Checkbox",
   component: Checkbox,
-} as Meta
+} as Meta;
 
 const Template: Story<CheckboxProps> = (args) => {
-  return <Checkbox {...args} />
-}
+  return <Checkbox {...args} />;
+};
 
-export const Default = Template.bind({})
-Default.args = {}
+export const Default = Template.bind({});
+Default.args = {};
 
-export const Indeterminate = Template.bind({})
+export const Indeterminate = Template.bind({});
 Indeterminate.args = {
   indeterminate: true,
-}
+};
 
 const FormTemplate: Story<CheckboxProps> = (args) => {
   return (
@@ -28,10 +28,10 @@ const FormTemplate: Story<CheckboxProps> = (args) => {
         <Checkbox {...args} />
       </Form.Label>
     </Form>
-  )
-}
-export const FormControl = FormTemplate.bind({})
-FormControl.args = {}
+  );
+};
+export const FormControl = FormTemplate.bind({});
+FormControl.args = {};
 
 export const Colors: Story<CheckboxProps> = (args) => {
   return (
@@ -44,9 +44,9 @@ export const Colors: Story<CheckboxProps> = (args) => {
       <Checkbox {...args} defaultChecked color="info" />
       <Checkbox {...args} defaultChecked color="error" />
     </div>
-  )
-}
-Colors.args = {}
+  );
+};
+Colors.args = {};
 
 export const Sizes: Story<CheckboxProps> = (args) => {
   return (
@@ -56,12 +56,12 @@ export const Sizes: Story<CheckboxProps> = (args) => {
       <Checkbox {...args} defaultChecked size="md" />
       <Checkbox {...args} defaultChecked size="lg" />
     </div>
-  )
-}
-Sizes.args = {}
+  );
+};
+Sizes.args = {};
 
-export const Disabled = Template.bind({})
-Disabled.args = { disabled: true }
+export const Disabled = Template.bind({});
+Disabled.args = { disabled: true };
 
-export const DisabledChecked = Template.bind({})
-DisabledChecked.args = { checked: true, disabled: true }
+export const DisabledChecked = Template.bind({});
+DisabledChecked.args = { checked: true, disabled: true };

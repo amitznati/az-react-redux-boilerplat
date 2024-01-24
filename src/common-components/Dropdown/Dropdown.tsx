@@ -1,24 +1,24 @@
-import React, { ReactNode } from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import React, { ReactNode } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps } from "../types";
 
-import DropdownDetails from './DropdownDetails'
-import DropdownMenu from './DropdownMenu'
-import DropdownItem from './DropdownItem'
-import DropdownToggle from './DropdownToggle'
+import DropdownDetails from "./DropdownDetails";
+import DropdownMenu from "./DropdownMenu";
+import DropdownItem from "./DropdownItem";
+import DropdownToggle from "./DropdownToggle";
 
 export type DropdownProps<T extends HTMLElement = HTMLDivElement> =
   React.HTMLAttributes<T> &
     IComponentBaseProps & {
-      item?: ReactNode
-      horizontal?: 'left' | 'right'
-      vertical?: 'top' | 'bottom'
-      end?: boolean
-      hover?: boolean
-      open?: boolean
-    }
+      item?: ReactNode;
+      horizontal?: "left" | "right";
+      vertical?: "top" | "bottom";
+      end?: boolean;
+      hover?: boolean;
+      open?: boolean;
+    };
 
 export const classesFn = ({
   className,
@@ -29,21 +29,21 @@ export const classesFn = ({
   open,
 }: Pick<
   DropdownProps,
-  'className' | 'horizontal' | 'vertical' | 'end' | 'hover' | 'open'
+  "className" | "horizontal" | "vertical" | "end" | "hover" | "open"
 >) =>
   twMerge(
-    'dropdown',
+    "dropdown",
     className,
     clsx({
-      'dropdown-left': horizontal === 'left',
-      'dropdown-right': horizontal === 'right',
-      'dropdown-top': vertical === 'top',
-      'dropdown-bottom': vertical === 'bottom',
-      'dropdown-end': end,
-      'dropdown-hover': hover,
-      'dropdown-open': open,
-    })
-  )
+      "dropdown-left": horizontal === "left",
+      "dropdown-right": horizontal === "right",
+      "dropdown-top": vertical === "top",
+      "dropdown-bottom": vertical === "bottom",
+      "dropdown-end": end,
+      "dropdown-hover": hover,
+      "dropdown-open": open,
+    }),
+  );
 
 const Dropdown = React.forwardRef<HTMLDivElement, DropdownProps>(
   (
@@ -59,7 +59,7 @@ const Dropdown = React.forwardRef<HTMLDivElement, DropdownProps>(
       dataTheme,
       ...props
     },
-    ref
+    ref,
   ) => {
     return (
       <div
@@ -85,13 +85,13 @@ const Dropdown = React.forwardRef<HTMLDivElement, DropdownProps>(
           <>{children}</>
         )}
       </div>
-    )
-  }
-)
+    );
+  },
+);
 
 export default Object.assign(Dropdown, {
   Details: DropdownDetails,
   Toggle: DropdownToggle,
   Menu: DropdownMenu,
   Item: DropdownItem,
-})
+});

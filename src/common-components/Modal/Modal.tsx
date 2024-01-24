@@ -1,35 +1,35 @@
-import React, { forwardRef, useCallback, useRef } from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import React, { forwardRef, useCallback, useRef } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps } from '../types'
+import { IComponentBaseProps } from "../types";
 
-import ModalActions from './ModalActions'
-import ModalBody from './ModalBody'
-import ModalHeader from './ModalHeader'
-import ModalLegacy, { ModalProps as ModalLegacyProps } from './ModalLegacy'
+import ModalActions from "./ModalActions";
+import ModalBody from "./ModalBody";
+import ModalHeader from "./ModalHeader";
+import ModalLegacy, { ModalProps as ModalLegacyProps } from "./ModalLegacy";
 
 export type ModalProps = React.HTMLAttributes<HTMLDialogElement> &
   IComponentBaseProps & {
-    open?: boolean
-    responsive?: boolean
-    backdrop?: boolean
-  }
+    open?: boolean;
+    responsive?: boolean;
+    backdrop?: boolean;
+  };
 
 const Modal = forwardRef<HTMLDialogElement, ModalProps>(
   (
     { children, open, responsive, backdrop, dataTheme, className, ...props },
-    ref
+    ref,
   ): JSX.Element => {
     const containerClasses = twMerge(
-      'modal',
+      "modal",
       clsx({
-        'modal-open': open,
-        'modal-bottom sm:modal-middle': responsive,
-      })
-    )
+        "modal-open": open,
+        "modal-bottom sm:modal-middle": responsive,
+      }),
+    );
 
-    const bodyClasses = twMerge('modal-box', className)
+    const bodyClasses = twMerge("modal-box", className);
 
     return (
       <dialog
@@ -51,38 +51,38 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
           </form>
         )}
       </dialog>
-    )
-  }
-)
+    );
+  },
+);
 
-Modal.displayName = 'Modal'
+Modal.displayName = "Modal";
 
-export type DialogProps = Omit<ModalProps, 'ref'>
+export type DialogProps = Omit<ModalProps, "ref">;
 const useDialog = () => {
-  const dialogRef = useRef<HTMLDialogElement>(null)
+  const dialogRef = useRef<HTMLDialogElement>(null);
 
   const handleShow = useCallback(() => {
-    dialogRef.current?.showModal()
-  }, [dialogRef])
+    dialogRef.current?.showModal();
+  }, [dialogRef]);
 
   const handleHide = useCallback(() => {
-    dialogRef.current?.close()
-  }, [dialogRef])
+    dialogRef.current?.close();
+  }, [dialogRef]);
 
   const Dialog = ({ children, ...props }: DialogProps) => {
     return (
       <Modal {...props} ref={dialogRef}>
         {children}
       </Modal>
-    )
-  }
-  Dialog.displayName = 'Dialog'
-  return { dialogRef, Dialog, handleShow, handleHide }
-}
+    );
+  };
+  Dialog.displayName = "Dialog";
+  return { dialogRef, Dialog, handleShow, handleHide };
+};
 export default Object.assign(Modal, {
   Header: ModalHeader,
   Body: ModalBody,
   Actions: ModalActions,
   Legacy: ModalLegacy,
   useDialog,
-})
+});

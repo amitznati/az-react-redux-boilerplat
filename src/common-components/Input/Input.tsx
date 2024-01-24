@@ -1,19 +1,19 @@
-import React, { forwardRef } from 'react'
-import clsx from 'clsx'
-import { twMerge } from 'tailwind-merge'
+import React, { forwardRef } from "react";
+import clsx from "clsx";
+import { twMerge } from "tailwind-merge";
 
-import { IComponentBaseProps, ComponentColor, ComponentSize } from '../types'
+import { IComponentBaseProps, ComponentColor, ComponentSize } from "../types";
 
 export type InputProps = Omit<
   React.InputHTMLAttributes<HTMLInputElement>,
-  'size' | 'color'
+  "size" | "color"
 > &
   IComponentBaseProps & {
-    bordered?: boolean
-    borderOffset?: boolean
-    size?: ComponentSize
-    color?: ComponentColor
-  }
+    bordered?: boolean;
+    borderOffset?: boolean;
+    size?: ComponentSize;
+    color?: ComponentColor;
+  };
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
   (
@@ -29,28 +29,28 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       type,
       ...props
     },
-    ref
+    ref,
   ): JSX.Element => {
     const classes = twMerge(
-      'input',
+      "input",
       className,
       clsx({
-        'input-lg': size === 'lg',
-        'input-md': size === 'md',
-        'input-sm': size === 'sm',
-        'input-xs': size === 'xs',
-        'input-primary': color === 'primary',
-        'input-secondary': color === 'secondary',
-        'input-accent': color === 'accent',
-        'input-ghost': color === 'ghost',
-        'input-info': color === 'info',
-        'input-success': color === 'success',
-        'input-warning': color === 'warning',
-        'input-error': color === 'error',
-        'input-bordered': bordered,
-        'focus:outline-offset-0': !borderOffset,
-      })
-    )
+        "input-lg": size === "lg",
+        "input-md": size === "md",
+        "input-sm": size === "sm",
+        "input-xs": size === "xs",
+        "input-primary": color === "primary",
+        "input-secondary": color === "secondary",
+        "input-accent": color === "accent",
+        "input-ghost": color === "ghost",
+        "input-info": color === "info",
+        "input-success": color === "success",
+        "input-warning": color === "warning",
+        "input-error": color === "error",
+        "input-bordered": bordered,
+        "focus:outline-offset-0": !borderOffset,
+      }),
+    );
 
     return (
       <input
@@ -62,10 +62,10 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
         data-theme={dataTheme}
         className={classes}
       />
-    )
-  }
-)
+    );
+  },
+);
 
-Input.displayName = 'Input'
+Input.displayName = "Input";
 
-export default Input
+export default Input;

@@ -1,16 +1,16 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Tabs, { TabsProps } from '.'
+import Tabs, { TabsProps } from ".";
 
-const { Tab, RadioTab } = Tabs
+const { Tab, RadioTab } = Tabs;
 
 const meta: Meta<TabsProps> = {
-  title: 'Core/Navigation/Tabs',
+  title: "Core/Navigation/Tabs",
   component: Tabs,
-}
+};
 
-export default meta
+export default meta;
 
 const Template: Story<TabsProps> = (args) => {
   return (
@@ -19,23 +19,23 @@ const Template: Story<TabsProps> = (args) => {
       <Tab active={true}>Tab 2</Tab>
       <Tab>Tab 3</Tab>
     </Tabs>
-  )
-}
+  );
+};
 
-export const Default: Story<TabsProps> = Template.bind({})
-export const Bordered: Story<TabsProps> = Template.bind({})
+export const Default: Story<TabsProps> = Template.bind({});
+export const Bordered: Story<TabsProps> = Template.bind({});
 Bordered.args = {
-  variant: 'bordered',
-}
-export const Lifted: Story<TabsProps> = Template.bind({})
+  variant: "bordered",
+};
+export const Lifted: Story<TabsProps> = Template.bind({});
 Lifted.args = {
-  variant: 'lifted',
-}
+  variant: "lifted",
+};
 
-export const Boxed: Story<TabsProps> = Template.bind({})
+export const Boxed: Story<TabsProps> = Template.bind({});
 Boxed.args = {
-  variant: 'boxed',
-}
+  variant: "boxed",
+};
 
 export const Sizes: Story<TabsProps> = ({ size, ...args }) => {
   return (
@@ -65,16 +65,16 @@ export const Sizes: Story<TabsProps> = ({ size, ...args }) => {
         <Tab>Large</Tab>
       </Tabs>
     </div>
-  )
-}
+  );
+};
 Sizes.argTypes = {
   size: {
     control: false,
   },
-}
+};
 Sizes.args = {
-  variant: 'lifted',
-}
+  variant: "lifted",
+};
 
 export const RadioTabBordered: Story<TabsProps> = (args) => {
   return (
@@ -94,11 +94,11 @@ export const RadioTabBordered: Story<TabsProps> = (args) => {
         Tab content 3
       </RadioTab>
     </Tabs>
-  )
-}
+  );
+};
 RadioTabBordered.args = {
-  variant: 'bordered',
-}
+  variant: "bordered",
+};
 
 export const RadioTabLifted: Story<TabsProps> = (args) => {
   return (
@@ -126,9 +126,9 @@ export const RadioTabLifted: Story<TabsProps> = (args) => {
         Tab content 3
       </RadioTab>
     </Tabs>
-  )
-}
+  );
+};
 RadioTabLifted.args = {
-  className: 'w-full my-10 lg:mx-10',
-  variant: 'lifted',
-}
+  className: "w-full my-10 lg:mx-10",
+  variant: "lifted",
+};

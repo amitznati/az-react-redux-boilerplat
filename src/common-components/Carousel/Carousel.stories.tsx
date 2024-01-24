@@ -1,13 +1,13 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Carousel, { CarouselProps } from '.'
-import Button from '../Button'
+import Carousel, { CarouselProps } from ".";
+import Button from "../Button";
 
 export default {
-  title: 'Core/Data Display/Carousel',
+  title: "Core/Data Display/Carousel",
   component: Carousel,
-} as Meta
+} as Meta;
 
 export const Default: Story<CarouselProps> = (args) => {
   return (
@@ -41,9 +41,9 @@ export const Default: Story<CarouselProps> = (args) => {
         alt="Fruits"
       />
     </Carousel>
-  )
-}
-Default.args = {}
+  );
+};
+Default.args = {};
 
 export const Snap: Story<CarouselProps> = (args) => {
   return (
@@ -77,11 +77,11 @@ export const Snap: Story<CarouselProps> = (args) => {
         alt="Fruits"
       />
     </Carousel>
-  )
-}
+  );
+};
 Snap.args = {
-  snap: 'end',
-}
+  snap: "end",
+};
 
 export const FullWidth: Story<CarouselProps> = (args) => {
   return (
@@ -115,11 +115,11 @@ export const FullWidth: Story<CarouselProps> = (args) => {
         alt="Fruits"
       />
     </Carousel>
-  )
-}
+  );
+};
 FullWidth.args = {
-  width: 'full',
-}
+  width: "full",
+};
 
 export const HalfWidth: Story<CarouselProps> = (args) => {
   return (
@@ -153,11 +153,11 @@ export const HalfWidth: Story<CarouselProps> = (args) => {
         alt="Fruits"
       />
     </Carousel>
-  )
-}
+  );
+};
 HalfWidth.args = {
-  width: 'half',
-}
+  width: "half",
+};
 
 export const Vertical: Story<CarouselProps> = (args) => {
   return (
@@ -191,12 +191,12 @@ export const Vertical: Story<CarouselProps> = (args) => {
         alt="Fruits"
       />
     </Carousel>
-  )
-}
+  );
+};
 Vertical.args = {
-  width: 'full',
+  width: "full",
   vertical: true,
-}
+};
 
 export const Numbered: Story<CarouselProps> = (args) => {
   return (
@@ -218,11 +218,11 @@ export const Numbered: Story<CarouselProps> = (args) => {
         alt="City"
       />
     </Carousel>
-  )
-}
+  );
+};
 Numbered.args = {
-  display: 'numbered',
-}
+  display: "numbered",
+};
 
 export const Sequential: Story<CarouselProps> = (args) => {
   return (
@@ -244,18 +244,18 @@ export const Sequential: Story<CarouselProps> = (args) => {
         alt="City"
       />
     </Carousel>
-  )
-}
+  );
+};
 Sequential.args = {
-  display: 'sequential',
-}
+  display: "sequential",
+};
 
 export const CustomButton: Story<CarouselProps> = (args) => {
   const buttonStyle = (value: string) => {
-    return <Button color="primary">{value}</Button>
-  }
+    return <Button color="primary">{value}</Button>;
+  };
 
-  args.buttonStyle = buttonStyle
+  args.buttonStyle = buttonStyle;
 
   return (
     <Carousel {...args} className="rounded-box">
@@ -276,8 +276,8 @@ export const CustomButton: Story<CarouselProps> = (args) => {
         alt="City"
       />
     </Carousel>
-  )
-}
+  );
+};
 CustomButton.args = {
-  display: 'sequential',
-}
+  display: "sequential",
+};

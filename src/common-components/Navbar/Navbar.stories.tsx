@@ -1,24 +1,24 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
-import { twMerge } from 'tailwind-merge'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
+import { twMerge } from "tailwind-merge";
 
-import Navbar, { NavbarProps } from '.'
-import Button from '../Button'
-import Menu from '../Menu'
-import Dropdown from '../Dropdown'
-import Form from '../Form'
-import Input from '../Input'
-import Indicator from '../Indicator'
-import Badge from '../Badge'
-import Card from '../Card'
+import Navbar, { NavbarProps } from ".";
+import Button from "../Button";
+import Menu from "../Menu";
+import Dropdown from "../Dropdown";
+import Form from "../Form";
+import Input from "../Input";
+import Indicator from "../Indicator";
+import Badge from "../Badge";
+import Card from "../Card";
 
 export default {
-  title: 'Core/Navigation/Navbar',
+  title: "Core/Navigation/Navbar",
   component: Navbar,
   args: {
-    className: 'bg-base-100 shadow-xl rounded-box',
+    className: "bg-base-100 shadow-xl rounded-box",
   },
-} as Meta
+} as Meta;
 
 export const Default: Story<NavbarProps> = (args) => {
   return (
@@ -27,8 +27,8 @@ export const Default: Story<NavbarProps> = (args) => {
         daisyUI
       </Button>
     </Navbar>
-  )
-}
+  );
+};
 
 export const TitleAndIcon: Story<NavbarProps> = (args) => {
   return (
@@ -56,8 +56,8 @@ export const TitleAndIcon: Story<NavbarProps> = (args) => {
         </Button>
       </div>
     </Navbar>
-  )
-}
+  );
+};
 
 export const IconAtStartAndEnd: Story<NavbarProps> = (args) => {
   return (
@@ -102,8 +102,8 @@ export const IconAtStartAndEnd: Story<NavbarProps> = (args) => {
         </Button>
       </div>
     </Navbar>
-  )
-}
+  );
+};
 
 export const MenuAndSubmenu: Story<NavbarProps> = (args) => {
   return (
@@ -134,11 +134,11 @@ export const MenuAndSubmenu: Story<NavbarProps> = (args) => {
         </Menu>
       </div>
     </Navbar>
-  )
-}
+  );
+};
 MenuAndSubmenu.args = {
-  className: 'bg-base-100 mb-32 shadow-xl rounded-box',
-}
+  className: "bg-base-100 mb-32 shadow-xl rounded-box",
+};
 
 export const SearchInputAndDropdown: Story<NavbarProps> = (args) => {
   return (
@@ -182,11 +182,11 @@ export const SearchInputAndDropdown: Story<NavbarProps> = (args) => {
         </Dropdown>
       </div>
     </Navbar>
-  )
-}
+  );
+};
 SearchInputAndDropdown.args = {
-  className: 'bg-base-100 mb-32 shadow-xl round-box',
-}
+  className: "bg-base-100 mb-32 shadow-xl round-box",
+};
 
 export const IconIndicatorAndDropdown: Story<NavbarProps> = (args) => {
   return (
@@ -256,11 +256,11 @@ export const IconIndicatorAndDropdown: Story<NavbarProps> = (args) => {
         </Dropdown>
       </div>
     </Navbar>
-  )
-}
+  );
+};
 IconIndicatorAndDropdown.args = {
-  className: 'bg-base-100 mb-40 shadow-xl rounded-box',
-}
+  className: "bg-base-100 mb-40 shadow-xl rounded-box",
+};
 
 export const DropdownCenterLogoAndIcon: Story<NavbarProps> = (args) => {
   return (
@@ -337,11 +337,11 @@ export const DropdownCenterLogoAndIcon: Story<NavbarProps> = (args) => {
         </Button>
       </Navbar.End>
     </Navbar>
-  )
-}
+  );
+};
 DropdownCenterLogoAndIcon.args = {
-  className: 'bg-base-100 mb-40 shadow-xl rounded-box',
-}
+  className: "bg-base-100 mb-40 shadow-xl rounded-box",
+};
 
 export const Responsive: Story<NavbarProps> = (args) => {
   return (
@@ -409,41 +409,41 @@ export const Responsive: Story<NavbarProps> = (args) => {
         <Button tag="a">Button</Button>
       </Navbar.End>
     </Navbar>
-  )
-}
+  );
+};
 Responsive.args = {
-  className: 'bg-base-100 mb-48 shadow-xl rounded-box',
-}
+  className: "bg-base-100 mb-48 shadow-xl rounded-box",
+};
 
 export const Colors: Story<NavbarProps> = (args) => {
   return (
     <>
       <Navbar
         {...args}
-        className={'rounded-box bg-neutral text-neutral-content'}
+        className={"rounded-box bg-neutral text-neutral-content"}
       >
         <Button tag="a" className="text-xl normal-case" color="ghost">
           daisyUI
         </Button>
       </Navbar>
-      <Navbar {...args} className={'rounded-box bg-base-300'}>
+      <Navbar {...args} className={"rounded-box bg-base-300"}>
         <Button tag="a" className="text-xl normal-case" color="ghost">
           daisyUI
         </Button>
       </Navbar>
       <Navbar
         {...args}
-        className={'rounded-box bg-primary text-primary-content'}
+        className={"rounded-box bg-primary text-primary-content"}
       >
         <Button tag="a" className="text-xl normal-case" color="ghost">
           daisyUI
         </Button>
       </Navbar>
     </>
-  )
-}
+  );
+};
 Colors.argTypes = {
   className: {
     control: false,
   },
-}
+};

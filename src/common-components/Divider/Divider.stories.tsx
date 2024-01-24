@@ -1,17 +1,17 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Divider, { DividerProps } from '.'
-import Card from '../Card'
+import Divider, { DividerProps } from ".";
+import Card from "../Card";
 
 const meta: Meta<DividerProps> = {
-  title: 'Core/Layout/Divider',
+  title: "Core/Layout/Divider",
   component: Divider,
   args: {
-    children: 'OR',
+    children: "OR",
   },
-}
-export default meta
+};
+export default meta;
 
 export const Default: Story<DividerProps> = ({ children, ...args }) => {
   return (
@@ -24,9 +24,9 @@ export const Default: Story<DividerProps> = ({ children, ...args }) => {
         content
       </Card>
     </div>
-  )
-}
-Default.args = {}
+  );
+};
+Default.args = {};
 
 export const Horizontal: Story<DividerProps> = ({ children, ...args }) => {
   return (
@@ -39,11 +39,11 @@ export const Horizontal: Story<DividerProps> = ({ children, ...args }) => {
         content
       </Card>
     </div>
-  )
-}
+  );
+};
 Horizontal.args = {
   horizontal: true,
-}
+};
 
 export const NoText: Story<DividerProps> = ({ children, ...args }) => {
   return (
@@ -56,11 +56,11 @@ export const NoText: Story<DividerProps> = ({ children, ...args }) => {
         content
       </Card>
     </div>
-  )
-}
+  );
+};
 NoText.args = {
-  children: '',
-}
+  children: "",
+};
 
 export const Responsive: Story<DividerProps> = ({ children, ...args }) => {
   return (
@@ -73,11 +73,11 @@ export const Responsive: Story<DividerProps> = ({ children, ...args }) => {
         content
       </Card>
     </div>
-  )
-}
+  );
+};
 Responsive.args = {
   responsive: true,
-}
+};
 
 export const Colors: Story<DividerProps> = ({ children, color, ...args }) => {
   return (
@@ -108,8 +108,8 @@ export const Colors: Story<DividerProps> = ({ children, color, ...args }) => {
         Error
       </Divider>
     </div>
-  )
-}
+  );
+};
 Colors.argTypes = {
   children: {
     control: false,
@@ -117,7 +117,7 @@ Colors.argTypes = {
   color: {
     control: false,
   },
-}
+};
 
 export const DifferentPositions: Story<DividerProps> = ({
   children,
@@ -135,8 +135,8 @@ export const DifferentPositions: Story<DividerProps> = ({
         End
       </Divider>
     </div>
-  )
-}
+  );
+};
 DifferentPositions.argTypes = {
   children: {
     control: false,
@@ -147,7 +147,7 @@ DifferentPositions.argTypes = {
   end: {
     control: false,
   },
-}
+};
 
 export const DifferentPositionsHorizontal: Story<DividerProps> = ({
   children,
@@ -165,8 +165,8 @@ export const DifferentPositionsHorizontal: Story<DividerProps> = ({
         End
       </Divider>
     </div>
-  )
-}
+  );
+};
 DifferentPositionsHorizontal.argTypes = {
   children: {
     control: false,
@@ -177,8 +177,8 @@ DifferentPositionsHorizontal.argTypes = {
   end: {
     control: false,
   },
-}
+};
 
 DifferentPositionsHorizontal.args = {
   horizontal: true,
-}
+};

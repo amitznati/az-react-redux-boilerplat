@@ -1,9 +1,9 @@
-import React from 'react'
-import { twMerge } from 'tailwind-merge'
-import { IComponentBaseProps } from '../types'
+import React from "react";
+import { twMerge } from "tailwind-merge";
+import { IComponentBaseProps } from "../types";
 
 export type ChatBubbleFooterProps = React.HTMLAttributes<HTMLDivElement> &
-  IComponentBaseProps
+  IComponentBaseProps;
 
 const ChatBubbleFooter = React.forwardRef<
   HTMLDivElement,
@@ -11,9 +11,9 @@ const ChatBubbleFooter = React.forwardRef<
 >(({ className, ...props }, ref) => (
   <div
     {...props}
-    className={twMerge('chat-footer opacity-50', className)}
+    className={twMerge("chat-footer opacity-50", className)}
     ref={ref}
   />
-))
+));
 
-export default ChatBubbleFooter
+export default ChatBubbleFooter;

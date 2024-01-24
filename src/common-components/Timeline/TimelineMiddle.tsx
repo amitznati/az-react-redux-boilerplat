@@ -1,7 +1,7 @@
-import React from 'react'
-import { twMerge } from 'tailwind-merge'
+import React from "react";
+import { twMerge } from "tailwind-merge";
 
-type TimelineMiddleProps = React.HTMLAttributes<HTMLDivElement> & {}
+type TimelineMiddleProps = React.HTMLAttributes<HTMLDivElement> & {};
 
 const TimelineMiddle = React.forwardRef<HTMLDivElement, TimelineMiddleProps>(
   (
@@ -23,16 +23,16 @@ const TimelineMiddle = React.forwardRef<HTMLDivElement, TimelineMiddleProps>(
       className,
       ...props
     },
-    ref
+    ref,
   ) => {
-    const classes = twMerge('timeline-middle', className)
+    const classes = twMerge("timeline-middle", className);
     return (
       <div {...props} className={classes} ref={ref}>
         {children}
       </div>
-    )
-  }
-)
+    );
+  },
+);
 
-TimelineMiddle.displayName = 'TimelineMiddle'
-export default TimelineMiddle
+TimelineMiddle.displayName = "TimelineMiddle";
+export default TimelineMiddle;

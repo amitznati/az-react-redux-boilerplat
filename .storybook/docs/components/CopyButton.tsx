@@ -1,24 +1,24 @@
-import React, { useState } from 'react'
-import { ButtonProps } from '../../../src/common-components/Button'
-import Button from '../../../src/common-components/Button'
+import React, { useState } from "react";
+import { ButtonProps } from "../../../src/common-components/Button";
+import Button from "../../../src/common-components/Button";
 
 export type CopyButtonProps = ButtonProps & {
-  text?: string
-}
+  text?: string;
+};
 
-export const CopyButton = ({ text = '', ...props }: CopyButtonProps) => {
-  const [isCopied, setIsCopied] = useState(false)
+export const CopyButton = ({ text = "", ...props }: CopyButtonProps) => {
+  const [isCopied, setIsCopied] = useState(false);
 
   const copy = async () => {
     navigator.clipboard
       .writeText(text)
       .then(() => setIsCopied(true))
-      .catch(() => setIsCopied(false))
-  }
+      .catch(() => setIsCopied(false));
+  };
 
   const handleClick: React.MouseEventHandler = () => {
-    copy()
-  }
+    copy();
+  };
 
   return (
     <Button {...props} onClick={handleClick}>
@@ -54,5 +54,5 @@ export const CopyButton = ({ text = '', ...props }: CopyButtonProps) => {
         </svg>
       )}
     </Button>
-  )
-}
+  );
+};

@@ -1,24 +1,24 @@
-import React from 'react'
-import { StoryFn as Story, Meta } from '@storybook/react'
+import React from "react";
+import { StoryFn as Story, Meta } from "@storybook/react";
 
-import Textarea, { TextareaProps } from '.'
+import Textarea, { TextareaProps } from ".";
 
 export default {
-  title: 'Core/Data Input/Textarea',
+  title: "Core/Data Input/Textarea",
   component: Textarea,
   args: {
-    placeholder: 'Bio',
+    placeholder: "Bio",
     disabled: false,
   },
-} as Meta
+} as Meta;
 
 export const Default: Story<TextareaProps> = (args) => {
   return (
     <div className="flex w-full component-preview p-4 items-center justify-center gap-2 font-sans">
       <Textarea {...args} />
     </div>
-  )
-}
+  );
+};
 
 export const FormControlAndLabels: Story<TextareaProps> = (args) => {
   return (
@@ -35,5 +35,5 @@ export const FormControlAndLabels: Story<TextareaProps> = (args) => {
         </label>
       </div>
     </div>
-  )
-}
+  );
+};
