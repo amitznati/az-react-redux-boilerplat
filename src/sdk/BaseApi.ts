@@ -2,7 +2,7 @@ export default class BaseApi {
   protected store: any;
   private APIsInstances: any;
   constructor(store: any, APIsInstances: any) {
-    this.store = store;
+    this.store = store.store;
     this.APIsInstances = APIsInstances;
   }
 
