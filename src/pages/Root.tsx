@@ -7,11 +7,11 @@ import {
   Badge,
 } from "../common-components";
 
-const links = [
-  { to: "/", label: "Home" },
-  { to: "posts", label: "Posts" },
-];
-export default function Root() {
+export default function Root({
+  links,
+}: {
+  links: { label: string; to: string }[];
+}) {
   const onNavItemClicked = () => {
     const elem = document.activeElement as HTMLElement;
     if (elem) {

@@ -1,4 +1,4 @@
-import BaseApi from "../../../sdk/BaseApi";
+import { BaseApi } from "@sdk";
 import selectors from "./WidgetTemplateSelectors";
 
 export const ActionTypes = {

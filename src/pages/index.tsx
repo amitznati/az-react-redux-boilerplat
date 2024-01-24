@@ -4,19 +4,25 @@ import { RouterProvider, createBrowserRouter } from "react-router-dom";
 import Posts from "./Posts.jsx";
 import Home from "./Home.jsx";
 import Root from "./Root.jsx";
+import { LoginPage } from "../widgets";
+
+const links = [
+  { to: "/", label: "Home" },
+  { to: "login", label: "Login" },
+];
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root />,
+    element: <Root links={links} />,
     children: [
       {
         path: "/",
         element: <Home />,
       },
       {
-        path: "posts",
-        element: <Posts />,
+        path: "login",
+        element: <LoginPage />,
       },
     ],
   },

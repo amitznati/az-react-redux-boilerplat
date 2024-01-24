@@ -16,7 +16,11 @@
     "noEmit": true,
     "jsx": "react-jsx",
     "jsxFactory": "",
-    "jsxFragmentFactory": ""
+    "jsxFragmentFactory": "",
+    "paths": {
+        "@sdk": ["./src/sdk"],
+        "@common-components": ["./src/common-components"],
+    }
   },
   "include": ["./src"],
   "exclude": ["./src/**/*.stories.tsx", "./WidgetTemplate/**/*"]

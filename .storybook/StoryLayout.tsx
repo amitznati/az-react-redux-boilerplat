@@ -20,6 +20,7 @@ const StoryLayout = ({ children, title, description, source }: Props) => {
   const globalTheme = useGlobalTheme();
 
   useEffect(() => {
+    // @ts-ignore
     document
       .getElementsByTagName("html")[0]
       .setAttribute("data-theme", globalTheme);

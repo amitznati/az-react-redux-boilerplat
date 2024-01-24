@@ -1,5 +1,6 @@
 const config = {
-  useMocks: false,
+  baseUrl: "https://jsonplaceholder.typicode.com",
+  useMocks: true,
 };
 
 export default config;
