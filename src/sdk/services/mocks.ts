@@ -12,13 +12,14 @@ const searchLocation = JSON.parse(
 
 const login = {
   data: {
-    username: 'demouser',
-    email: 'demo@example.com',
-    fullName: 'Demo User',
-    id: 'dfjkh435jh4k3j5hkj4',
-    token: 'dsfjsdhfjkh4jk5jKUHFSHDFkuhfsdf7HKSDFHfd7dfhsk98DFFsldgjkSDKLFJ9485FJLljf'
-  }
-}
+    username: "demouser",
+    email: "demo@example.com",
+    fullName: "Demo User",
+    id: "dfjkh435jh4k3j5hkj4",
+    token:
+      "dsfjsdhfjkh4jk5jKUHFSHDFkuhfsdf7HKSDFHfd7dfhsk98DFFsldgjkSDKLFJ9485FJLljf",
+  },
+};
 
 const mocks: any = {
   "https://api.opencagedata.com/geocode/v1/json": loadLocationName,

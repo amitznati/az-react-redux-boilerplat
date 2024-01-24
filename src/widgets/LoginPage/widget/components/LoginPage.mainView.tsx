@@ -1,18 +1,18 @@
-import {useState, MouseEvent} from "react";
+import { useState, MouseEvent } from "react";
 import { Button } from "@common-components";
 
 interface LoginPageMainViewProps {
   className?: string;
-  login: (data: {username: string, password: string}) => void;
+  login: (data: { username: string; password: string }) => void;
 }
 
-export default function LoginPageMainView({login}: LoginPageMainViewProps) {
+export default function LoginPageMainView({ login }: LoginPageMainViewProps) {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const onLogin = (e: MouseEvent<HTMLElement>) => {
     e.preventDefault();
-    login({username, password});
-  }
+    login({ username, password });
+  };
   return (
     <div className="relative flex flex-col justify-center h-screen overflow-hidden">
       <div className="w-full p-6 m-auto bg-white rounded-md shadow-md lg:max-w-lg">
@@ -32,7 +32,7 @@ export default function LoginPageMainView({login}: LoginPageMainViewProps) {
               placeholder="Email Address/User Name"
               className="w-full input input-bordered input-primary"
               value={username}
-              onChange={e => setUsername(e.target.value)}
+              onChange={(e) => setUsername(e.target.value)}
             />
           </div>
           <div>
@@ -44,7 +44,7 @@ export default function LoginPageMainView({login}: LoginPageMainViewProps) {
               placeholder="Enter Password"
               className="w-full input input-bordered input-primary"
               value={password}
-                onChange={e => setPassword(e.target.value)}
+              onChange={(e) => setPassword(e.target.value)}
             />
           </div>
           <a
@@ -55,7 +55,9 @@ export default function LoginPageMainView({login}: LoginPageMainViewProps) {
             Forget Password?
           </a>
           <div>
-            <Button color="primary" onClick={onLogin}>Login</Button>
+            <Button color="primary" onClick={onLogin}>
+              Login
+            </Button>
           </div>
         </form>
       </div>

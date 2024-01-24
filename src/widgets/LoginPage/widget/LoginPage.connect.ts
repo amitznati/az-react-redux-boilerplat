@@ -5,9 +5,7 @@ import LoginPageComponent from "./LoginPage.component";
 const loginPageApi = getInstance().LoginPageApi;
 
 const mapStateToProps = () => {
-  return {
-
-  };
+  return {};
 };
 
 const mapDispatchToProps = () => ({
