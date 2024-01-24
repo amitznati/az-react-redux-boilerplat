@@ -3,6 +3,7 @@ import selectors from "./LoginPageSelectors";
 
 export const ActionTypes = {
   LoginPage_LOGIN: "LoginPage_LOGIN",
+  LoginPage_LOGOUT: "LoginPage_LOGOUT",
 };
 export default class LoginPageApi extends BaseApi {
   login = async (data: any) => {
@@ -21,6 +22,22 @@ export default class LoginPageApi extends BaseApi {
     );
   };
 
+  logout = async () => {
+    await this.serviceRequest(
+      SimpleServices.logout,
+      {},
+      ActionTypes.LoginPage_LOGOUT,
+      (res) => {
+        console.log("Logout Success!", res);
+        return res.data;
+      },
+      (err) => {
+        console.log("Logout Failed!");
+        return err;
+      },
+    );
+    this.store.dispatch({ type: "RESET_STATE" });
+  };
   getUserSelector = () => {
     return selectors.getUserSelector(this.store.getState());
   };

@@ -25,6 +25,7 @@ const mocks: any = {
   "https://api.opencagedata.com/geocode/v1/json": loadLocationName,
   "https://api.sunrise-sunset.org/json": loadSunTimes,
   "https://jsonplaceholder.typicode.com/login": login,
+  "https://jsonplaceholder.typicode.com/logout": "OK",
   searchLocation,
 };
 

@@ -4,7 +4,7 @@ const config = {
   persist: {
     whitelist: ["user"],
     blacklist: ["loginForm"],
-  }
+  },
 };
 
 export default config;

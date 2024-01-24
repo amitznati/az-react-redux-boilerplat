@@ -16,6 +16,10 @@ class SimpleServices {
   login = ({ data }: { data: { username: string; password: string } }) => {
     return this.serviceBase.ajax.post({ url: this.getUrl("login"), data });
   };
+
+  logout = () => {
+    return this.serviceBase.ajax.post({ url: this.getUrl("logout") });
+  };
 }
 
 const simpleService = new SimpleServices();

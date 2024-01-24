@@ -12,6 +12,7 @@ const mapStateToProps = (state: any, ownProps: any) => {
 };
 
 const mapDispatchToProps = () => ({
+  logout: loginApi.logout,
 });
 
 export default connect(

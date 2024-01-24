@@ -6,10 +6,9 @@ interface LoginPageMainViewProps {
 }
 
 export default function LoginPageMainView({ login }: LoginPageMainViewProps) {
-
   return (
-      <div className="relative flex flex-col justify-center h-[700px] overflow-hidden">
-        <LoginPageLoginForm login={login} />
-      </div>
+    <div className="relative flex flex-col justify-center h-[700px] overflow-hidden">
+      <LoginPageLoginForm login={login} />
+    </div>
   );
 }
