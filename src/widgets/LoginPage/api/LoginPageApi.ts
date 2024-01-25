@@ -36,7 +36,7 @@ export default class LoginPageApi extends BaseApi {
         return err;
       },
     );
-    this.store.dispatch({ type: "RESET_STATE" });
+    this.store.dispatch({ type: "@@RESET_STORE" });
   };
   getUserSelector = () => {
     return selectors.getUserSelector(this.store.getState());

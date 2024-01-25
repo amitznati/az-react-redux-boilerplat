@@ -1,4 +1,6 @@
-import { configureStore } from "@reduxjs/toolkit";
+import {
+  configureStore
+} from "@reduxjs/toolkit";
 import { combineReducers } from "redux";
 import {
   FLUSH,
@@ -24,11 +26,11 @@ interface WidgetType {
   reducer: any;
   api: any;
 }
-const createStoreInstance = () => {
-  const reducerMap: any = {};
-  (widgets as Array<WidgetType>).forEach((widget) => {
-    if (widget.config.persist) {
-      reducerMap[widget.config.sliceName] = persistReducer(
+const reducerMap: any = {};
+const persistSlices: string[] = [];
+(widgets as Array<WidgetType>).forEach((widget) => {
+  if (widget.config.persist) {
+    reducerMap[widget.config.sliceName] = persistReducer(
         {
           key: widget.config.sliceName,
           version: 1,
@@ -36,16 +38,27 @@ const createStoreInstance = () => {
           ...widget.config.persist,
         },
         widget.reducer,
-      );
-    } else {
-      reducerMap[widget.config.sliceName] = widget.reducer;
-    }
-  });
-  reducerMap.general = baseReducer;
+    );
+    persistSlices.push(widget.config.sliceName);
+  } else {
+    reducerMap[widget.config.sliceName] = widget.reducer;
+  }
+});
+reducerMap.general = baseReducer;
+const createStoreInstance = () => {
   const reducers = combineReducers(reducerMap);
+  const resettableRootReducer = (state: { [x: string]: unknown; } | Partial<{ [x: string]: unknown; }> | undefined, action: { type: any; }) => {
+    if (action.type === '@@RESET_STORE') {
+        Promise.all(persistSlices.map(async (slice) => {
+            return storage.removeItem(`persist:${slice}`);
+        }));
+      return reducers(undefined, action);
+    }
+    return reducers(state, action);
+  }
 
   const store = configureStore({
-    reducer: reducers,
+    reducer: resettableRootReducer,
     middleware: (getDefaultMiddleware) =>
       getDefaultMiddleware({
         serializableCheck: {
