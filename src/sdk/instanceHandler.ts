@@ -1,6 +1,4 @@
-import {
-  configureStore
-} from "@reduxjs/toolkit";
+import { configureStore } from "@reduxjs/toolkit";
 import { combineReducers } from "redux";
 import {
   FLUSH,
@@ -31,13 +29,13 @@ const persistSlices: string[] = [];
 (widgets as Array<WidgetType>).forEach((widget) => {
   if (widget.config.persist) {
     reducerMap[widget.config.sliceName] = persistReducer(
-        {
-          key: widget.config.sliceName,
-          version: 1,
-          storage,
-          ...widget.config.persist,
-        },
-        widget.reducer,
+      {
+        key: widget.config.sliceName,
+        version: 1,
+        storage,
+        ...widget.config.persist,
+      },
+      widget.reducer,
     );
     persistSlices.push(widget.config.sliceName);
   } else {
@@ -47,15 +45,23 @@ const persistSlices: string[] = [];
 reducerMap.general = baseReducer;
 const createStoreInstance = () => {
   const reducers = combineReducers(reducerMap);
-  const resettableRootReducer = (state: { [x: string]: unknown; } | Partial<{ [x: string]: unknown; }> | undefined, action: { type: any; }) => {
-    if (action.type === '@@RESET_STORE') {
-        Promise.all(persistSlices.map(async (slice) => {
-            return storage.removeItem(`persist:${slice}`);
-        }));
+  const resettableRootReducer = (
+    state:
+      | { [x: string]: unknown }
+      | Partial<{ [x: string]: unknown }>
+      | undefined,
+    action: { type: any },
+  ) => {
+    if (action.type === "@@RESET_STORE") {
+      Promise.all(
+        persistSlices.map(async (slice) => {
+          return storage.removeItem(`persist:${slice}`);
+        }),
+      );
       return reducers(undefined, action);
     }
     return reducers(state, action);
-  }
+  };
 
   const store = configureStore({
     reducer: resettableRootReducer,

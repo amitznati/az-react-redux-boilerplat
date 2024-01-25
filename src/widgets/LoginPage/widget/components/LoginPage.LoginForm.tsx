@@ -1,16 +1,20 @@
 import { Button, Card } from "@common-components";
 import { MouseEvent, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 interface LoginPageLoginFormProps {
-  login: (data: { username: string; password: string }) => void;
+  login: (data: { username: string; password: string }) => Promise<void>;
 }
 
 const LoginPageLoginForm = ({ login }: LoginPageLoginFormProps) => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const onLogin = (e: MouseEvent<HTMLElement>) => {
     e.preventDefault();
-    login({ username, password });
+    login({ username, password }).then(() => {
+      navigate("/posts");
+    });
   };
   return (
     <Card className="w-full m-auto rounded-md shadow-md lg:max-w-lg">

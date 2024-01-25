@@ -9,6 +9,7 @@ import { LoginPage } from "../widgets";
 const links = [
   { to: "/", label: "Home" },
   { to: "login", label: "Login" },
+  { to: "posts", label: "Posts" },
 ];
 
 const router = createBrowserRouter([
@@ -23,6 +24,10 @@ const router = createBrowserRouter([
       {
         path: "login",
         element: <LoginPage />,
+      },
+      {
+        path: "posts",
+        element: <Posts />,
       },
     ],
   },
