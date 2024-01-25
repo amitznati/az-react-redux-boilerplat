@@ -82,7 +82,7 @@ export const getStoreInstance = () => {
   return storeInstance;
 };
 
-let instance: any;
+
 const createInstance = () => {
   const apis: any = {};
   widgets.forEach((widget) => {
@@ -92,16 +92,10 @@ const createInstance = () => {
   return apis;
 };
 
+let instance: any;
 export const getInstance = () => {
   if (!instance) {
     instance = createInstance();
   }
   return instance;
 };
-
-const instanceHandler = {
-  getStoreInstance,
-  getInstance,
-};
-
-export default instanceHandler;
