@@ -1,18 +1,16 @@
 import { Button, Card } from "@common-components";
 import { MouseEvent, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { useAuth } from "../../../../hooks/AuthProvider";
 
-interface LoginPageLoginFormProps {
-  login: (data: { username: string; password: string }) => Promise<void>;
-}
-
-const LoginPageLoginForm = ({ login }: LoginPageLoginFormProps) => {
+const LoginPageLoginForm = () => {
   const navigate = useNavigate();
+  const { onLogin } = useAuth();
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-  const onLogin = (e: MouseEvent<HTMLElement>) => {
+  const onLoginSubmit = (e: MouseEvent<HTMLElement>) => {
     e.preventDefault();
-    login({ username, password }).then(() => {
+    onLogin({ username, password }).then(() => {
       navigate("/posts");
     });
   };
@@ -57,7 +55,7 @@ const LoginPageLoginForm = ({ login }: LoginPageLoginFormProps) => {
             Forget Password?
           </a>
           <div>
-            <Button color="primary" onClick={onLogin}>
+            <Button color="primary" onClick={onLoginSubmit}>
               Login
             </Button>
           </div>

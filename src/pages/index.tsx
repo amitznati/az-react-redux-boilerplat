@@ -1,21 +1,25 @@
 import * as React from "react";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import {
+  RouterProvider,
+  createBrowserRouter,
+  Navigate,
+} from "react-router-dom";
 
-import Posts from "./Posts.jsx";
 import Home from "./Home.jsx";
 import Root from "./Root.jsx";
-import { LoginPage } from "../widgets";
+import { LoginPage, PostsList } from "../widgets";
+import { ReactNode } from "react";
+import { useAuth } from "../hooks/AuthProvider";
 
-const links = [
-  { to: "/", label: "Home" },
-  { to: "login", label: "Login" },
-  { to: "posts", label: "Posts" },
-];
+const ProtectedRoute = ({ children }: { children: ReactNode }) => {
+  const { user } = useAuth();
+  return user ? children : <Navigate to="/" replace />;
+};
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Root links={links} />,
+    element: <Root />,
     children: [
       {
         path: "/",
@@ -27,7 +31,11 @@ const router = createBrowserRouter([
       },
       {
         path: "posts",
-        element: <Posts />,
+        element: (
+          <ProtectedRoute>
+            <PostsList />
+          </ProtectedRoute>
+        ),
       },
     ],
   },

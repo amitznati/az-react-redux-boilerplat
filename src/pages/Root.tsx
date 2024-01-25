@@ -1,14 +1,10 @@
 import { Outlet } from "react-router-dom";
-import { MainNavbar } from "../widgets";
+import MainNavbar from "./MainNavbar";
 
-export default function Root({
-  links,
-}: {
-  links: { label: string; to: string }[];
-}) {
+export default function Root() {
   return (
     <div>
-      <MainNavbar links={links} />
+      <MainNavbar />
       <Outlet />
     </div>
   );

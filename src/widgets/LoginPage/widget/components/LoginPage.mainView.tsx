@@ -2,7 +2,7 @@ import LoginPageLoginForm from "./LoginPage.LoginForm";
 
 interface LoginPageMainViewProps {
   className?: string;
-  login: (data: { username: string; password: string }) => void;
+  login: (data: { username: string; password: string }) => Promise<void>;
 }
 
 export default function LoginPageMainView({ login }: LoginPageMainViewProps) {
