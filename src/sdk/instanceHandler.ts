@@ -14,7 +14,6 @@ import storage from "redux-persist/lib/storage";
 import widgets from "../widgets/widgetsApis";
 import baseReducer from "./baseReducer";
 
-let storeInstance: any;
 interface WidgetType {
   config: {
     persist: object;
@@ -75,13 +74,6 @@ const createStoreInstance = () => {
   let persistor = persistStore(store);
   return { store, persistor };
 };
-export const getStoreInstance = () => {
-  if (!storeInstance) {
-    storeInstance = createStoreInstance();
-  }
-  return storeInstance;
-};
-
 
 const createInstance = () => {
   const apis: any = {};
@@ -90,6 +82,14 @@ const createInstance = () => {
     apis[widget.config.apiName] = new api(getStoreInstance(), apis);
   });
   return apis;
+};
+
+let storeInstance: any;
+export const getStoreInstance = () => {
+  if (!storeInstance) {
+    storeInstance = createStoreInstance();
+  }
+  return storeInstance;
 };
 
 let instance: any;
