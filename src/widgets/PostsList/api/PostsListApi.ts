@@ -1,6 +1,5 @@
-import BaseApi from "../../../sdk/BaseApi";
+import { BaseApi, SimpleServices } from "@sdk";
 import selectors from "./PostsListSelectors";
-import SimpleServices from "../../../sdk/services/SimpleServices";
 
 export const ActionTypes = {
   UPDATE_POSTS: "UPDATE_POSTS",
