@@ -1,13 +1,13 @@
-import LoginPageApi from "./api/LoginPageApi";
+import LoginPageApi, {ILoginPageApi as TILoginPageApi} from "./api/LoginPageApi";
 import LoginPageReducer from "./api/LoginPageReducer";
 import LoginPageConfig from "./api/LoginPageConfig";
-import LoginPageComponent from "./widget/LoginPage.component";
+import { WidgetType } from "../types";
 
-export const widget = {
+export type ILoginPageApi = TILoginPageApi;
+export const widget: WidgetType = {
   api: LoginPageApi,
   reducer: LoginPageReducer,
   config: LoginPageConfig,
-  component: LoginPageComponent,
 };
 
 export default widget;

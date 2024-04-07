@@ -5,7 +5,13 @@ export const ActionTypes = {
   LoginPage_LOGIN: "LoginPage_LOGIN",
   LoginPage_LOGOUT: "LoginPage_LOGOUT",
 };
-export default class LoginPageApi extends BaseApi {
+
+export interface ILoginPageApi {
+  login: (data: any) => Promise<any>;
+  logout: () => Promise<any>;
+  getUserSelector: () => any;
+}
+export default class LoginPageApi extends BaseApi implements ILoginPageApi {
   login = async (data: any) => {
     return this.serviceRequest(
       SimpleServices.login,
@@ -19,6 +25,13 @@ export default class LoginPageApi extends BaseApi {
         console.log("Login Failed!");
         return err;
       },
+      {
+        feedbackOptions: {
+          successCode: "login_success!",
+          successValues: {USER_NAME: data.username},
+          errorCode: "login_failed!"
+        },
+      }
     );
   };
 

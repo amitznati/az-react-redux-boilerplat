@@ -17,6 +17,7 @@
     "jsx": "react-jsx",
     "jsxFactory": "",
     "jsxFragmentFactory": "",
+    "types": ["vite/client","node", "vite-plugin-svgr/client"],
     "paths": {
         "@sdk": ["./src/sdk"],
         "@common-components": ["./src/common-components"],

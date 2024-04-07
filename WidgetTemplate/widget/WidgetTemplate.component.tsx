@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import { Component } from "react";
 import WidgetTemplateMainView from "./components/WidgetTemplate.mainView";
 import { mapComponentProps } from "./WidgetTemplate.propsMappar";
 export default class WidgetTemplateComponent extends Component {

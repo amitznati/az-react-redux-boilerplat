@@ -1,0 +1,16 @@
+{
+  "login_success": {
+    "title": "Welcome back!",
+    "message": "You have successfully logged in {USER_NAME}.",
+    "type": "success",
+    "position": "top-center",
+    "feedbackType": "toast"
+  },
+  "login_failed": {
+    "title": "Login Failed!",
+    "message": "Failed to login. Please check your credentials and try again.",
+    "type": "error",
+    "position": "top-center",
+    "feedbackType": "toast"
+  }
+}

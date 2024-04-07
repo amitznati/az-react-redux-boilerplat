@@ -21,22 +21,9 @@ const router = createBrowserRouter([
     path: "/",
     element: <Root />,
     children: [
-      {
-        path: "/",
-        element: <Home />,
-      },
-      {
-        path: "login",
-        element: <LoginPage />,
-      },
-      {
-        path: "posts",
-        element: (
-          <ProtectedRoute>
-            <PostsList />
-          </ProtectedRoute>
-        ),
-      },
+      { path: "/", element: <Home /> },
+      { path: "login", element: <LoginPage /> },
+      { path: "posts", element: <ProtectedRoute><PostsList /></ProtectedRoute>},
     ],
   },
 ]);

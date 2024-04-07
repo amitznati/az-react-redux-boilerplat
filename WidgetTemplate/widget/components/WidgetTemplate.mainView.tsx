@@ -1,11 +1,7 @@
-import React from "react";
+import {WidgetTemplatePropsType} from "../../WidgetTemplate.types";
 
-interface WidgetTemplateMainViewProps {
-  className?: string;
-}
 
-export default function WidgetTemplateMainView(
-  props: WidgetTemplateMainViewProps,
-) {
-  return <div {...props}>main view</div>;
+export default function WidgetTemplateMainView(props: WidgetTemplatePropsType) {
+
+  return <div {...props} >main view</div>;
 }

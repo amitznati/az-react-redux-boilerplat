@@ -7,7 +7,7 @@ import { IComponentBaseProps } from "../types";
 import ModalActions from "./ModalActions";
 import ModalBody from "./ModalBody";
 import ModalHeader from "./ModalHeader";
-import ModalLegacy, { ModalProps as ModalLegacyProps } from "./ModalLegacy";
+import ModalLegacy from "./ModalLegacy";
 
 export type ModalProps = React.HTMLAttributes<HTMLDialogElement> &
   IComponentBaseProps & {
@@ -20,7 +20,7 @@ const Modal = forwardRef<HTMLDialogElement, ModalProps>(
   (
     { children, open, responsive, backdrop, dataTheme, className, ...props },
     ref,
-  ): JSX.Element => {
+  ) => {
     const containerClasses = twMerge(
       "modal",
       clsx({

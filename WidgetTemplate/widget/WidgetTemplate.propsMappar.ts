@@ -1,4 +1,6 @@
-const mapComponentProps = (props: any) => {
+import {WidgetTemplatePropsType} from "../WidgetTemplate.types";
+
+const mapComponentProps = (props: any): WidgetTemplatePropsType => {
   return props;
 };
 

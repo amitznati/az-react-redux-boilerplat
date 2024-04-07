@@ -3,6 +3,7 @@ import { resolve } from "path";
 import react from '@vitejs/plugin-react';
 import eslint from 'vite-plugin-eslint';
 import alias from '@rollup/plugin-alias';
+import svgr from "vite-plugin-svgr";
 
 const projectRootDir = resolve(__dirname);
 
@@ -10,6 +11,7 @@ const projectRootDir = resolve(__dirname);
 export default defineConfig({
     plugins: [
       react(),
+      svgr(),
       alias({
         entries: [
           {find: '@sdk', replacement: resolve(projectRootDir, 'src/sdk')},

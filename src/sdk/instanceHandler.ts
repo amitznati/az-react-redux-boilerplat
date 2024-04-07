@@ -11,18 +11,10 @@ import {
   persistStore,
 } from "redux-persist";
 import storage from "redux-persist/lib/storage";
-import widgets from "../widgets/widgetsApis";
 import baseReducer from "./baseReducer";
+import { ApisType, WidgetType } from "../widgets/types";
+import widgets from "../widgets/widgetsApis";
 
-interface WidgetType {
-  config: {
-    persist: object;
-    sliceName: string;
-    apiName: string;
-  };
-  reducer: any;
-  api: any;
-}
 const reducerMap: any = {};
 const persistSlices: string[] = [];
 (widgets as Array<WidgetType>).forEach((widget) => {
@@ -81,7 +73,9 @@ const createInstance = () => {
     const api: any = widget.api;
     apis[widget.config.apiName] = new api(getStoreInstance(), apis);
   });
-  return apis;
+  // @ts-ignore
+  window.azAPIs = apis;
+  return apis as ApisType;
 };
 
 let storeInstance: any;
@@ -92,8 +86,8 @@ export const getStoreInstance = () => {
   return storeInstance;
 };
 
-let instance: any;
-export const getInstance = () => {
+let instance: ApisType;
+export const getInstance = (): ApisType => {
   if (!instance) {
     instance = createInstance();
   }

@@ -5,7 +5,12 @@ export const ActionTypes = {
   UPDATE_POSTS: "UPDATE_POSTS",
   FETCH_POSTS: "FETCH_POSTS",
 };
-export default class PostsListApi extends BaseApi {
+export interface IPostsListApi {
+  updatePosts: (posts: Array<string>) => void;
+  getPostsSelector: () => any;
+  fetchPosts: () => Promise<any>;
+}
+export default class PostsListApi extends BaseApi implements IPostsListApi {
   updatePosts = (posts: Array<string>) => {
     this.dispatchStoreAction(ActionTypes.UPDATE_POSTS, posts);
   };
