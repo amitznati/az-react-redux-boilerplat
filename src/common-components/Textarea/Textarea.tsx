@@ -27,7 +27,7 @@ const Textarea = React.forwardRef<HTMLTextAreaElement, TextareaProps>(
       ...props
     },
     ref,
-  ): JSX.Element => {
+  ) => {
     const classes = twMerge(
       "textarea",
       className,

@@ -5,7 +5,7 @@ export type SelectOptionProps = React.OptionHTMLAttributes<HTMLOptionElement>;
 const SelectOption = ({
   children,
   ...props
-}: SelectOptionProps): JSX.Element => {
+}: SelectOptionProps) => {
   return <option {...props}>{children}</option>;
 };
 

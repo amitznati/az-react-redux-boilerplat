@@ -62,10 +62,11 @@ const classesFn = ({
   );
 
 const Mask = React.forwardRef<HTMLImageElement, MaskProps>(
-  ({ src, variant, dataTheme, className, ...props }, ref): JSX.Element => {
+  ({ src, variant, dataTheme, className, alt, ...props }, ref) => {
     return (
       <img
         {...props}
+        alt={alt}
         data-theme={dataTheme}
         className={classesFn({ className, variant })}
         src={src}

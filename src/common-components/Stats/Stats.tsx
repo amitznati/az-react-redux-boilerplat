@@ -16,7 +16,7 @@ const Stats = React.forwardRef<HTMLDivElement, StatsProps>(
   (
     { horizontal, vertical, dataTheme, className, children, ...props },
     ref,
-  ): JSX.Element => {
+  ) => {
     const classes = twMerge(
       "stats",
       className,

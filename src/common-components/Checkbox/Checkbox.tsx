@@ -18,7 +18,7 @@ const Checkbox = forwardRef<HTMLInputElement, CheckboxProps>(
   (
     { color, size, indeterminate, dataTheme, className, ...props },
     ref,
-  ): JSX.Element => {
+  ) => {
     const classes = twMerge(
       "checkbox",
       className,

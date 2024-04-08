@@ -16,7 +16,7 @@ const Steps = React.forwardRef<HTMLUListElement, StepsProps>(
   (
     { children, dataTheme, className, vertical, horizontal, ...props },
     ref,
-  ): JSX.Element => {
+  ) => {
     const classes = twMerge(
       "steps",
       className,

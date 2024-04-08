@@ -13,7 +13,7 @@ const Diff = forwardRef<HTMLDivElement, DiffProps>(
   (
     { dataTheme, className, children, secondItem, ...props },
     ref,
-  ): JSX.Element => {
+  ) => {
     const classes = twMerge("diff aspect-[16/9]", clsx({}), className);
 
     return (

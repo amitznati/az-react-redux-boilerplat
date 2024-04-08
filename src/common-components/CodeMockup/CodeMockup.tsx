@@ -8,7 +8,7 @@ export type CodeMockupProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps;
 
 const CodeMockup = forwardRef<HTMLDivElement, CodeMockupProps>(
-  ({ dataTheme, className, children, ...props }, ref): JSX.Element => {
+  ({ dataTheme, className, children, ...props }, ref) => {
     const classes = twMerge("mockup-code", className);
 
     return (

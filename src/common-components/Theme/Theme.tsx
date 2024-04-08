@@ -1,4 +1,4 @@
-import React, { MutableRefObject, useEffect, useRef, useState } from "react";
+import React, { MutableRefObject, useCallback, useEffect, useRef, useState } from "react";
 import { defaultTheme } from "../constants";
 
 import { DataTheme, IComponentBaseProps } from "../types";
@@ -17,7 +17,7 @@ const Theme = React.forwardRef<HTMLDivElement, ThemeProps>(
   (
     { children, dataTheme, onChange, className, ...props },
     ref,
-  ): JSX.Element => {
+  ) => {
     // Either use provided ref or create a new ref
     const themeRef = useRef<HTMLDivElement>(
       (ref as MutableRefObject<HTMLDivElement>)?.current,
@@ -30,19 +30,19 @@ const Theme = React.forwardRef<HTMLDivElement, ThemeProps>(
       dataTheme || closestAncestorTheme || defaultTheme,
     );
 
-    const handleThemeChange = (theme: DataTheme) => {
+    const handleThemeChange = useCallback((theme: DataTheme) => {
       // Fire custom onChange, if provided. ie, user provided function to store theme in session/local storage
       onChange && onChange(theme);
       // Update state/context
       setTheme(theme);
-    };
+    }, [onChange, setTheme]);
 
     // Properly handle changes to theme prop on Theme component
     useEffect(() => {
       if (dataTheme !== theme) {
         dataTheme && handleThemeChange(dataTheme);
       }
-    }, [dataTheme]);
+    }, [dataTheme, theme, handleThemeChange]);
 
     return (
       <ThemeContext.Provider value={{ theme, setTheme: handleThemeChange }}>

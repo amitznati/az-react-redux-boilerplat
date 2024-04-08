@@ -1,4 +1,4 @@
-import { forwardRef, ReactNode } from "react";
+import React, { forwardRef } from "react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
@@ -32,7 +32,7 @@ const Timeline = forwardRef<HTMLUListElement, TimelineProps>(
       ...props
     },
     ref,
-  ): JSX.Element => {
+  ) => {
     const classes = twMerge(
       "timeline",
       clsx({

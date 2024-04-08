@@ -12,7 +12,7 @@ export type TableRowProps = React.TableHTMLAttributes<HTMLTableRowElement> &
   };
 
 const TableRow = React.forwardRef<HTMLTableRowElement, TableRowProps>(
-  ({ children, active, hover, className, ...props }, ref): JSX.Element => {
+  ({ children, active, hover, className, ...props }, ref) => {
     const classes = twMerge(
       className,
       clsx({

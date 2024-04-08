@@ -50,7 +50,7 @@ const Collapse = React.forwardRef<HTMLDivElement, CollapseProps>(
       ...props
     },
     ref,
-  ): JSX.Element => {
+  ) => {
     const [isChecked, setIsChecked] = useState(open);
     const checkboxRef = useRef<HTMLInputElement>(null);
 

@@ -7,7 +7,7 @@ export type HeroContentProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps;
 
 const HeroContent = React.forwardRef<HTMLDivElement, HeroContentProps>(
-  ({ dataTheme, className, children, ...props }, ref): JSX.Element => {
+  ({ dataTheme, className, children, ...props }, ref) => {
     const classes = twMerge("hero-content", className);
 
     return (

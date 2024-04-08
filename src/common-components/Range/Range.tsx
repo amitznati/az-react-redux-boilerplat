@@ -14,7 +14,7 @@ export type RangeProps = Omit<
   };
 
 const Range = forwardRef<HTMLInputElement, RangeProps>(
-  ({ color, size, step, dataTheme, className, ...props }, ref): JSX.Element => {
+  ({ color, size, step, dataTheme, className, ...props }, ref) => {
     const classes = twMerge(
       "range",
       className,
@@ -39,7 +39,7 @@ const Range = forwardRef<HTMLInputElement, RangeProps>(
     const numSteps = useMemo(() => {
       const safeStep = Math.max(1, Number(step));
       return Math.ceil(100 / safeStep) ?? 1;
-    }, [props.max, step]);
+    }, [step]);
 
     return (
       <>

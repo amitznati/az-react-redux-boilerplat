@@ -14,7 +14,7 @@ export type TabsProps = React.HTMLAttributes<HTMLDivElement> &
   };
 
 const Tabs = forwardRef<HTMLDivElement, TabsProps>(
-  ({ children, className, variant, size }, ref): JSX.Element => {
+  ({ children, className, variant, size }, ref) => {
     const classes = twMerge(
       "tabs",
       className,

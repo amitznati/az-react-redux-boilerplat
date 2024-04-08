@@ -59,7 +59,7 @@ const Card = React.forwardRef<HTMLDivElement, CardProps>(
   (
     { bordered = true, imageFull, normal, compact, side, className, ...props },
     ref,
-  ): JSX.Element => {
+  ) => {
     const classes = twMerge(
       "card",
       className,

@@ -1,4 +1,4 @@
-import {
+import React, {
   cloneElement,
   createRef,
   forwardRef,
@@ -42,7 +42,7 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
       ...props
     },
     ref,
-  ): JSX.Element => {
+  ) => {
     const classes = twMerge(
       "carousel",
       className,
@@ -59,7 +59,7 @@ const Carousel = forwardRef<HTMLDivElement, CarouselProps>(
 
     useEffect(() => {
       const newRefs: RefObject<HTMLDivElement>[] = [];
-      children.map((_) => {
+      children.forEach((_) => {
         newRefs.push(createRef<HTMLDivElement>());
       });
       setItemRefs(newRefs);

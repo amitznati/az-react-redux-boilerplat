@@ -9,7 +9,7 @@ export const useTheme = (value?: DataTheme) => {
     if (value && theme !== value) {
       setTheme(value);
     }
-  }, [value]);
+  }, [value, theme, setTheme]);
 
   return { theme, setTheme };
 };

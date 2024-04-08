@@ -29,7 +29,7 @@ const Tooltip = forwardRef<HTMLDivElement, TooltipProps>(
       ...props
     },
     ref,
-  ): JSX.Element => {
+  ) => {
     const classes = twMerge(
       "tooltip",
       className,

@@ -8,7 +8,7 @@ export type TabProps = React.AnchorHTMLAttributes<HTMLAnchorElement> & {
 };
 
 const Tab = forwardRef<HTMLAnchorElement, TabProps>(
-  ({ children, className, active, disabled, ...props }, ref): JSX.Element => {
+  ({ children, className, active, disabled, ...props }, ref) => {
     const classes = twMerge(
       "tab",
       className,

@@ -9,7 +9,7 @@ export type NavbarProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps;
 
 const Navbar = React.forwardRef<HTMLDivElement, NavbarProps>(
-  ({ children, dataTheme, className, ...props }, ref): JSX.Element => {
+  ({ children, dataTheme, className, ...props }, ref) => {
     const classes = twMerge("navbar", className);
 
     return (

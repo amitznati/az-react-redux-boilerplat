@@ -10,7 +10,7 @@ export type StatItemProps = React.HTMLAttributes<HTMLDivElement> &
   };
 
 const StatItem = React.forwardRef<HTMLDivElement, StatItemProps>(
-  ({ variant, className, ...props }, ref): JSX.Element => {
+  ({ variant, className, ...props }, ref) => {
     const classes = twMerge(
       className,
       clsx({

@@ -8,7 +8,7 @@ export type AvatarGroupProps = React.HTMLAttributes<HTMLDivElement> & {
 };
 
 const AvatarGroup = React.forwardRef<HTMLDivElement, AvatarGroupProps>(
-  ({ children, className, ...props }, ref): JSX.Element => {
+  ({ children, className, ...props }, ref) => {
     const classes = twMerge("avatar-group -space-x-6", className);
 
     return (

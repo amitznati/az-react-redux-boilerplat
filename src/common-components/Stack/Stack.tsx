@@ -7,7 +7,7 @@ export type StackProps = React.HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps;
 
 const Stack = forwardRef<HTMLDivElement, StackProps>(
-  ({ dataTheme, className, children, ...props }, ref): JSX.Element => {
+  ({ dataTheme, className, children, ...props }, ref) => {
     const classes = twMerge("stack", className);
 
     return (

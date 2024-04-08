@@ -6,7 +6,7 @@ export type TableHeadProps =
   };
 
 const TableHead = React.forwardRef<HTMLTableSectionElement, TableHeadProps>(
-  ({ children, ...props }, ref): JSX.Element => {
+  ({ children, ...props }, ref) => {
     return (
       <thead {...props} ref={ref}>
         <tr>

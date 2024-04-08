@@ -18,7 +18,7 @@ const Breadcrumbs = React.forwardRef<HTMLDivElement, BreadcrumbsProps>(
   (
     { children, dataTheme, className, innerProps, innerRef, ...props },
     ref,
-  ): JSX.Element => {
+  ) => {
     const classes = twMerge("breadcrumbs", "text-sm", className);
 
     return (

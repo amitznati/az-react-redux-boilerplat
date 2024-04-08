@@ -21,7 +21,7 @@ const Table = React.forwardRef<HTMLTableElement, TableProps>(
   (
     { children, size, zebra, pinRows, pinCols, dataTheme, className, ...props },
     ref,
-  ): JSX.Element => {
+  ) => {
     const classes = twMerge(
       "table",
       className,

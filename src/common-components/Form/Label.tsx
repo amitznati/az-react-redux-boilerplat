@@ -9,7 +9,7 @@ export type LabelProps = React.LabelHTMLAttributes<HTMLLabelElement> &
   };
 
 const Label = React.forwardRef<HTMLLabelElement, LabelProps>(
-  ({ children, title, dataTheme, className, ...props }, ref): JSX.Element => {
+  ({ children, title, dataTheme, className, ...props }, ref) => {
     const classes = twMerge("label", className);
 
     return (

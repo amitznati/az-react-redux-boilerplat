@@ -27,7 +27,7 @@ const Badge = forwardRef<HTMLDivElement, BadgeProps>(
       ...props
     },
     ref,
-  ): JSX.Element => {
+  ) => {
     const classes = twMerge(
       "badge",
       className,

@@ -24,7 +24,7 @@ const ChatBubble = forwardRef<HTMLDivElement, ChatBubbleProps>(
   (
     { end = false, color, dataTheme, className, children, ...props },
     ref,
-  ): JSX.Element => (
+  ) => (
     <div
       style={end ? endStyle : startStyle}
       {...props}

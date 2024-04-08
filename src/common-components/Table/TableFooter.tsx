@@ -9,7 +9,7 @@ export type TableFooterProps =
     };
 
 const TableFooter = React.forwardRef<HTMLTableSectionElement, TableFooterProps>(
-  ({ children, ...props }, ref): JSX.Element => {
+  ({ children, ...props }, ref) => {
     return (
       <tfoot {...props} ref={ref}>
         <tr>

@@ -1,14 +1,14 @@
-import { forwardRef, ReactNode } from "react";
+import { forwardRef, HTMLAttributes } from "react";
 import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
 import { IComponentBaseProps } from "../types";
 
-export type SkeletonProps = React.HTMLAttributes<HTMLDivElement> &
+export type SkeletonProps = HTMLAttributes<HTMLDivElement> &
   IComponentBaseProps & {};
 
 const Skeleton = forwardRef<HTMLDivElement, SkeletonProps>(
-  ({ dataTheme, className, children, ...props }, ref): JSX.Element => {
+  ({ dataTheme, className, children, ...props }, ref) => {
     const classes = twMerge("skeleton", clsx({}), className);
 
     return (

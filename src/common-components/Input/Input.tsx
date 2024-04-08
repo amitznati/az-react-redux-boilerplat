@@ -30,7 +30,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
       ...props
     },
     ref,
-  ): JSX.Element => {
+  ) => {
     const classes = twMerge(
       "input",
       className,

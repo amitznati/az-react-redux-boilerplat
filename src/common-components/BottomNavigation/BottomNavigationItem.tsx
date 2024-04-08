@@ -22,7 +22,7 @@ const BottomNavigationItem = forwardRef<
   (
     { children, className, color, dataTheme, active, disabled, ...props },
     ref,
-  ): JSX.Element => {
+  ) => {
     const classes = twMerge(
       className,
       clsx({

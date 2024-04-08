@@ -10,7 +10,7 @@ const CollapseContent = ({
   children,
   className,
   ...props
-}: CollapseContentProps): JSX.Element => {
+}: CollapseContentProps) => {
   const classes = twMerge("collapse-content", className);
 
   return (

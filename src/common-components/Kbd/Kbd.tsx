@@ -10,7 +10,7 @@ export type KbdProps = React.HTMLAttributes<HTMLElement> &
   };
 
 const Kbd = forwardRef<HTMLElement, KbdProps>(
-  ({ children, size, dataTheme, className, ...props }, ref): JSX.Element => {
+  ({ children, size, dataTheme, className, ...props }, ref) => {
     const classes = twMerge(
       "kbd",
       className,

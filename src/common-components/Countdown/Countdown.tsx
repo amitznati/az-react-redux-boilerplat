@@ -13,7 +13,7 @@ const Countdown = ({
   dataTheme,
   className,
   ...props
-}: CountdownProps): JSX.Element => {
+}: CountdownProps) => {
   const classes = twMerge("countdown", className);
 
   const displayedValue = Math.min(99, Math.max(0, value));

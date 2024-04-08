@@ -16,7 +16,8 @@ export type AvatarProps = Omit<React.HTMLAttributes<HTMLDivElement>, "color"> &
   IComponentBaseProps & {
     src?: string;
     letters?: string;
-    size?: ComponentSize | number;
+    size?: ComponentSize;
+    customSize?: number;
     shape?: ComponentShape;
     color?: Exclude<ComponentColor, "ghost">;
     border?: boolean;
@@ -43,10 +44,11 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
       className,
       innerClassName,
       children,
+      customSize,
       ...props
     },
     ref,
-  ): JSX.Element => {
+  ) => {
     const containerClasses = twMerge(
       "avatar",
       className,
@@ -111,14 +113,14 @@ const Avatar = React.forwardRef<HTMLDivElement, AvatarProps>(
     });
 
     const customImgDimension =
-      typeof size === "number" ? { width: size, height: size } : {};
+      customSize ? { width: customSize, height: customSize } : {};
 
     const renderAvatarContents = () => {
       // Base case, if src is provided, render img
       if (src) {
         return (
           <div className={imgClasses} style={customImgDimension}>
-            <img src={src} />
+            <img src={src} alt="avatar" />
           </div>
         );
       }

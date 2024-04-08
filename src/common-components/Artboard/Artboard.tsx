@@ -15,7 +15,7 @@ const Artboard = forwardRef<HTMLDivElement, ArtboardProps>(
   (
     { children, demo = true, size, horizontal, dataTheme, className, ...props },
     ref,
-  ): JSX.Element => {
+  ) => {
     const classes = twMerge(
       "artboard",
       className,

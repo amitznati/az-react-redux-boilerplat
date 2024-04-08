@@ -9,7 +9,7 @@ export type NavbarSectionProps = NavbarProps & {
 };
 
 const NavbarSection = React.forwardRef<HTMLDivElement, NavbarSectionProps>(
-  ({ children, section, dataTheme, className, style }, ref): JSX.Element => {
+  ({ children, section, dataTheme, className, style }, ref) => {
     const classes = twMerge(
       className,
       clsx({

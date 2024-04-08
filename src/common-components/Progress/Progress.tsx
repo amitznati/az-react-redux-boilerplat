@@ -13,7 +13,7 @@ export type ProgressProps = Omit<
   };
 
 const Progress = forwardRef<HTMLProgressElement, ProgressProps>(
-  ({ color, dataTheme, className, ...props }, ref): JSX.Element => {
+  ({ color, dataTheme, className, ...props }, ref) => {
     const classes = twMerge(
       "progress",
       className,

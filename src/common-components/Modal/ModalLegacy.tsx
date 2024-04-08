@@ -23,7 +23,7 @@ const Modal = forwardRef<HTMLDivElement, ModalProps>(
       ...props
     },
     ref,
-  ): JSX.Element => {
+  ) => {
     const containerClasses = twMerge(
       "modal",
       clsx({

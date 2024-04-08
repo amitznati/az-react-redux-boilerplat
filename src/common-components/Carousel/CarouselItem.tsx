@@ -31,7 +31,7 @@ const CarouselItem = ({
   onNext,
   className,
   ...props
-}: CarouselItemProps): JSX.Element => {
+}: CarouselItemProps) => {
   const classes = twMerge(
     "carousel-item relative",
     className,

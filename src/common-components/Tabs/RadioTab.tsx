@@ -26,7 +26,7 @@ const RadioTab = forwardRef<HTMLInputElement, RadioTabProps>(
       ...props
     },
     ref,
-  ): JSX.Element => {
+  ) => {
     const classes = twMerge(
       "tab",
       className,

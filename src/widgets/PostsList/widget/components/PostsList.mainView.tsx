@@ -1,4 +1,4 @@
-import { Button, Card } from "../../../../common-components";
+import { Button, Card } from "@common-components";
 
 type Post = {
   id: number;

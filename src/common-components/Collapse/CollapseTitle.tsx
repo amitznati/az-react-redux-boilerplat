@@ -13,7 +13,7 @@ const CollapseTitle = ({
   children,
   className,
   ...props
-}: CollapseTitleProps): JSX.Element => {
+}: CollapseTitleProps) => {
   return (
     <div {...props} className={classesFn({ className })}>
       {children}
@@ -23,7 +23,7 @@ const CollapseTitle = ({
 
 export type SummaryProps = CollapseTitleProps<HTMLElement>;
 export const Summary = React.forwardRef<HTMLElement, SummaryProps>(
-  ({ children, className }, ref): JSX.Element => {
+  ({ children, className }, ref) => {
     return (
       <summary ref={ref} className={classesFn({ className })}>
         {children}

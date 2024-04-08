@@ -11,7 +11,7 @@ const Details = React.forwardRef<HTMLDetailsElement, DetailsProps>(
   (
     { children, icon, open, dataTheme, className, ...props },
     ref,
-  ): JSX.Element => {
+  ) => {
     return (
       <details
         {...props}
