@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
 import "./main_loader.css";
 import { Loading } from "../../common-components";
-function SpinnerWidget({ spinnerOn }: { spinnerOn: boolean }) {
+export function SpinnerWidget({ spinnerOn }: { spinnerOn: boolean }) {
   if (!spinnerOn) {
     return <div />;
   }

@@ -21,6 +21,8 @@
     "paths": {
         "@sdk": ["./src/sdk"],
         "@common-components": ["./src/common-components"],
+        "@widgets": ["./src/widgets"],
+        "@assets": ["./src/assets"],
     }
   },
   "include": ["./src"],

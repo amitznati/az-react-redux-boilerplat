@@ -7,7 +7,7 @@ import {
 
 import Home from "./Home.jsx";
 import Root from "./Root.jsx";
-import { LoginPage, PostsList } from "../widgets";
+import { LoginPage, PostsList } from "@widgets";
 import { ReactNode } from "react";
 import { useAuth } from "../hooks/AuthProvider";
 

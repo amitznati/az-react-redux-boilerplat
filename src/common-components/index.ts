@@ -299,9 +299,14 @@ export type PhoneProps = TPhoneProps;
 export { default as WindowMockup } from "./WindowMockup";
 export type WindowMockupProps = TWindowMockupProps;
 
+// MicroFrontend
+export { default as MFComponent } from './MicroFrontend/MFComponent';
+
 // ----------------------- < Utils > ----------------------- //
 
 // Utils > Theme
 export { default as Theme } from "./Theme";
 export type ThemeProps = TThemeProps;
 export { useTheme } from "./Theme/useTheme";
+
+

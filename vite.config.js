@@ -16,6 +16,8 @@ export default defineConfig({
         entries: [
           {find: '@sdk', replacement: resolve(projectRootDir, 'src/sdk')},
           {find: '@common-components', replacement: resolve(projectRootDir, 'src/common-components')},
+          {find: '@widgets', replacement: resolve(projectRootDir, 'src/widgets')},
+          {find: '@assets', replacement: resolve(projectRootDir, 'src/assets')},
         ]}),
       eslint({exclude: ['/virtual:/**', 'node_modules/**']})
     ],

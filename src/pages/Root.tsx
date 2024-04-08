@@ -1,6 +1,6 @@
 import { Outlet } from "react-router-dom";
 import MainNavbar from "./MainNavbar";
-import { FeedbackHandler } from "../widgets";
+import { FeedbackHandler } from "@widgets";
 
 export default function Root() {
   return (

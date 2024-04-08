@@ -3,18 +3,22 @@ import clsx from "clsx";
 import { twMerge } from "tailwind-merge";
 
 import { IComponentBaseProps, ComponentColor } from "../types";
+import { useNavigate } from "react-router-dom";
 
 export type LinkProps = React.AnchorHTMLAttributes<HTMLAnchorElement> &
   IComponentBaseProps & {
     color?: "neutral" | ComponentColor;
     hover?: boolean;
+    to?: string;
   };
 
 const Link = forwardRef<HTMLAnchorElement, LinkProps>(
   (
-    { children, href, color, hover = true, dataTheme, className, ...props },
+    { children, href, color, hover = true,
+      dataTheme, className, to, ...props },
     ref,
   ) => {
+    const navigate = useNavigate();
     const classes = twMerge(
       "link",
       className,
@@ -39,6 +43,7 @@ const Link = forwardRef<HTMLAnchorElement, LinkProps>(
         data-theme={dataTheme}
         className={classes}
         ref={ref}
+        onClick={() => to && navigate(to)}
       >
         {children}
       </a>

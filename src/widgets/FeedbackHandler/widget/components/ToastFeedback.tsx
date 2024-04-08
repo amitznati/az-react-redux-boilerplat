@@ -1,8 +1,8 @@
 import {feedbackConfigType} from "../../FeedbackHandler.types";
-import SuccessIcon from '../../../../assets/images/icons/success-icon.svg?react';
-import WarningIcon from '../../../../assets/images/icons/warning-icon.svg?react';
-import ErrorIcon from '../../../../assets/images/icons/error-icon.svg?react';
-import InfoIcon from '../../../../assets/images/icons/info-icon.svg?react';
+import SuccessIcon from '@assets/images/icons/success-icon.svg?react';
+import WarningIcon from '@assets/images/icons/warning-icon.svg?react';
+import ErrorIcon from '@assets/images/icons/error-icon.svg?react';
+import InfoIcon from '@assets/images/icons/info-icon.svg?react';
 import React from "react";
 import { twMerge } from "tailwind-merge";
 import clsx from "clsx";
